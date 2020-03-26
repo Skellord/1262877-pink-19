@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Руслан Галяутдинов](https://up.htmlacademy.ru/adaptive/19/user/1262877).
-* Наставник: `Неизвестно`.
+* Наставник: [Руслан Давлетбаев](https://htmlacademy.ru/profile/davletbaev).
 
 ---
 

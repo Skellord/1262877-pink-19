@@ -39,39 +39,38 @@
         </ul>
         <span class="download__description"></span>
       </section>
-      <section class="features">
-        <h3 class="features__head">Устали от серости мегаполиса?</h3>
-        <h4 class="features__head">Нам есть, что вам предложить!</h4>
-        <ul class="features__list">
-          <li class="features__item">
-            <span class="features__title">Поднимает настроение</span>
-            <p class="features__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+      <section class="features-section">
+        <p class="features__head">Устали от серости мегаполиса?<br> Нам есть, что вам предложить!</p>
+        <ul class="features-list reviews">
+          <li class="reviews__item">
+            <span class="reviews__title">Поднимает настроение</span>
+            <p class="reviews__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
           </li>
-          <li class="features__item">
-            <span class="features__title">Меняет мир вокруг</span>
-            <p class="features__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+          <li class="reviews__item">
+            <span class="reviews__title">Меняет мир вокруг</span>
+            <p class="reviews__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
           </li>
-          <li class="features__item">
-            <span class="features__title">Заводит новых друзей</span>
-            <p class="features__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+          <li class="reviews__item">
+            <span class="reviews__title">Заводит новых друзей</span>
+            <p class="reviews__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
           </li>
         </ul>
         <div class="features__phone"></div>
       </section>
-      <section class="reviews">
+      <section class="reviews-section">
         <div class="reviews__wrapper slider">
           <h2 class="visually-hidden">Отзывы</h2>
-          <ul class="reviews__list">
+          <ul class="reviews-list reviews">
             <li class="reviews__item">
-            <span class="reviews__name">Николай Петров</span>
+              <span class="reviews__title">Николай Петров</span>
               <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
             </li>
             <li class="reviews__item">
-              <span class="reviews__name">Николай Петров</span>
+              <span class="reviews__title">Николай Петров</span>
               <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
             </li>
             <li class="reviews__item">
-              <span class="reviews__name">Николай Петров</span>
+              <span class="reviews__title">Николай Петров</span>
               <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
             </li>
           </ul>
@@ -122,14 +121,22 @@
     <footer class="footer">
       <section class="contacts">
         <h2 class="contacts__title">Остались вопросы? Свяжитесь с нами!</h2>
-        <span class="contacts__item">Звоните:</span>
-        <a href="tel:+78125556666" class="contacts__tel">+7 (812) 555-66-66</a>
-        <span class="contacts__item">Пишите:</span>
-        <a href="mailto:mail@htmlacademy.ru" class="contacts__mail">mail@htmlacademy.ru</a>
-        <span class="contacts__item">Приезжайте в гости:</span>
-        <p class="contacts__adress">ул. Большая Конюшенная, 19/8</p>
+        <div class="contacts__item">
+          <span class="contacts__item-text">Звоните:</span>
+          <a href="tel:+78125556666" class="contacts__tel">+7 (812) 555-66-66</a>
+        </div>
+        <div class="contacts__item">
+          <span class="contacts__item-text">Пишите:</span>
+          <a href="mailto:mail@htmlacademy.ru" class="contacts__mail">mail@htmlacademy.ru</a>
+        </div>
+        <div class="contacts__item">
+          <span class="contacts__item-text">Приезжайте в гости:</span>
+          <p class="contacts__adress">ул. Большая Конюшенная, 19/8</p>
+        </div>
         <div class="contacts__map-container">
-          <img src="img/map.jpg" width="320" height="645" class="contacts__map" alt="ул. Большая Конюшенная, 19/8">
+          <picture class="contacts__map">
+            <img src="img/map.jpg" width="320" height="645" alt="ул. Большая Конюшенная, 19/8">
+          </picture>
         </div>
       </section>
     </footer>

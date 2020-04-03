@@ -3,26 +3,30 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
   </head>
   <body class="body">
-    <header class="header">
-      <a class="header__logo logo">
-        <img class="logo__image" src="img/logotype-white-mobile-svg.svg" width="74" height="23" alt="Лого Пинка">
-      </a>
+    <header class="header wrapper">
+      <div class="header__wrapper">
+        <a class="header__logo logo">
+          <img class="logo__image" src="img/logotype-white-mobile-svg.svg" width="74" height="23" alt="Лого Пинка">
+        </a>
+      </div>
       <nav class="main-nav">
-        <button class="main-nav__button button" type="button">Открыть меню</button>
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active">
-            <a>Главная</a>
+        <button class="main-nav__button button" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <ul class="main-nav__list ">
+          <li class="main-nav__item">
+            <a class="active-link">Главная</a>
           </li>
-          <li class="site-list__item">
+          <li class="main-nav__item">
             <a href="photo.html">Фотографии</a>
           </li>
-          <li class="site-list__item">
-            <a href="">Конкурс</a>
+          <li class="main-nav__item">
+            <a href="form.html">Конкурс</a>
           </li>
-          <li class="site-list__item">
-            <a href="">HTML Academy</a>
+          <li class="main-nav__item">
+            <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           </li>
         </ul>
       </nav>

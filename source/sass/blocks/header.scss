@@ -1,0 +1,12 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    background-color: $dark;
+}
+.header__wrapper {
+    height: 69px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 22px;
+    box-sizing: border-box;
+}

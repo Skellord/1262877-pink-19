@@ -3,6 +3,7 @@
     flex-direction: column;
     background-color: $dark;
 }
+
 .header__wrapper {
     height: 69px;
     padding-left: 20px;
@@ -20,17 +21,13 @@
     }
 }
 @media (min-width: $desktop) {
-    .header {
-        flex-direction: row;
+    .header__container {
+        display: flex;
         background-color: rgba($dark, 0.3);
     }
     .header__wrapper {
-        height: 100%;
         padding-left: 202px;
         margin-right: 152px;
-        padding-top: 44px;
-        padding-bottom: 37px;
-        box-sizing: content-box;
         box-shadow: none;
     }
 }

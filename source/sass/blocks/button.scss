@@ -1,0 +1,15 @@
+.button {
+    padding: 17px 39px;
+    color: $white;
+    font-weight: bold;
+    text-decoration: none;
+    border: solid 3px $white;
+    border-radius: 40px;
+    &:hover {
+        background-color: $white;
+        color: $red;
+    }
+    &:active {
+        color: rgba($red, 0.3);
+    }
+}

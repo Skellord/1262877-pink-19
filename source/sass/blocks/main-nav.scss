@@ -54,12 +54,14 @@
         box-shadow: none;
     }
     .main-nav__item a {
+        position: relative;
         text-transform: none;
         font-weight: normal;
     }
     .main-nav__button {
         display: none;
     }
+
     .active-link::after {
         content: "";
         position: absolute;

@@ -7,8 +7,8 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body class="body">
-    <header class="header wrapper">
+  <body class="body body--index">
+    <header class="header">
       <h1 class="visually-hidden">Pink - мобильное приложение</h1>
       <div class="header__container">
         <div class="header__wrapper">
@@ -34,19 +34,25 @@
           </ul>
         </nav>
       </div>
+      <div class="wrapper">
         <section class="download">
-          <h2 class="download__title">Взгляните на жизнь иначе!</h2>
-          <a href="" class="download__button button">Скачать приложение</a>
-          <ul class="download__list os-list">
-            <li class="os-list__item"><a href="" class="os-list__link">iOs</a></li>
-            <li class="os-list__item"><a href="" class="os-list__link">Android</a></li>
-            <li class="os-list__item"><a href="" class="os-list__link">Windows</a></li>
-          </ul>
-          <span class="download__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</span>
+          
+          <div class="download__phone">
+            <h2 class="download__title header__title">Взгляните на жизнь иначе!</h2>
+          </div>
+          <div class="download__list">
+            <a href="" class="download__button button">Скачать приложение</a>
+            <ul class="os-list">
+              <li class="os-list__item"><a href="" class="os-list__link os__iOS"></a></li>
+              <li class="os-list__item"><a href="" class="os-list__link os__Android"><span class="visually-hidden">Android</span></a></li>
+              <li class="os-list__item"><a href="" class="os-list__link os__windows"><span class="visually-hidden">Windows</span></a></li>
+            </ul>
+            <span class="download__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</span>
+          </div>
         </section>
-      </header>
+      </div>
+    </header>
     <main class="main wrapper">
-     
       <section class="features">
         <h2 class="visually-hidden">Достоинства приложения</h2>
         <p class="features__head">Устали от серости мегаполиса?<br> Нам есть, что вам предложить!</p>

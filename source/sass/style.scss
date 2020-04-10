@@ -4,10 +4,11 @@
 @import "scaffoldings.scss";
 @import "visually-hidden.scss";
 @import "mixins.scss";
-
+@import "./blocks/button.scss";
 @import "./blocks/header.scss";
 @import "./blocks/wrapper.scss";
 @import "./blocks/main-nav.scss";
 @import "./blocks/logo.scss";
 @import "./blocks/download.scss";
-@import "./blocks/button.scss";
+
+@import "./blocks/os-list.scss";

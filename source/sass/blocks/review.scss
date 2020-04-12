@@ -1,0 +1,22 @@
+.review__title {
+    display: inherit;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: $black;
+}
+.review__text {
+    font-size: 14px;
+    text-align: center;
+    margin: 0;
+    padding-top: 11px;
+}
+@media (min-width: $desktop) {
+    .review__title {
+        font-size: 30px;
+    }
+    .review__text {
+        font-size: 18px;
+        font-weight: normal;
+    }
+}

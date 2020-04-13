@@ -14,9 +14,13 @@
 @media (min-width: $desktop) {
     .review__title {
         font-size: 30px;
+        line-height: 30px;
+        padding-top: 48px;
     }
     .review__text {
+        padding-top: 25px;
         font-size: 18px;
         font-weight: normal;
+        line-height: 30px;
     }
 }

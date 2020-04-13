@@ -3,3 +3,20 @@
         display: none;
     }
 }
+.effect__clock  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 238px;
+    height: 276px;
+    
+    background: url(../../img/icon-timer.svg) 0 0 no-repeat;
+    background-size: cover;
+    
+}
+    
+.effect__clock span {
+    font-size: 96px;
+    font-weight: bold;
+    color: $red;
+}

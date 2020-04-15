@@ -1,13 +1,27 @@
 .reviews {
+    position: relative;
     padding-top: 81px;
     background-color: $gray;
+    z-index: 1;
+    overflow: hidden;
 }
 .reviews__list {
     @include reset-list;
     padding-bottom: 6px;
 }
 .reviews__item {
-    padding-bottom: 33px;
+    margin-bottom: 33px;
+}
+.reviews::before {
+    position: absolute;
+    content: "";
+    width: 115%;
+    height: 11%;
+    top: -56px;
+    left: -12px;
+    background-color: $white;
+    transform: rotate(-10deg);
+    z-index: -1;
 }
 @media (min-width: $tablet) {
     .reviews {

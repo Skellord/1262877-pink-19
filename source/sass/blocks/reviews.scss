@@ -1,84 +1,33 @@
 .reviews {
     position: relative;
-    padding-top: 81px;
-    background-color: $gray;
-    z-index: 1;
-    overflow: hidden;
-}
-.reviews__list {
-    @include reset-list;
-    padding-bottom: 6px;
-}
-.reviews__item {
-    margin-bottom: 33px;
-}
-.reviews::before {
-    position: absolute;
-    content: "";
-    width: 115%;
-    height: 11%;
-    top: -56px;
-    left: -12px;
-    background-color: $white;
-    transform: rotate(-10deg);
-    z-index: -1;
-}
-@media (min-width: $tablet) {
-    .reviews {
-        padding-top: 75px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    &__slider {
+        padding-bottom: 30px;
     }
-    .reviews__list {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        padding-right: 28px;
-        padding-bottom: 19px;
+    &__list {
+        @include reset-list;
     }
-    .reviews__item {
-        width: 300px;
-        padding-bottom: 0;
+    &__title {
+        margin: 0;
+        margin-bottom: 25px;
+        font-size: $Mfont;
+        color: $black;
+        font-weight: bold;
     }
-    .reviews__item:not(:last-child) {
-        padding-bottom: 35px;
-    }
-    .reviews__item span,
-    .reviews__item p {
-        text-align: left;
-    }
-}
-@media (min-width: $desktop) {
-    .reviews {
-        display: flex;
-        justify-content: center;
-        min-height: 500px;
-        padding-top: 29px;
-    }
-    .reviews__list {
-        flex-direction: row;
-        justify-content: center;
-        align-items: flex-start;
-        padding-right: 0;
-        padding-left: 40px;
-    }
-    .reviews__item span,
-    .reviews__item p {
+    &__text {
+        margin: 0;
+        font-size: $Sfont;
         text-align: center;
     }
-    .reviews__item {
-        margin-right: 25px;
+    &__item {
+        text-align: center;
+        padding: 0 22px;
     }
-    .reviews__item::before {
-        content: "";
-        display: block;
-        height: 310px;
-    }
-    .reviews__item:first-child::before {
-        background: url(../../img/iphone-screen-1-desktop@1x.png) 0 0 no-repeat;
-    }
-    .reviews__item:nth-child(2)::before {
-        background: url(../../img/iphone-screen-2-desktop@1x.png) 0 0 no-repeat;
-    }
-    .reviews__item:last-child::before {
-        background: url(../../img/iphone-screen-3-desktop@1x.png) 0 0 no-repeat;
+    &__toggles {
+        margin-left: -29px;
+        position: absolute;
+        left: 50%;
+        bottom: 5px;
     }
 }

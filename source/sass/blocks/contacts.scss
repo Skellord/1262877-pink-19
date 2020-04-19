@@ -1,0 +1,43 @@
+.contacts {
+    position: absolute;
+    top: auto;
+    left: auto;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    text-align: center;
+    background-color: $white;
+
+    &__title {
+        margin: 0;
+        margin-bottom: 44px;
+        text-align: center;
+        font-weight: 300;
+        font-size: $Lfont;
+    }
+    &__text {
+        font-weight: bold;
+    }
+    &__value {
+        display: block;
+        margin: 0;
+        font-size: $Lfont;
+        font-weight: 300;
+        color: $red;
+        text-decoration: none;
+    }
+    &__label:not(:last-child) {
+        margin-bottom: 27px;
+    }
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        background: url(../../img/bg-triangle-white-footer.svg) 0 0 no-repeat;
+        background-size: contain;
+        background-color: transparent;
+        width: 320px;
+        bottom: -64px;
+        height: 65px;
+        
+    }
+}

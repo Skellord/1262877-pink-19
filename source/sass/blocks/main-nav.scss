@@ -1,12 +1,23 @@
-.main-nav {
+
+.main-nav   {
+    
+    &__menu {
     position: relative;
     background-color: $dark;
-    
 }
-.main-nav__list {
+    &__wrapper {
+    min-height: 69px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    box-shadow: 0px 1px 0 0 $black;
+    background-color: $dark;
+}
+    &__list {
     @include reset-list;
 }
-.main-nav__item {
+    &__item {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,7 +28,7 @@
                 inset 0px 1px 0 0 rgba(255, 255, 255, 0.15);
 
 }
-.main-nav__item  a{
+    &__item  a{
     display: flex;
     justify-content: center;
     width: 100%;
@@ -29,17 +40,23 @@
     &:hover:not(.active-link) {color: $red;};
     &:active:not(.active-link) {opacity: 0.3;}
 }
-.main-nav__button {
+    &__button {
     width: 24px;
     height: 23px;
+}
 }
 @media (min-width: $tablet) {
 }
 @media (min-width: $desktop) {
     .main-nav {
+        display: flex;
+        background-color: rgba($black, 0.3);
+    
+    &__menu {
         padding-top: 22px;
         background-color: transparent;
     }
+}
     .main-nav__list {
         display: flex;
         align-items: flex-start;

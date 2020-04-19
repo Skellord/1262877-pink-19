@@ -1,44 +1,47 @@
 .download {
     position: relative;
-}
-.download__button {
+
+    &__button {
     min-width: 249px;
     display: block;
 }
-.download__phone {
+    &__phone {
     padding-top: 20px;
     min-height: 374px;
     background: url(../../img/iphone-hand-mobile@1x.png) 0% 100% no-repeat;
 }
-.download__list {
-    padding-top: 28px;
-    padding-left: 18px;
-    padding-right: 18px;
-    padding-bottom: 29px;
+    &__list {
     background-color: #1d2631;
     text-align: center;
 }
-.download__description {
+    &__description {
     display: inline-block;
     margin-top: 17px;
-    font-size: 14px;
+    font-size: $Sfont;
     font-weight: 300;
     color: $white;
 }
-.download__title {
+    &__title {
     margin: 0;
     margin-left: auto;
     margin-right: auto;
 }
+    &__wrapper {
+    width: $mobile;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+}
 @media (min-width: $tablet) {
     .download {
         padding-top: 40px;
-    }
-    .download__phone {
+    
+    &__phone {
         min-height: 545px;
         background: url(../../img/iphone-hand-tablet@1x.png) 50% 0 no-repeat;
     }
-    .download__title {
+    &__title {
         margin-right: 0;
         margin-left: 0;
         padding-top: 19px;
@@ -48,22 +51,23 @@
         width: 186px;
         line-height: normal;
     }
-    .download__list {
+    &__list {
         position: absolute;
         padding-left: 11px;
         top: 240px;
         width: 320px;
         background-color: transparent;
     }
-    .download__button {
+    &__button {
         min-width: 270px;
     }
-    .download__description {
+    &__description {
         padding-top: 32px;
         padding-left: 2px;
         padding-bottom: 10px;
         font-size: 18px;
     }
+}
 }
 @media (min-width: $desktop) {
     .download__phone {

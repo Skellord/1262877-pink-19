@@ -1,0 +1,88 @@
+.purchase {
+    position: relative;
+    background-color: $gray;
+    padding-top: 125px;
+    padding-bottom: 50px;
+    z-index: 1;
+
+    &__wrapper {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+    }
+    &__table {
+        border-collapse: collapse;
+        text-transform: uppercase;
+        margin-bottom: 45px;
+        transform: translateX(-30%);
+    }
+    &__table th {
+        position: relative;
+        height: 94px;
+        min-width: 276px;
+        color: $white;
+        font-size: $Mfont;
+        text-transform: uppercase;
+        background-color: $dark;
+        border: 2px solid $gray2;
+    }
+    &__cost {
+        display: block;
+        font-weight: 300;
+        font-size: $Lfont;
+    }
+    &__table td {
+        height: 59px;
+        border: 2px solid $gray2;
+        padding-left: 22px;
+        background-color: $white;
+        font-size: $Sfont;
+    }
+    &__hit {
+        z-index: 1;
+    }
+    &__hit::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        height: 73px;
+        width: 74px;
+        background: url(../../img/bg-hit.svg) 0 0 no-repeat;
+        z-index: -1;
+        
+    }
+    &__hit::after {
+        content: "ХИТ";
+        font-size: 10px;
+        font-weight: normal;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        display: block;
+        height: 35px;
+        width: 35px;
+        background: transparent;
+        transform: rotate(-45deg);
+        z-index: -1;
+    }
+    &__toggles {
+        margin-left: -29px;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100px;
+        top: 0;
+        left: auto;
+        background: url(../../img/bg-triangle-white.svg) 0 0 no-repeat;
+        background-size: contain;;
+        z-index: -1;
+    }
+}

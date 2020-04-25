@@ -1,0 +1,57 @@
+.tariff {
+        border-collapse: collapse;
+        text-transform: uppercase;
+
+    & th {
+        position: relative;
+        height: 100px;
+        min-width: 276px;
+        color: $white;
+        font-size: $fontM;
+        text-transform: uppercase;
+        background-color: $dark;
+        border: 1px solid $gray2;
+    }
+    &__cost {
+        display: block;
+        margin-top: 5px;
+        font-weight: 300;
+        font-size: $fontL;
+    }
+    & td {
+        height: 59px;
+        border: 2px solid $gray2;
+        padding-left: 22px;
+        background-color: $white;
+        font-size: $fontS;
+    }
+    &__hit {
+        z-index: 1;
+    }
+    &__hit::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        height: 73px;
+        width: 74px;
+        background: url(../img/bg-hit.svg) 0 0 no-repeat;
+        z-index: -1;
+        
+    }
+    &__hit::after {
+        content: "ХИТ";
+        font-size: 14px;
+        font-weight: normal;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        display: block;
+        height: 35px;
+        width: 35px;
+        background: transparent;
+        transform: rotate(-45deg);
+        z-index: -1;
+    }
+}

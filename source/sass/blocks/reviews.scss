@@ -1,24 +1,25 @@
 .reviews {
     position: relative;
-    padding-top: 50px;
-    padding-bottom: 30px;
+    padding-top: $paddingM5;
+    padding-bottom: $paddingM3;
     &__slider {
-        padding-bottom: 30px;
+        padding-bottom: 55px;
     }
     &__list {
         @include reset-list;
     }
     &__title {
         margin: 0;
-        margin-bottom: 25px;
-        font-size: $Mfont;
+        margin-bottom: $paddingM2;
+        font-size: $fontM;
         color: $black;
         font-weight: bold;
     }
     &__text {
         margin: 0;
-        font-size: $Sfont;
+        font-size: $fontS;
         text-align: center;
+        line-height: $lineheightL;
     }
     &__item {
         text-align: center;
@@ -28,6 +29,6 @@
         margin-left: -29px;
         position: absolute;
         left: 50%;
-        bottom: 5px;
+        bottom: 15px;
     }
 }

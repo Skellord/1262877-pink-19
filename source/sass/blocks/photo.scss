@@ -1,0 +1,13 @@
+.photo {
+    padding-top: 55px;
+
+    &__description {
+        margin: 0;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 56px;
+        font-size: $fontS;
+        width: 250px;
+        text-align: center;
+    }
+}

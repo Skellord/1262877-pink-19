@@ -37,8 +37,12 @@
     font-weight: bold;
     color: $white;
     text-decoration: none;
-    &:hover:not(.active-link) {color: $red;};
-    &:active:not(.active-link) {opacity: 0.3;}
+    &:hover:not(.active-link) {
+        color: $red;
+    };
+    &:active:not(.active-link) {
+        opacity: 0.3;
+    }
 }
     &__button {
     width: 24px;

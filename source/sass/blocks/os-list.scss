@@ -2,18 +2,18 @@
     @include reset-list;
     display: flex;
     align-items: center;
-    padding-top: 31px;
+    padding-top: $paddingM3;
     padding-left: 37px;
-    padding-right: 43px;
+    padding-right: 37px;
     justify-content: space-between;
 
     &__item {
     vertical-align: middle;
     &:nth-child(2) {
-        padding-top: 9px;
+        padding-top: $paddingM;
     }
     &:nth-child(3) {
-        padding-top: 8px;
+        padding-top: $paddingM;
     }
 }
     &__item a {
@@ -23,17 +23,17 @@
 .os__iOS {
     width: 47px;
     height: 56px;
-    background: url(../../img/logo-apple.svg) 0 0 no-repeat;
+    background: url(../img/logo-apple.svg) 0 0 no-repeat;
 }
 .os__Android {
     width: 43px;
     height: 47px;
-    background: url(../../img/logo-android.svg) 0 0 no-repeat;
+    background: url(../img/logo-android.svg) 0 0 no-repeat;
 }
 .os__windows {
     width: 44px;
     height: 41px;
-    background: url(../../img/logo-microsoft.svg) 0 0 no-repeat;
+    background: url(../img/logo-microsoft.svg) 0 0 no-repeat;
 }
 @media (min-width: $tablet) {
     .os-list {

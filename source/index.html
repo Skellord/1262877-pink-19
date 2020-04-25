@@ -58,8 +58,8 @@
       <section class="features">
         <h2 class="visually-hidden">Достоинства приложения</h2>
         <p class="features__head">
-          <span>Устали&nbsp;от&nbsp;серости мегаполиса?</span>
-          <span>Нам есть,&nbsp;что&nbsp;вам предложить!</span>
+          <span class="features__head-text">Устали&nbsp;от&nbsp;серости мегаполиса?</span>
+          <span class="features__head-text">Нам есть,&nbsp;что&nbsp;вам предложить!</span>
         </p>
       </div>
       <div class="features__main">
@@ -110,28 +110,54 @@
       </section>
       <section class="purchase">
         <div class="purchase__wrapper slider">
-          <table class="purchase__table">
-            <tr>
-              <th>База <span class="purchase__cost">1,99 USD</span></th>
-              <th class="purchase__hit">Стандарт <span class="purchase__cost">3,99 USD</span></th>
-              <th>Анлим <span class="purchase__cost">9,99 USD</span></th>
-            </tr>
-            <tr>
-              <td>Розовый фильтр <span class="visually-hidden">Включено в тариф</span></td>
-              <td>Розовый фильтр <span class="visually-hidden">Включено в тариф</span></td>
-              <td>Розовый фильтр <span class="visually-hidden">Включено в тариф</span></td>
-            </tr>
-            <tr>
-              <td>Смайлики <span class="visually-hidden">Не включено в тариф</span></td>
-              <td>Смайлики <span class="visually-hidden">Включено в тариф</span></td>
-              <td>Смайлики <span class="visually-hidden">Включено в тариф</span></td>
-            </tr>
-            <tr>
-              <td>Комментарии <span class="visually-hidden">Не включено в тариф</span></td>
-              <td>Комментарии <span class="visually-hidden">Не включено в тариф</span></td>
-              <td>Комментарии <span class="visually-hidden">Включено в тариф</span></td>
-            </tr>
-          </table>
+            <div class="purchase__item">
+              <table class="tariff">
+                <tr>
+                  <th>База <span class="tariff__cost">1,99 USD</span></th>
+                </tr>
+                <tr>
+                  <td>Розовый фильтр <span class="visually-hidden">Включено в тариф</span></td>
+                </tr>
+                <tr>
+                  <td>Смайлики <span class="visually-hidden">Не включено в тариф</span></td>
+                </tr>
+                <tr>
+                  <td>Комментарии <span class="visually-hidden">Не включено в тариф</span></td>
+                </tr>
+              </table>
+            </div>
+            <div class="purchase__item">
+              <table class="tariff">
+                <tr>
+                  <th class="tariff__hit">Стандарт <span class="tariff__cost">3,99 USD</span></th>
+                </tr>
+                <tr>
+                  <td>Розовый фильтр <span class="visually-hidden">Включено в тариф</span></td>
+                </tr>
+                <tr>
+                  <td>Смайлики <span class="visually-hidden">Включено в тариф</span></td>
+                </tr>
+                <tr>
+                  <td>Комментарии <span class="visually-hidden">Не включено в тариф</span></td>
+                </tr>
+              </table>
+            </div>
+            <div class="purchase__item">
+              <table class="tariff">
+                <tr>
+                  <th>Анлим <span class="tariff__cost">9,99 USD</span></th>
+                </tr>
+                <tr>
+                  <td>Розовый фильтр <span class="visually-hidden">Включено в тариф</span></td>
+                </tr>
+                <tr>
+                  <td>Смайлики <span class="visually-hidden">Включено в тариф</span></td>
+                </tr>
+                <tr>
+                  <td>Комментарии <span class="visually-hidden">Включено в тариф</span></td>
+                </tr>
+              </table>
+            </div>
           <div class="purchase__toggles slider__toggles">
             <a class="slider__toggle"><span class="visually-hidden">1</span></a>
             <a class="slider__toggle slider__toggle-active"><span class="visually-hidden">2</span></a>
@@ -140,26 +166,26 @@
         </div>
       </section>
     </main>
-    <footer class="footer wrapper">
+    <footer class="footer">
       <section class="contacts">
-        <h2 class="contacts__title">Остались вопросы? Свяжитесь с нами!</h2>
-        <div class="contacts__label">
-          <span class="contacts__text">Звоните:</span>
-          <a href="tel:+78125556666" class="contacts__value">+7 (812) 555-66-66</a>
-        </div>
-        <div class="contacts__label">
-          <span class="contacts__text">Пишите:</span>
-          <a href="mailto:mail@htmlacademy.ru" class="contacts__value">mail@htmlacademy.ru</a>
-        </div>
-        <div class="contacts__label">
-          <span class="contacts__text">Приезжайте в гости:</span>
-          <p class="contacts__value">ул. Большая <br> Конюшенная, 19/8</p>
+        <div class="wrapper">
+          <h2 class="contacts__title">Остались вопросы? Свяжитесь с нами!</h2>
+          <div class="contacts__label contact">
+            <span class="contact__text">Звоните:</span>
+            <a href="tel:+78125556666" class="contact__value">+7 (812) 555-66-66</a>
+          </div>
+          <div class="contacts__label contact">
+            <span class="contact__text">Пишите:</span>
+            <a href="mailto:mail@htmlacademy.ru" class="contact__value">mail@htmlacademy.ru</a>
+          </div>
+          <div class="contacts__label contact">
+            <span class="contact__text">Приезжайте в гости:</span>
+            <p class="contact__value">ул. Большая <br> Конюшенная, 19/8</p>
+          </div>
         </div>
       </section>
       <div class="footer__map-container">
-        <picture class="footer__map">
-          <img src="img/map.jpg" width="320" height="645" alt="ул. Большая Конюшенная, 19/8">
-        </picture>
+        <iframe class="footer__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533168!2d30.32085871600612!3d59.93871648187625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1587399436592!5m2!1sru!2sru"></iframe>
       </div>
     </footer>
   </body>

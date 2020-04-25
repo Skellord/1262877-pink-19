@@ -1,0 +1,15 @@
+.contact {
+    
+    &__text {
+        font-weight: bold;
+        margin-bottom: $paddingM;
+    }
+    &__value {
+        display: block;
+        margin: 0;
+        font-size: $fontL;
+        font-weight: 300;
+        color: $red;
+        text-decoration: none;
+    }
+}

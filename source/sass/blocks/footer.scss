@@ -1,3 +1,10 @@
 .footer {
     position: relative;
+    
+    &__map {
+        width: 100%;
+        min-width: $mobile;
+        height: 290px;
+        margin-top: 380px;
+    }
 }

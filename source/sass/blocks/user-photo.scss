@@ -1,0 +1,65 @@
+.user-photo {
+    background-color: $gray;
+
+    &__form {
+        text-align: center;
+    }
+    &__photo {
+        margin-bottom: $paddingM4;
+    }
+    &__filter {
+        padding-bottom: $paddingM;
+        margin-bottom: $paddingM2;
+    }
+    &__filter-buttons {
+        display: flex;
+        justify-content: space-around;
+        padding-left: $paddingM5;
+        padding-right: $paddingM5;
+    }
+    &__button {
+        background-color: transparent;
+        border: 0;
+        padding: 0;
+        opacity: 0.3;
+    }
+    &__button svg {
+        fill: $dark;
+    }
+    &__button-active {
+        opacity: 1;
+    }
+    &__button-active svg {
+        fill: $red;
+    }
+    &__range {
+        -webkit-appearance: none;
+        width: 240px;
+        height: 2px;
+        background: $black;
+    }
+    &__range::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 13px;
+        height: 13px;
+        background-color: $gray;
+        border-radius: 50%;
+        border: 2px solid $red;
+    }
+    &__buttons {
+        padding-top: $paddingM4;
+        padding-bottom: $paddingM4;
+        text-align: center;
+    }
+    &__form-button:not(:last-child) {
+        margin-bottom: $paddingM;
+    }
+}
+.user-photo .wrapper:first-child::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: $dark;
+    opacity: 0.1;
+}

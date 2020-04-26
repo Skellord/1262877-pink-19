@@ -1,0 +1,44 @@
+.form {
+    & fieldset {
+        border: none;
+    }
+    &__wrapper {
+        background-color: $gray;
+    }
+    &__input--text {
+        width: 276px;
+        height: 59px;
+        padding: 20px;
+        border: 2px solid $gray2;
+        &:hover {
+            border: 2px solid $dark;
+        }
+        &:focus {
+            border: 2px solid $red;
+        }
+        &::placeholder {
+            color: $dark;
+        }
+    }
+    &__label--text {
+        display: block;
+        margin-left: $paddingM2;
+        margin-bottom: $paddingM;
+        font-size: $fontS;
+        color: $red;
+        text-transform: uppercase;
+    }
+    &__item {
+        margin-bottom: $paddingM3;
+    }
+    &__legend {
+        padding-top: $paddingM4;
+        color: $red;
+        font-size: $fontS;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    &__list {
+        @include reset-list;
+    }
+}

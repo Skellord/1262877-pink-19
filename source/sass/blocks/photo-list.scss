@@ -4,9 +4,30 @@
 
     &__item {
         display: inline-block;
+        position: relative;
     }
     &__item:not(:last-child) {
         margin-bottom: 20px;
+    }
+    &__item--panorama .photo-list__comments-section {
+        margin-right: auto;
+        margin-left: auto;
+    }
+    &__item--panorama::before{
+        content: "Панорама дня";
+        position: absolute;
+        top: 0;
+        left: 160px;
+        display: block;
+        width: 140px;
+        height: 36px;
+        background-color: $red;
+        color: $white;
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding-top: 5px;
+        box-sizing: border-box;
     }
     &__comments-section {
         width: 280px;
@@ -15,7 +36,9 @@
         padding-left: 17px;
         background-color: $gray;
         text-align: left;
-        
+    }
+    &__link {
+        display: flex;
     }
     &__author {
         font-weight: bold;

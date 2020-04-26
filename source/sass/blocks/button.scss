@@ -14,4 +14,33 @@
     &:active {
         color: rgba($red, 0.3);
     }
+    &--red {
+        border:  3px solid $red;
+        background-color: transparent;
+        color: $red;
+        min-width: 280px;
+        &:hover {
+            background-color: $red;
+            color: $white;
+        }
+        &:active {
+            color: rgba($white, 0.3);
+        }
+    }
+    
+    &--gray {
+        min-width: 280px;
+        border: 3px solid $dark;
+        color: $dark;
+        opacity: 0.1;
+        &:hover {
+            opacity: 0.3;
+            color: $dark;
+        }
+        &:active {
+            background-color: $dark;
+            color: $white;
+            opacity: 0.3;
+        }
+    }
 }

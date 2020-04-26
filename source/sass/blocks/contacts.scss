@@ -15,7 +15,7 @@
         font-weight: 300;
         font-size: $fontL;
     }
-    &__label {
+    &__label:not(:last-child) {
         margin-bottom: $paddingM3;
     }
     &::after {

@@ -1,13 +1,13 @@
 .photo {
-    padding-top: 55px;
 
-    &__description {
-        margin: 0;
+    &__slogan {
+        margin-bottom: $paddingM5;
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: 56px;
-        font-size: $fontS;
-        width: 250px;
+        margin-top: $paddingM5;
+        width: 260px;
         text-align: center;
+        font-size: $fontS;
+        line-height: $lineheightL;
     }
 }

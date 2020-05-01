@@ -13,9 +13,16 @@
       <div class="main-nav">
         <div class="main-nav__wrapper">
           <a class="main-nav__logo logo">
-            <img class="logo__image" src="img/logotype-white-mobile-svg.svg" width="74" height="23" alt="Лого Пинка">
+            <svg class="logo__mobile" width="74" height="23">
+              <use xlink:href="img/sprite.svg#logo-mobile"></use>
+            </svg>
           </a>
-          <button class="main-nav__button" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <button class="main-nav__button" type="button">
+            <span class="visually-hidden">Закрыть меню</span>
+            <svg class="main-nav__cross" width="24" height="23">
+              <use xlink:href="img/sprite.svg#close-button"></use>
+            </svg>
+          </button>
         </div>
         <nav class="main-nav__menu">
           <ul class="main-nav__list ">

@@ -47,6 +47,18 @@
         display: block;
         width: 24px;
         height: 23px;
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        color: $white;
+        &:hover
+        &:focus {
+            color: $red;
+        }
+        &:active {
+            color: $red;
+            opacity: 0.3;
+        }
     }
 }
 @media (min-width: $tablet) {

@@ -1,0 +1,19 @@
+.logo {
+    color: $white;
+    &:hover {
+        color: $red;
+    }
+    &:active {
+        color: $white;
+        opacity: 0.3;
+    }
+    &--black {
+        color: $dark;
+        &:hover  {
+            color: $red;
+        }
+        &:active {
+            opacity: 0.3;
+        }
+    }
+}

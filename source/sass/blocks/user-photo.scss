@@ -22,15 +22,17 @@
         border: 0;
         padding: 0;
         opacity: 0.3;
-    }
-    &__button svg {
-        fill: $dark;
+        color: $dark;
+        &:hover:not(.user-photo__button-active) {
+            opacity: 0.5;
+        }
     }
     &__button-active {
         opacity: 1;
+        color: $red;
     }
-    &__button-active svg {
-        fill: $red;
+    &__label:not(.user-photo__label-active) {
+        display: none;
     }
     &__range {
         -webkit-appearance: none;
@@ -45,6 +47,9 @@
         background-color: $gray;
         border-radius: 50%;
         border: 2px solid $red;
+        &:active {
+            background-color: $red;
+        }
     }
     &__buttons {
         padding-top: $paddingM4;
@@ -54,12 +59,12 @@
     &__form-button:not(:last-child) {
         margin-bottom: $paddingM;
     }
-}
-.user-photo .wrapper:first-child::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 1px;
-    background-color: $dark;
-    opacity: 0.1;
+    &__wrapper:first-child::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: $dark;
+        opacity: 0.1;
+    }
 }

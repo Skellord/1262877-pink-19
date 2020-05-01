@@ -59,16 +59,14 @@
         align-items: center;
     }
     &__button {
-        display: flex;
+        display: block;
         background-color: transparent;
+        background: url(../img/icon-heart.svg) 0 0 no-repeat;
         padding: 0;
         border: none;
         width: 13px;
         height: 12px;
         margin-right: 20px;
-    }
-    &__button svg {
-        fill: $red;
     }
     &__likes-number {
         text-transform: uppercase;

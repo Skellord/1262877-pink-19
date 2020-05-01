@@ -7,4 +7,55 @@
         height: 290px;
         margin-top: 380px;
     }
+    &__logo {
+        margin-bottom: $paddingM4;
+    }
+    &__socials {
+        @include reset-list;
+        display: flex;
+        margin-bottom: $paddingM4;
+    }
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 46px;
+        height: 46px;
+        border: 3px solid rgba($dark, 0.1);
+        border-radius: 50%;
+        &:hover {
+            border: 3px solid $dark;
+        }
+        &:active {
+            opacity: 0.1;
+        }
+    }
+    &__link:not(:last-child) {
+        margin-right: 17px;
+    }
+    &__twitter {
+        display: block;
+        width: 19px;
+        height: 15px;
+        background: url(../img/icon-twitter.svg) 0 0 no-repeat;
+    }
+    &__facebook {
+        display: block;
+        width: 9px;
+        height: 19px;
+        background: url(../img/icon-facebook.svg) 0 0 no-repeat;
+    }
+    &__youtube {
+        display: block;
+        width: 15px;
+        height: 14px;
+        background: url(../img/icon-youtube.svg) 0 0 no-repeat;
+    }
+    &--photo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: $paddingM4;
+        padding-bottom: $paddingM4;
+    }
 }

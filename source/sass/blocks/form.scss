@@ -41,4 +41,11 @@
     &__list {
         @include reset-list;
     }
+    &__list-item:not(:last-child) {
+        margin-bottom: 57px;
+    }
+    &__input--checkbox {
+        position: absolute;
+        appearance: none;
+    }
 }

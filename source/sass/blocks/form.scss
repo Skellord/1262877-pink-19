@@ -1,6 +1,7 @@
 .form {
     & fieldset {
         border: none;
+        padding: 0;
     }
     &__wrapper {
         background-color: $gray;
@@ -40,12 +41,31 @@
     }
     &__list {
         @include reset-list;
+        padding-top: $paddingM4;
+        padding-bottom: $paddingM4;
+    }
+    &__list-item {
+        position: relative;
+        min-height: 39px;
+        padding-left: 90px;
+        padding-top: 8px;
     }
     &__list-item:not(:last-child) {
-        margin-bottom: 57px;
+        margin-bottom: 47px;
     }
     &__input--checkbox {
         position: absolute;
         appearance: none;
+    }
+    &__label--checkbox::before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 20px;
+        top: 0;
+        width: 35px;
+        height: 35px;
+        background-color: $white;
+        border: 2px solid $gray2;
     }
 }

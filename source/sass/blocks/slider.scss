@@ -4,7 +4,6 @@
 
     &__wrapper {
         display: flex;
-        transition: transform 0.6s ease;
     }
     &__item {
         flex: 0 0 100%;
@@ -22,7 +21,8 @@
         background-color: $dark;
         opacity: 0.3;
         border-radius: 50%;
-        &:hover:not(.slider__toggle-active) {
+        &:hover:not(.slider__toggle-active),
+        &:focus:not(.slider__toggle-active) {
             opacity: 0.6;
         }
         &:active:not(.slider__toggle-active) {

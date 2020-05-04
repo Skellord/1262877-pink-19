@@ -51,6 +51,26 @@
             background-color: $red;
         }
     }
+    &__range::-moz-range-thumb {
+        width: 13px;
+        height: 13px;
+        background-color: $gray;
+        border-radius: 50%;
+        border: 2px solid $red;
+        &:active {
+            background-color: $red;
+        }
+    }
+    &__range::-ms-thumb {
+        width: 13px;
+        height: 13px;
+        background-color: $gray;
+        border-radius: 50%;
+        border: 2px solid $red;
+        &:active {
+            background-color: $red;
+        }
+    }
     &__buttons {
         padding-top: $paddingM4;
         padding-bottom: $paddingM4;

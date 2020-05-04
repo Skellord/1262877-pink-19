@@ -117,7 +117,7 @@
       </section>
       <section class="purchase">
         <div class="purchase__wrapper slider">
-            <div class="purchase__item">
+            <div class="purchase__item slider__item--1">
               <table class="tariff">
                 <tr>
                   <th>База <span class="tariff__cost">1,99 USD</span></th>
@@ -131,14 +131,22 @@
                   </td>
                 </tr>
                 <tr>
-                  <td>Смайлики <span class="visually-hidden">Не включено в тариф</span></td>
+                  <td>Смайлики
+                    <svg class="tariff__minus" width="27" height="26">
+                      <use xlink:href="img/sprite.svg#icon-no"></use>
+                    </svg>
+                    <span class="visually-hidden">Не включено в тариф</span></td>
                 </tr>
                 <tr>
-                  <td>Комментарии <span class="visually-hidden">Не включено в тариф</span></td>
+                  <td>Комментарии
+                    <svg class="tariff__minus" width="27" height="26">
+                      <use xlink:href="img/sprite.svg#icon-no"></use>
+                    </svg>
+                    <span class="visually-hidden">Не включено в тариф</span></td>
                 </tr>
               </table>
             </div>
-            <div class="purchase__item">
+            <div class="purchase__item slider__item--2">
               <table class="tariff">
                 <tr>
                   <th class="tariff__hit">Стандарт <span class="tariff__cost">3,99 USD</span></th>
@@ -168,7 +176,7 @@
                 </tr>
               </table>
             </div>
-            <div class="purchase__item">
+            <div class="purchase__item slider__item--3">
               <table class="tariff">
                 <tr>
                   <th>Анлим <span class="tariff__cost">9,99 USD</span></th>
@@ -217,7 +225,7 @@
           </div>
           <div class="contacts__label contact">
             <span class="contact__text">Пишите:</span>
-            <a href="mailto:mail@htmlacademy.ru" class="contact__value">mail@htmlacademy.ru</a>
+            <a class="contact__mail" href="mailto:mail@htmlacademy.ru" class="contact__value">mail@htmlacademy.ru</a>
           </div>
           <div class="contacts__label contact">
             <span class="contact__text">Приезжайте в гости:</span>

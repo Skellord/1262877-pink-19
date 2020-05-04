@@ -2,7 +2,12 @@
     display: flex;
     flex-direction: column;
     background: url(../img/bg-back-mobile@1x.jpg) 50% 50% no-repeat;
+    background-size: cover;
     background-color: $dark;
+    @media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
+        background: url(../img/bg-back-mobile@2x.jpg) 50% 50% no-repeat;
+        background-size: cover;
+    }
 
     &__title {
     text-align: center;
@@ -17,7 +22,7 @@
         min-height: 171px;
         display: flex;
         justify-content: center;
-        align-items: center;
+        padding-top: 35px;
     }
 
 }

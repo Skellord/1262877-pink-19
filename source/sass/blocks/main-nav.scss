@@ -36,7 +36,8 @@
         font-weight: bold;
         color: $white;
         text-decoration: none;
-        &:hover:not(.active-link) {
+        &:hover:not(.active-link),
+        &:focus:not(.active-link) {
             color: $red;
     }
         &:active:not(.active-link) {
@@ -51,7 +52,7 @@
         background-color: transparent;
         border: none;
         color: $white;
-        &:hover
+        &:hover,
         &:focus {
             color: $red;
         }

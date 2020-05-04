@@ -7,7 +7,8 @@
     text-decoration: none;
     border: solid 3px $white;
     border-radius: 40px;
-    &:hover {
+    &:hover,
+    &:focus {
         background-color: $white;
         color: $red;
     }
@@ -19,7 +20,8 @@
         background-color: transparent;
         color: $red;
         min-width: 280px;
-        &:hover {
+        &:hover,
+        &:focus {
             background-color: $red;
             color: $white;
         }
@@ -33,7 +35,8 @@
         border: 3px solid $dark;
         color: $dark;
         opacity: 0.1;
-        &:hover {
+        &:hover,
+        &:focus {
             opacity: 0.3;
             color: $dark;
         }
@@ -41,6 +44,25 @@
             background-color: $dark;
             color: $white;
             opacity: 0.3;
+        }
+    }
+    &--green {
+        color: $white;
+        background-color: $green2;
+        border-radius: 0;
+        border: none;
+        &:hover,
+        &:focus {
+            background-color: $green3;
+            color: $white;
+            outline: none;
+        }
+        &:active {
+            color: rgba($white, 0.3);
+            outline: none;
+        }
+        &:disabled {
+            background-color: $gray2;
         }
     }
 }

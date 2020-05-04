@@ -13,12 +13,10 @@
         margin-right: auto;
         margin-left: auto;
     }
-    &__item--panorama::before{
-        content: "Панорама дня";
+    &__announcment {
         position: absolute;
         top: 0;
         left: 160px;
-        display: block;
         width: 140px;
         height: 36px;
         background-color: $red;
@@ -27,7 +25,6 @@
         font-weight: bold;
         text-transform: uppercase;
         padding-top: 5px;
-        box-sizing: border-box;
     }
     &__comments-section {
         width: 280px;
@@ -67,10 +64,12 @@
         width: 13px;
         height: 12px;
         margin-right: 20px;
+        cursor: pointer;
     }
     &__likes-number {
         text-transform: uppercase;
         font-size: $fontXS;
         color: $red;
+        line-height: 1;
     }
 }

@@ -1,6 +1,10 @@
 .features {
     position: relative;
-
+    &__wrapper {
+        width: $mobile;
+        margin-left: auto;
+        margin-right: auto;
+    }
     &__head {
     display: flex;
     flex-direction: column;
@@ -59,57 +63,39 @@
     &__phone {
     min-height: 277px;
     background: url(../img/iphone-screen-mobile@1x.png) 50% 0% no-repeat;
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background: url(../img/iphone-screen-mobile@2x.png) 50% 0% no-repeat;
+        background-size: 157px auto;
+    }
     background-color: $gray;
 }
 }
-@media (min-width: $desktop) {
-    .features__title {
-        font-size: 30px;
-        line-height: 30px;
-        padding-top: 48px;
-    }
-    .features__text {
-        padding-top: 25px;
-        font-size: 18px;
-        font-weight: normal;
-        line-height: 30px;
-    }
-}
 @media (min-width: $tablet) {
-    .features__head {
-        padding-top: 50px;
-        font-size: 40px;
-        line-height: 48px;
-        padding-bottom: 47px;
-    }
-    .features__head span:first-child {
-        width: 598px;
-    }
-    .features__head span:last-child {
-        width: 385px;
-    }
-    .features__phone {
-        position: absolute;
-        left: 20px;
-        bottom: 0px;
-        min-height: 481px;
-        min-width: 268px;
-        background: url(../img/iphone-screen-3-tablet@1x.png) 50% 0% no-repeat;
-    }
-}
-@media (min-width: $desktop) {
-    .features__head {
-        font-size: 50px;
-        padding-top: 67px;
-        line-height: 60px;
-    }
-    .features__head span:first-child {
-        width: 740px;
-    }
-    .features__head span:last-child {
-        width: 435px;
-    }
-    .features__phone {
-        display: none;
+    .features {
+        &__head  {
+            font-size: $fontXL;
+            font-weight: 300;
+            justify-content: space-around;
+            line-height: normal;
+        }
+        &__head-text {
+            width: 590px;
+            &:last-child {
+                width: 340px;
+            }
+        }
+        &__main {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+        &__wrapper {
+            width: 331px;
+        }
+        &__phone {
+            width: 268px;
+            height: 481px;
+            background: url(../img/iphone-screen-3-tablet@1x.png) 50% 0% no-repeat;
+        }
     }
 }

@@ -4,6 +4,7 @@
         display: block;
         font-weight: bold;
         margin-bottom: $paddingM;
+        line-height: 1;
     }
     &__value {
         display: block;
@@ -12,6 +13,7 @@
         font-weight: 300;
         color: $red;
         text-decoration: none;
+        line-height: 1;
     }
     &__mail {
         display: block;
@@ -20,6 +22,7 @@
         font-weight: 300;
         color: $red;
         text-decoration: none;
+        line-height: 1;
         &:hover,
         &:focus {
             color: $dark;

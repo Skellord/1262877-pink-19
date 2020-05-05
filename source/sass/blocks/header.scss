@@ -1,13 +1,6 @@
 .header {
     display: flex;
     flex-direction: column;
-    background: url(../img/bg-back-mobile@1x.jpg) 50% 50% no-repeat;
-    background-size: cover;
-    background-color: $dark;
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-        background: url(../img/bg-back-mobile@2x.jpg) 50% 50% no-repeat;
-        background-size: cover;
-    }
 
     &__title {
     text-align: center;
@@ -23,20 +16,32 @@
         display: flex;
         justify-content: center;
         padding-top: 35px;
+        background: url(../img/bg-back-mobile@1x.jpg) 50% 25% no-repeat;
+        background-size: cover;
+        background-color: $dark;
+        @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+            background: url(../img/bg-back-mobile@2x.jpg) 50% 25% no-repeat;
+            background-size: cover;
+        }
+    
     }
 
 }
 @media (min-width: $tablet) {
     .header {
-        background: url(../img/bg-back-tablet@1x.jpg) 0 0 no-repeat;
-        background-size: cover;
-        background-color: $dark;
+
 
     &__wrapper {
         height: 100%;
         padding-left: 92px;
         padding-top: 44px;
         padding-bottom: 37px;
+        background: url(../img/bg-back-tablet@1x.jpg) 50% 100% no-repeat;
+        background-size: cover;
+        background-color: $dark;
+        @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+            background: url(../img/bg-back-tablet@2x.jpg) 50% 100% no-repeat;
+        }
         
     }
 }

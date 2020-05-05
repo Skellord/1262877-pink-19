@@ -2,13 +2,16 @@
     position: relative;
 
     &__button {
-    min-width: 249px;
-    display: block;
+    min-width: 280px;
 }
     &__phone {
     padding-top: $paddingM2;
     min-height: 400px;
     background: url(../img/iphone-hand-mobile@1x.png) 0% 100% no-repeat;
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background: url(../img/iphone-hand-mobile@2x.png) 0 100% no-repeat;
+        background-size: 258px auto;
+    }
 }
     &__list {
     background-color: #1d2631;
@@ -24,6 +27,12 @@
     color: $white;
 }
     &__title {
+    text-align: center;
+    max-width: 235px;
+    font-weight: 300;
+    font-size: $fontL;
+    line-height: $lineheightL;
+    color: $white;
     margin: 0;
     margin-left: auto;
     margin-right: auto;
@@ -43,32 +52,35 @@
     &__phone {
         min-height: 545px;
         background: url(../img/iphone-hand-tablet@1x.png) 50% 0 no-repeat;
+        @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+            background: url(../img/iphone-hand-tablet@2x.png) 50% 0 no-repeat;
+            background-size: 700px auto;
+        }
+        
+    }
+    &__wrapper {
+        padding: 0;
     }
     &__title {
-        margin-right: 0;
-        margin-left: 0;
-        padding-top: 19px;
-        padding-left: 76px;
-        font-size: 40px;
-        line-height: 48px;
-        width: 186px;
+        color: $white;
+        font-size: $fontXL;
+        font-weight: 300;
+        width: 190px;
+        text-align: center;
         line-height: normal;
+        margin-left: 50px;
     }
     &__list {
         position: absolute;
-        padding-left: 11px;
-        top: 240px;
-        width: 320px;
+        bottom: -170px;
+        left: 20px;
         background-color: transparent;
     }
     &__button {
-        min-width: 270px;
+        min-width: 300px;
     }
     &__description {
-        padding-top: 32px;
-        padding-left: 2px;
-        padding-bottom: 10px;
-        font-size: 18px;
+        font-size: $fontM;
     }
 }
 }

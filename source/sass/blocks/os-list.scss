@@ -37,7 +37,7 @@
 }
 @media (min-width: $tablet) {
     .os-list {
-        padding-top: 44px;
+        padding-top: $paddingM3;
         padding-right: 58px;
         padding-left: 57px;
     }

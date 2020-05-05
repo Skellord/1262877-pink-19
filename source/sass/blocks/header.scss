@@ -4,7 +4,7 @@
     background: url(../img/bg-back-mobile@1x.jpg) 50% 50% no-repeat;
     background-size: cover;
     background-color: $dark;
-    @media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
         background: url(../img/bg-back-mobile@2x.jpg) 50% 50% no-repeat;
         background-size: cover;
     }
@@ -28,7 +28,8 @@
 }
 @media (min-width: $tablet) {
     .header {
-        background: url(../img/bg-back-tablet@1x.jpg) 0 100% no-repeat;
+        background: url(../img/bg-back-tablet@1x.jpg) 0 0 no-repeat;
+        background-size: cover;
         background-color: $dark;
 
     &__wrapper {

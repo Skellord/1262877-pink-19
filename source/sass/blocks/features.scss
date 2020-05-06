@@ -18,24 +18,24 @@
     font-weight: 300;
     text-align: center;
     line-height: 27px;
-}
+    }
     &__head-text {
     width: 202px;
-}
+    }
     &__main {
     position: relative;
     padding-top: 80px;
     background-color: $gray;
     z-index: 1;
     overflow: hidden;
-}
+    }
     &__list {
     @include reset-list;
     padding-bottom: $paddingM4;
-}
+    }
     &__item:not(:last-child) {
     margin-bottom: $paddingM3;
-}
+    }
     &__main::before {
     position: absolute;
     content: "";
@@ -46,7 +46,7 @@
     background: url(../img/bg-triangle-white.svg) 0 0 no-repeat;
     background-size: contain;
     z-index: -1;
-}
+    }
     &__title {
     display: inherit;
     font-size: $fontM;
@@ -54,12 +54,12 @@
     text-align: center;
     color: $black;
     margin-bottom: 11px;
-}
+    }
     &__text {
     font-size: $fontS;
     text-align: center;
     margin: 0;
-}
+    }
     &__phone {
     min-height: 277px;
     background: url(../img/iphone-screen-mobile@1x.png) 50% 0% no-repeat;
@@ -68,7 +68,7 @@
         background-size: 157px auto;
     }
     background-color: $gray;
-}
+    }
 }
 @media (min-width: $tablet) {
     .features {
@@ -88,6 +88,8 @@
             display: flex;
             flex-direction: row-reverse;
             justify-content: space-between;
+            padding-left: $paddingM2;
+            padding-top: 70px;
         }
         &__wrapper {
             width: 331px;
@@ -95,7 +97,17 @@
         &__phone {
             width: 268px;
             height: 481px;
+            margin-top: -60px;
             background: url(../img/iphone-screen-3-tablet@1x.png) 50% 0% no-repeat;
+        }
+        &__title {
+            text-align: left;
+        }
+        &__text {
+            text-align: left;
+        }
+        &__list {
+            margin-left: 20px;
         }
     }
 }

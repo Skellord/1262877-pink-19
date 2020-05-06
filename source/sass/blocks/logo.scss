@@ -1,6 +1,7 @@
 .logo {
     color: $white;
-    &:hover {
+    &:hover,
+    &:focus {
         color: $red;
     }
     &:active {
@@ -16,8 +17,18 @@
             opacity: 0.3;
         }
     }
+    &__tablet,
+    &__desktop {
+        display: none;
+    }
 }
-.logotablet,
-.logodesktop {
-    display: none;
+@media (min-width: $tablet) {
+    .logo {
+        &__mobile {
+            display: none;
+        }
+        &__tablet {
+            display: inline-block;
+        }
+    }
 }

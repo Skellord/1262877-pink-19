@@ -29,22 +29,17 @@
 }
 @media (min-width: $tablet) {
     .header {
-
-
-    &__wrapper {
-        height: 100%;
-        padding-left: 92px;
-        padding-top: 44px;
-        padding-bottom: 37px;
-        background: url(../img/bg-back-tablet@1x.jpg) 50% 100% no-repeat;
-        background-size: cover;
-        background-color: $dark;
-        @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-            background: url(../img/bg-back-tablet@2x.jpg) 50% 100% no-repeat;
+        &__wrapper {
+            height: 100%;
+            background: url(../img/bg-back-tablet@1x.jpg) 50% 25% no-repeat;
+            background-color: $dark;
+            @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+                background: url(../img/bg-back-tablet@2x.jpg) 50% 25% no-repeat;
+                background-size: cover;
+            }
+            
         }
-        
     }
-}
 }
 @media (min-width: $desktop) {
     .header {

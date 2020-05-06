@@ -66,6 +66,11 @@
     }
 }
 @media (min-width: $tablet) {
+    .main-nav {
+        &__wrapper {
+            min-height: 109px;
+        }
+    }
 }
 @media (min-width: $desktop) {
     .main-nav {

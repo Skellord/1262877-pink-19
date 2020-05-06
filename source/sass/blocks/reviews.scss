@@ -10,7 +10,6 @@
     }
     &__title {
         margin: 0;
-        margin-bottom: $paddingM2;
         font-size: $fontM;
         color: $black;
         font-weight: bold;
@@ -30,5 +29,36 @@
         position: absolute;
         left: 50%;
         bottom: 15px;
+    }
+    &__author-about {
+        display: none;
+    }
+    &__author {
+        margin-bottom: $paddingM2;
+    }
+}
+@media (min-width: $tablet) {
+    .reviews {
+        &__item {
+            display: flex;
+            flex-direction: column;
+        }
+        &__text {
+            font-size: $fontM;
+            margin-bottom: $paddingM4;
+        }
+        &__author-about {
+            display: inline-block;
+            font-size: $fontS;
+            margin: 0;
+        }
+        &__title {
+            font-size: $fontM2;
+            margin-bottom: $paddingM;
+        }
+        &__author {
+            order: 2;
+            margin-bottom: 0;
+        }
     }
 }

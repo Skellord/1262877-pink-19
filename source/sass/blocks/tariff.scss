@@ -70,27 +70,29 @@
             display: none;
         }
         & th {
-            min-width: 158px;
-            font-size: $fontS2;
+            min-width: 152px;
+            font-size: 16px;
+            height: 79px;
         }
         &__cost {
             font-size: $fontM;
         }
         & td {
             justify-content: center;
+            height: 45px;
         }
         &--unlim td {
             border-right: 2px solid $gray2;;
         }
         &--description {
             display: table;
-            margin-top: 99.5px;
+            margin-top: 78.5px;
             border: 2px solid $gray2;
             border-collapse: collapse;
             border-right: 1px solid $gray2;
         }
         &--description td {
-            min-width: 193px;
+            min-width: 153px;
             font-size: $fontS;
             justify-content: flex-start;
             text-transform: none;

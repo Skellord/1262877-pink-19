@@ -4,7 +4,10 @@
         display: block;
         font-weight: bold;
         margin-bottom: $paddingM;
+    }
+    &__text:not(:last-child) {
         line-height: 1;
+
     }
     &__value {
         display: block;

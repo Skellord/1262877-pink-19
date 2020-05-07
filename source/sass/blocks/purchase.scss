@@ -37,3 +37,14 @@
 .purchase  .slider__item--3{
     display: none;
 }
+@media (min-width: $tablet) {
+    .purchase .slider__item--1,
+    .purchase  .slider__item--3 {
+        display: block;
+    }
+    .purchase {
+        &__toggles {
+            display: none;
+        }
+    }
+}

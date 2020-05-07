@@ -1,7 +1,10 @@
 .tariff {
-        border-collapse: collapse;
-        text-transform: uppercase;
+    border-collapse: collapse;
+    text-transform: uppercase;
 
+    &--description {
+        display: none;
+    }
     & th {
         position: relative;
         height: 100px;
@@ -41,8 +44,6 @@
         height: 73px;
         width: 74px;
         background: url(../img/bg-hit.svg) 0 0 no-repeat;
-        z-index: -1;
-        
     }
     &__hit::after {
         content: "ХИТ";
@@ -54,12 +55,54 @@
         display: block;
         background: transparent;
         transform: rotate(-45deg);
-        z-index: -1;
     }
     &__plus {
         color: $green;
     }
     &__minus {
         color: $orange;
+    }
+}
+@media (min-width: $tablet) {
+    .tariff {
+        border-bottom: 2px solid $gray2;
+        &__details {
+            display: none;
+        }
+        & th {
+            min-width: 158px;
+            font-size: $fontS2;
+        }
+        &__cost {
+            font-size: $fontM;
+        }
+        & td {
+            justify-content: center;
+        }
+        &--unlim td {
+            border-right: 2px solid $gray2;;
+        }
+        &--description {
+            display: table;
+            margin-top: 99.5px;
+            border: 2px solid $gray2;
+            border-collapse: collapse;
+            border-right: 1px solid $gray2;
+        }
+        &--description td {
+            min-width: 193px;
+            font-size: $fontS;
+            justify-content: flex-start;
+            text-transform: none;
+        }
+        &__hit::before {
+            width: 61px;
+            height: 61px;
+            background-position-y: 90%;
+        }
+        &__hit::after {
+            top: 7px;
+            left: 6px;
+        }
     }
 }

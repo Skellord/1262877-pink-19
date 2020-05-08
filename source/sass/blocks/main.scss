@@ -14,3 +14,16 @@
         display: none;
     }
 }
+@media (min-width: $tablet) {
+    .main {
+        &__description {
+            font-size: $fontM;
+            width: 440px;
+            margin-top: $paddingT2;
+            margin-bottom: $paddingT2;
+        }
+        &__description br {
+            display: none;
+        }
+    }
+}

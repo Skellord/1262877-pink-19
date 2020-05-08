@@ -51,11 +51,37 @@
         height: 14px;
         background: url(../img/icon-youtube.svg) 0 0 no-repeat;
     }
-    &--contacts {
+    &__contacts {
         display: flex;
         flex-direction: column;
         align-items: center;
         padding-top: $paddingM4;
         padding-bottom: $paddingM4;
+    }
+    &__contacts--index {
+        display: none;
+    }
+}
+@media (min-width: $tablet) {
+    .footer {
+        &__map {
+            height: 435px;
+            margin-top: 400px;
+        }
+        &__contacts--index {
+            display: flex;
+            justify-content: space-between;
+        }
+        &__contacts {
+            flex-direction: row;
+            padding-left: $paddingM2;
+            padding-right: $paddingM2;
+        }
+        &__logo {
+            margin-bottom: 0;
+        }
+        &__socials {
+            margin-bottom: 0;
+        }
     }
 }

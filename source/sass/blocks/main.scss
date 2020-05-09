@@ -22,7 +22,7 @@
             margin-top: $paddingT2;
             margin-bottom: $paddingT2;
         }
-        &__description br {
+        &__description:not(.main__description--bottom) br {
             display: none;
         }
     }

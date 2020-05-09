@@ -120,27 +120,30 @@
             order: -1;
             margin-right: auto;
         }
-        &__item--panorama .photo-list__comments-section {
+        &__comments-section--panorama {
             width: 620px;
             display: flex;
+            flex-direction: row;
             flex-wrap: wrap;
+            height: 121px;
         }
-        &__item--panorama .photo-list__name {
+        &__name--panorama {
             order: 1;
         }
-        &__item--panorama .photo-list__comment {
+        &__comment--panorama {
             order: 3;
             margin-bottom: 0;
         }
-        &__item--panorama .photo-list__stats {
+        &__stats--panorama {
             order: 2;
+            margin-top: 8px;
             margin-left: auto;
-            margin-right: 30px;
+            align-items: flex-start;
         }
-        &__item--panorama .photo-list__button {
+        &__button--panorama {
             margin-right: 0;
         }
-        &__item--panorama .photo-list__likes-number {
+        &__likes-number--panorama {
             order: -1;
             margin-right: 20px;
         }

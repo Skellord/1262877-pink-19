@@ -6,6 +6,8 @@
     }
     &__photo {
         margin-bottom: $paddingM4;
+        width: 280px;
+        height: 374px;
     }
     &__filter {
         padding-bottom: $paddingM;
@@ -32,6 +34,9 @@
         color: $red;
     }
     &__label:not(.user-photo__label-active) {
+        display: none;
+    }
+    &__label svg {
         display: none;
     }
     &__range {
@@ -79,6 +84,9 @@
     &__form-button:not(:last-child) {
         margin-bottom: $paddingM;
     }
+    &__form-button {
+        min-width: 280px;
+    }
     &__wrapper:first-child::after {
         content: "";
         display: block;
@@ -86,5 +94,67 @@
         height: 1px;
         background-color: $dark;
         opacity: 0.1;
+    }
+}
+@media (min-width: $tablet) {
+    .user-photo {
+        position: relative;
+        &__photo {
+            width: 300px;
+            height: 400px;
+        }
+        &__form {
+            display: flex;
+            justify-content: space-between;
+            padding-left: $paddingM2;
+            padding-right: $paddingM2;
+            padding-top: $paddingT;
+        }
+        &__label:not(.user-photo__label-active) {
+            display: flex;
+        }
+        &__label {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+            padding-top: 27px;
+        }
+        &__label::after {
+            content: "";
+            position: absolute;
+            bottom: -15px;
+            display: block;
+            width: 275px;
+            height: 1px;
+            background-color: $dark;
+            opacity: 0.1;
+        }
+        &__label svg {
+            display: inline-block;
+            color: $red;
+        }
+        &__filter-buttons {
+            display: none;
+        }
+        &__range {
+            margin-left: $paddingM3;
+            width: 202px;
+        }
+        &__buttons {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            bottom: 3px;
+            right: 13px;
+            width: 260px;
+        }
+        &__form-button {
+            min-width: 260px;
+        }
+        &__form-button:not(:last-child) {
+            margin-bottom: 25px;
+        }
     }
 }

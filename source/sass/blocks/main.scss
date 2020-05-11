@@ -18,12 +18,15 @@
     .main {
         &__description {
             font-size: $fontM;
-            width: 440px;
+            width: 500px;
             margin-top: $paddingT2;
             margin-bottom: $paddingT2;
         }
         &__description:not(.main__description--bottom) br {
             display: none;
+        }
+        &__text-desktop {
+            display: inline;
         }
     }
 }

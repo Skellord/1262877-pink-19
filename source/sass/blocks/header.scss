@@ -32,6 +32,7 @@
             min-height: 330px;
             background: url(../img/bg-back-tablet@1x.jpg) 50% 25% no-repeat;
             background-color: $dark;
+            padding-top: 60px;
             @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
                 background: url(../img/bg-back-tablet@2x.jpg) 50% 25% no-repeat;
                 background-size: cover;
@@ -40,6 +41,7 @@
         &__title {
             font-size: $fontXXL;
             line-height: normal;
+            width: 500px;
         }
     }
 }

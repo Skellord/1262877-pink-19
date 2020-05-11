@@ -1,0 +1,110 @@
+.tariff {
+    border-collapse: collapse;
+    text-transform: uppercase;
+
+    &--description {
+        display: none;
+    }
+    & th {
+        position: relative;
+        height: 100px;
+        min-width: 276px;
+        color: $white;
+        font-size: $fontM;
+        text-transform: uppercase;
+        background-color: $dark;
+        border: 1px solid $gray2;
+    }
+    &__cost {
+        display: block;
+        margin-top: 5px;
+        font-weight: 300;
+        font-size: $fontL;
+    }
+    & td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 59px;
+        border: 1px solid $gray2;
+        padding-left: $paddingM2;
+        padding-right: $paddingM2;
+        background-color: $white;
+        font-size: $fontS;
+    }
+    &__hit {
+        z-index: 1;
+    }
+    &__hit::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        height: 73px;
+        width: 74px;
+        background: url(../img/bg-hit.svg) 0 0 no-repeat;
+    }
+    &__hit::after {
+        content: "ХИТ";
+        font-size: 14px;
+        font-weight: normal;
+        position: absolute;
+        top: 15px;
+        left: 10px;
+        display: block;
+        background: transparent;
+        transform: rotate(-45deg);
+    }
+    &__plus {
+        color: $green;
+    }
+    &__minus {
+        color: $orange;
+    }
+}
+@media (min-width: $tablet) {
+    .tariff {
+        border-bottom: 2px solid $gray2;
+        &__details {
+            display: none;
+        }
+        & th {
+            min-width: 152px;
+            font-size: 16px;
+            height: 79px;
+        }
+        &__cost {
+            font-size: $fontM;
+        }
+        & td {
+            justify-content: center;
+            height: 45px;
+        }
+        &--unlim td {
+            border-right: 2px solid $gray2;;
+        }
+        &--description {
+            display: table;
+            margin-top: 78.5px;
+            border: 2px solid $gray2;
+            border-collapse: collapse;
+            border-right: 1px solid $gray2;
+        }
+        &--description td {
+            min-width: 153px;
+            font-size: $fontS;
+            justify-content: flex-start;
+            text-transform: none;
+        }
+        &__hit::before {
+            width: 61px;
+            height: 61px;
+            background-position-y: 90%;
+        }
+        &__hit::after {
+            top: 7px;
+            left: 6px;
+        }
+    }
+}

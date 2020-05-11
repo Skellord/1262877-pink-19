@@ -1,0 +1,41 @@
+.slider {
+    position: relative;
+    overflow: hidden;
+
+    &__wrapper {
+        display: flex;
+    }
+    &__item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    &__toggles {
+        display: flex;
+        width: auto;
+        height: auto;
+        align-items: center;
+    }
+    &__toggle {
+        width: 6px;
+        height: 6px;
+        background-color: $dark;
+        opacity: 0.3;
+        border-radius: 50%;
+        &:hover:not(.slider__toggle-active),
+        &:focus:not(.slider__toggle-active) {
+            opacity: 0.6;
+        }
+        &:active:not(.slider__toggle-active) {
+            opacity: 0.1;
+        }
+    }
+    &__toggle:not(:last-child) {
+        margin-right: $paddingM2;
+    }
+    &__toggle-active {
+        background-color: $white;
+        box-shadow: 0 0 0 3px $dark;
+        opacity: 1;
+        border-radius: 50%;
+    }
+}

@@ -1,0 +1,108 @@
+.download {
+    position: relative;
+
+    &__button {
+        min-width: 280px;
+    }
+    &__phone {
+        padding-top: $paddingM2;
+        min-height: 400px;
+        background: url(../img/iphone-hand-mobile@1x.png) 0% 100% no-repeat;
+        @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+            background: url(../img/iphone-hand-mobile@2x.png) 0 100% no-repeat;
+            background-size: 258px auto;
+    }
+    }
+    &__list {
+        text-align: center;
+        padding-bottom: $paddingM;
+        padding-top: $paddingM;
+    }
+    &__container {
+        background-color: #1d2631;
+    }
+        &__description {
+        display: inline-block;
+        margin-top: 17px;
+        font-size: $fontS;
+        font-weight: 300;
+        color: $white;
+    }
+    &__title {
+        text-align: center;
+        max-width: 235px;
+        font-weight: 300;
+        font-size: $fontL;
+        line-height: $lineheightL;
+        color: $white;
+        margin: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__wrapper {
+        width: $mobile;
+        padding: $paddingM2;
+        padding-top: $paddingM2;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media (min-width: $tablet) {
+    .download {
+        padding-top: 40px;
+        
+        &__phone {
+            min-height: 545px;
+            padding-top: 0;
+            background: url(../img/iphone-hand-tablet@1x.png) 50% 0 no-repeat;
+            @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+                background: url(../img/iphone-hand-tablet@2x.png) 50% 0 no-repeat;
+                background-size: 700px auto;
+            }
+            
+        }
+        &__wrapper {
+            padding: 0;
+        }
+        &__title {
+            color: $white;
+            font-size: $fontXL;
+            font-weight: 300;
+            text-align: center;
+            line-height: normal;
+            margin-left: 50px;
+        }
+        &__list {
+            position: absolute;
+            bottom: 120px;
+            left: 10px;
+            background-color: transparent;
+        }
+        &__button {
+            min-width: 300px;
+        }
+        &__description {
+            font-size: $fontM;
+        }
+    }
+}
+@media (min-width: $desktop) {
+    .download__phone {
+        min-height: 662px;
+        background: url(../img/iphone-hand-desktop@1x.png) 97% 100% no-repeat;
+    }
+    .download__title {
+        padding-top: 27px;
+        padding-left: 160px;
+        font-size: 50px;
+        line-height: 60px;
+        width: auto;
+    }
+    .download__list {
+        top: 311px;
+        left: 108px;
+    }
+    .download__description {
+        padding-top: 51px;
+    }
+}

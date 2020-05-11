@@ -1,0 +1,66 @@
+.button {
+    display: inline-block;
+    padding: 13px 13px;
+    font-size: 18px;
+    color: $white;
+    font-weight: bold;
+    text-decoration: none;
+    border: solid 3px $white;
+    border-radius: 40px;
+    &:hover,
+    &:focus {
+        background-color: $white;
+        color: $red;
+    }
+    &:active {
+        color: rgba($red, 0.3);
+    }
+    &--red {
+        border:  3px solid $red;
+        background-color: transparent;
+        color: $red;
+        &:hover,
+        &:focus {
+            background-color: $red;
+            color: $white;
+        }
+        &:active {
+            color: rgba($white, 0.3);
+        }
+    }
+    
+    &--gray {
+        border: 3px solid $dark;
+        color: $dark;
+        opacity: 0.1;
+        &:hover,
+        &:focus {
+            opacity: 0.3;
+            color: $dark;
+        }
+        &:active {
+            background-color: $dark;
+            color: $white;
+            opacity: 0.3;
+        }
+    }
+    &--green {
+        color: $white;
+        background-color: $green2;
+        border-radius: 0;
+        border: none;
+        &:hover,
+        &:focus {
+            background-color: $green3;
+            color: $white;
+            outline: none;
+        }
+        &:active {
+            color: rgba($white, 0.3);
+            outline: none;
+        }
+        &:disabled {
+            background-color: $gray2;
+        }
+    }
+}

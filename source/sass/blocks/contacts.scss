@@ -1,0 +1,55 @@
+.contacts {
+    position: absolute;
+    width: 100%;
+    top: auto;
+    left: auto;
+    padding-top: 50px;
+    padding-bottom: 35px;
+    text-align: center;
+    background-color: $white;
+
+    &__title {
+        margin: 0;
+        margin-bottom: $paddingM4;
+        text-align: center;
+        font-weight: 300;
+        font-size: $fontL;
+    }
+    &__label:not(:last-child) {
+        margin-bottom: $paddingM3;
+    }
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        background: url(../img/bg-triangle-white-footer.svg) 0 0 no-repeat;
+        background-size: contain;
+        background-color: transparent;
+        width: 100%;
+        bottom: -64px;
+        height: 65px;
+        
+    }
+}
+@media (min-width: $tablet) {
+    .contacts {
+        &__title {
+            font-size: $fontXL;
+            line-height: normal;
+        }
+        &__label {
+            display: inline-block;
+        }
+        &__label:first-of-type {
+            margin-right: 100px;
+        }
+        &__label:not(:last-child) {
+            margin-bottom: $paddingT;
+        }
+        &::after {
+            bottom: -80px;
+            height: 80px;
+            background-size: 100% 80px;
+        }
+    }
+}

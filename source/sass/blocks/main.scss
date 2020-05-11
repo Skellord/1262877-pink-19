@@ -1,0 +1,32 @@
+.main {
+
+    &__description {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: $paddingM5;
+        margin-bottom: $paddingM5;
+        font-size: $fontS;
+        width: 275px;
+        text-align: center;
+        line-height: $lineheightL;
+    }
+    &__text-desktop {
+        display: none;
+    }
+}
+@media (min-width: $tablet) {
+    .main {
+        &__description {
+            font-size: $fontM;
+            width: 500px;
+            margin-top: $paddingT2;
+            margin-bottom: $paddingT2;
+        }
+        &__description:not(.main__description--bottom) br {
+            display: none;
+        }
+        &__text-desktop {
+            display: inline;
+        }
+    }
+}

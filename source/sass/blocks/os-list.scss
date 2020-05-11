@@ -1,0 +1,49 @@
+.os-list {
+    @include reset-list;
+    display: flex;
+    align-items: center;
+    padding-top: $paddingM3;
+    padding-left: 37px;
+    padding-right: 37px;
+    justify-content: space-between;
+
+    &__item {
+    vertical-align: middle;
+    &:nth-child(2) {
+        padding-top: $paddingM;
+    }
+    &:nth-child(3) {
+        padding-top: $paddingM;
+    }
+}
+    &__item a {
+    display: inline-block;
+}
+}
+.os__iOS {
+    width: 47px;
+    height: 56px;
+    background: url(../img/logo-apple.svg) 0 0 no-repeat;
+}
+.os__Android {
+    width: 43px;
+    height: 47px;
+    background: url(../img/logo-android.svg) 0 0 no-repeat;
+}
+.os__windows {
+    width: 44px;
+    height: 41px;
+    background: url(../img/logo-microsoft.svg) 0 0 no-repeat;
+}
+@media (min-width: $tablet) {
+    .os-list {
+        padding-top: $paddingM3;
+        padding-right: 58px;
+        padding-left: 57px;
+    }
+}
+@media (min-width: $desktop) {
+    .os-list {
+        padding-top: 67px;
+    }
+}

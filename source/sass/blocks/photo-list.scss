@@ -88,9 +88,10 @@
             flex-wrap: wrap;
             padding-left: $paddingM2;
             padding-right: $paddingM2;
-        }
-        &__wrapper .photo-list__item:not(:nth-of-type(2n)) {
-            margin-right: $paddingM2;
+            margin-bottom: -20px;
+            & .photo-list__item:not(:nth-of-type(2n)) {
+                margin-right: $paddingM2;
+            }
         }
         &__announcment {
             top: 50px;
@@ -120,32 +121,34 @@
             order: -1;
             margin-right: auto;
         }
-        &__comments-section--panorama {
-            width: 620px;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            min-height: 121px;
-        }
-        &__name--panorama {
-            order: 1;
-        }
-        &__comment--panorama {
-            order: 3;
-            margin-bottom: 0;
-        }
-        &__stats--panorama {
-            order: 2;
-            margin-top: 8px;
-            margin-left: auto;
-            align-items: flex-start;
-        }
-        &__button--panorama {
-            margin-right: 0;
-        }
-        &__likes-number--panorama {
-            order: -1;
-            margin-right: 20px;
+        &__item--panorama {
+            & .photo-list__comments-section {
+                width: 620px;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                min-height: 121px;
+            }
+            & .photo-list__name {
+                order: 1;
+            }
+            & .photo-list__comment {
+                order: 3;
+                margin-bottom: 0;
+            }
+            & .photo-list__stats {
+                order: 2;
+                margin-top: 8px;
+                margin-left: auto;
+                align-items: flex-start;
+            }
+            & .photo-list__button {
+                margin-right: 0;
+            }
+            & .photo-list__likes-number{
+                order: -1;
+                margin-right: 20px;
+            }
         }
     }
 }

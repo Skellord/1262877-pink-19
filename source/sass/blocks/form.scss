@@ -160,6 +160,7 @@
         width: 100%;
         text-align: center;
         font-size: $fontS;
+        text-transform: uppercase;
         & b {
             color: $red;
         }
@@ -178,51 +179,55 @@
         &__container {
             width: 100%;
             margin: 0;
-        }
-        &__container{
             margin-bottom: $paddingT;
         }
         &__wrapper {
             background-color: $white;
         }
-        &__block-container {
-            width: $tablet;
-            margin-left: auto;
-            margin-right: auto;
-            display: flex;
-            flex-direction: column;
+        &__block {
+            &-container {
+                width: $tablet;
+                margin-left: auto;
+                margin-right: auto;
+                display: flex;
+                flex-direction: column;
+            }
+            &-name {
+                order: 1;
+            }
+            &-os {
+                order: 2;
+            }
+            &-phone {
+                order: 3;
+            }
+            &-achievements {
+                order: 4;
+            }
         }
-        &__block-name {
-            order: 1;
+        &__label {
+            &--text {
+                display: inline-block;
+                margin-left: 0;
+                margin-right: 10px;
+            }
         }
-        &__block-os {
-            order: 2;
-        }
-        &__block-phone {
-            order: 3;
-        }
-        &__block-achievements {
-            order: 4;
-        }
-        &__label--text {
-            display: inline-block;
-            margin-left: 0;
-            margin-right: 10px;
-        }
-        &__input--text {
-            width: 521px;
-        }
-        &__input--name {
-            width: 561px;
+        &__input {
+            &--text {
+                width: 521px;
+            }
+            &--name {
+                width: 561px;
+            }
         }
         &__legend br {
             display: none;
         }
         &__legend {
             padding: 0;
-        }
-        &__legend--phone {
-            display: inline;
+            &--phone {
+                display: inline;
+            }
         }
         &__fieldset {
             padding-left: 0;
@@ -279,7 +284,9 @@
             width: 496px;
             height: 189px;
         }
-        &__button-container {
+        &__button {
+            margin: 0;
+            &-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -287,9 +294,7 @@
             padding-bottom: $paddingM3;
             padding-left: $paddingM2;
             padding-right: $paddingM2;
-        }
-        &__button {
-            margin: 0;
+            }
         }
         &__not {
             width: auto;

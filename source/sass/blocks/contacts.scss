@@ -33,15 +33,19 @@
 }
 @media (min-width: $tablet) {
     .contacts {
+        &__wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding-left: $paddingM5;
+            padding-right: $paddingM5;
+        }
         &__title {
             font-size: $fontXL;
             line-height: normal;
         }
         &__label {
             display: inline-block;
-        }
-        &__label:first-of-type {
-            margin-right: 100px;
         }
         &__label:not(:last-child) {
             margin-bottom: $paddingT;

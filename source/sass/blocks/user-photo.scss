@@ -25,15 +25,15 @@
         padding: 0;
         opacity: 0.3;
         color: $dark;
-        &:hover:not(.user-photo__button-active) {
+        &:hover:not(.user-photo__button--active) {
             opacity: 0.5;
         }
     }
-    &__button-active {
+    &__button--active {
         opacity: 1;
         color: $red;
     }
-    &__label:not(.user-photo__label-active) {
+    &__label:not(.user-photo__label--active) {
         display: none;
     }
     &__label svg {
@@ -110,7 +110,7 @@
             padding-right: $paddingM2;
             padding-top: $paddingT;
         }
-        &__label:not(.user-photo__label-active) {
+        &__label:not(.user-photo__label--active) {
             display: flex;
         }
         &__label {
@@ -120,20 +120,20 @@
             justify-content: space-between;
             height: 70px;
             padding-top: 27px;
-        }
-        &__label::after {
-            content: "";
-            position: absolute;
-            bottom: -15px;
-            display: block;
-            width: 275px;
-            height: 1px;
-            background-color: $dark;
-            opacity: 0.1;
-        }
-        &__label svg {
-            display: inline-block;
-            color: $red;
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -15px;
+                display: block;
+                width: 275px;
+                height: 1px;
+                background-color: $dark;
+                opacity: 0.1;
+                }
+            & svg {
+                display: inline-block;
+                color: $red;
+            }
         }
         &__filter-buttons {
             display: none;

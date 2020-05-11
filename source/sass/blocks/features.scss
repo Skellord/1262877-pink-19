@@ -64,6 +64,12 @@
     }
         background-color: $gray;
     }
+    &__wrapper {
+        position: relative;
+        width: $mobile;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 @media (min-width: $tablet) {
     .features {
@@ -79,13 +85,6 @@
                 width: 340px;
             }
         }
-        &__main .wrapper {
-            display: flex;
-            flex-direction: row-reverse;
-            justify-content: space-between;
-            padding-left: $paddingM2;
-        }
-
         &__phone {
             width: 268px;
             height: 481px;
@@ -103,8 +102,15 @@
             text-align: left;
         }
         &__list {
-            margin-left: 20px;
+            margin-right: 20px;
             width: 310px;
+        }
+        &__wrapper {
+            width: $tablet;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            padding-left: $paddingM2;
         }
     }
 }

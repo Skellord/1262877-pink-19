@@ -55,15 +55,10 @@
     &__wrapper {
         background-color: transparent;
         background: none;
-    }
+        }
     &__container {
         display: flex;
         background-color: rgba($black, 0.3);
+        }
     }
-    &__wrapper {
-        padding-left: 202px;
-        margin-right: 152px;
-        box-shadow: none;
-    }
-}
 }

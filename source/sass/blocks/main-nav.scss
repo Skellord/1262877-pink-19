@@ -73,9 +73,14 @@
     .main-nav {
         display: flex;
         background-color: rgba($black, 0.3);
-        &__menu {
-            padding-top: 22px;
+        &__wrapper {
             background-color: transparent;
+            margin-left: 10.8%;
+        }
+        &__menu {
+            padding-top: $paddingM5;
+            background-color: transparent;
+            margin-left: 14.5%;
         }
         &__list {
             display: flex;
@@ -84,9 +89,11 @@
         }
         &__item {
             width: auto;
+            height: auto;
             margin-right: 80px;
             white-space: nowrap;
             box-shadow: none;
+            line-height: 1;
         }
         &__item a {
             position: relative;

@@ -132,6 +132,7 @@
         &__wrapper {
             width: $desktop;
             display: block;
+            padding-left: 0;
         }
         &__phone {
             display: none;
@@ -185,7 +186,7 @@
             margin-bottom: $paddingM3;
         }
         &__text {
-            font-size: $fontS2;
+            font-size: $fontM;
             text-align: center;
             line-height: 30px;
         }

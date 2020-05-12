@@ -26,9 +26,9 @@
     }
     &__list {
         @include reset-list;
-        padding-bottom: $paddingM4;
+        padding-bottom: $paddingM;
     }
-    &__item:not(:last-child) {
+    &__item {
         margin-bottom: $paddingM3;
     }
     &__main::before {

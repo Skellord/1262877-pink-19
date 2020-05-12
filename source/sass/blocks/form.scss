@@ -16,7 +16,7 @@
     }
     &__input--text {
         width: 276px;
-        height: 59px;
+        height: 60px;
         padding: 20px;
         border: 2px solid $gray2;
         &:hover {
@@ -51,23 +51,22 @@
         text-align: center;
         text-transform: uppercase;
         line-height: 18px;
-    }
-    &__legend--phone {
-        display: none;
+        &--phone {
+            display: none;
+        }
     }
     &__list {
         @include reset-list;
         padding-top: $paddingM4;
         padding-bottom: $paddingM4;
+        margin-bottom: -47px;
+        &-item {
+            position: relative;
+            min-height: 39px;
+            padding-left: 70px;
+            padding-top: 7px;
+            margin-bottom: 47px;
     }
-    &__list-item {
-        position: relative;
-        min-height: 39px;
-        padding-left: 70px;
-        padding-top: 7px;
-    }
-    &__list-item:not(:last-child) {
-        margin-bottom: 47px;
     }
     &__input--checkbox {
         position: absolute;
@@ -151,9 +150,9 @@
             border: 2px solid $red;
             outline: none;
         }
-    }
-    &__textarea::placeholder{
-        color: $dark;
+        &::placeholder {
+            color: $dark; 
+        }
     }
     &__not {
         display: inline-block;
@@ -205,11 +204,22 @@
                 order: 4;
             }
         }
+        &__list {
+            padding-top: 0;
+        }
+        &__item {
+            &--phone {
+            display: flex;
+            flex-direction: column-reverse;
+            }
+        }
         &__label {
             &--text {
                 display: inline-block;
-                margin-left: 0;
-                margin-right: 10px;
+                margin: 0;
+                margin-right: $paddingM;
+                margin-top: $paddingM2;
+                width: max-content;
             }
         }
         &__input {
@@ -219,70 +229,68 @@
             &--name {
                 width: 561px;
             }
+            &-wrapper {
+                position: relative;
+                width: 496px;
+                display: flex;
+            }
+            &--phone {
+                width: 100%;
+            }
         }
-        &__legend br {
-            display: none;
+        &__icon {
+            width: 60px;
+            height: 60px;
+            background-color: $gray2;
+            pointer-events: none;
+            &--phone::before {
+                content: "";
+                position: absolute;
+                right: 18px;
+                top: 20px;
+                width: 20px;
+                height: 20px;
+                background: url(../img/icon-phone.svg) 0 0 no-repeat;
+            }
+            &--email::before {
+                content: "";
+                position: absolute;
+                right: 18px;
+                top: 20px;
+                width: 20px;
+                height: 20px;
+                background: url(../img/icon-mail.svg) 0 0 no-repeat;
+            }
         }
         &__legend {
             padding: 0;
+            padding-left: 25px;
+            padding-right: 25px;
             &--phone {
                 display: inline;
+            }
+            & br {
+                display: none;
             }
         }
         &__fieldset {
             padding-left: 0;
             margin-left: $paddingM2;
             margin-right: $paddingM2;
-        }
-        &__os-type {
-            border: 2px solid $gray2;
-            padding-left: $paddingT;
-        }
-        &__contacts {
-            border: 2px solid $gray2;
-            padding-left: $paddingT;
-        }
-        &__input--phone {
-            width: 496px;
-            margin-bottom: $paddingM2;
-        }
-        &__label--phone::after {
-            content: "";
-            position: absolute;
-            right: 52px;
-            top: -77px;
-            display: block;
-            height: 54px;
-            width: 54px;
-            background: url(../img/icon-phone.svg) 50% 50% no-repeat;
-            background-color: $gray2;
-        }
-        &__label--email::after {
-            content: "";
-            position: absolute;
-            right: 52px;
-            top: -76px;
-            display: block;
-            height: 54px;
-            width: 54px;
-            background: url(../img/icon-mail.svg) 50% 50% no-repeat;
-            background-color: $gray2;
+            &--frame {
+                border: 2px solid $gray2;
+                padding-left: $paddingT;
+                padding-top: $paddingM5;
+            }
         }
         &__contacts .form__item{
             display: flex;
             flex-direction: column-reverse;
         }
-        &__achievements {
-            border: 2px solid $gray2;
-            padding-left: $paddingT;
-        }
-        &__comment {
-            border: 2px solid $gray2;
-            padding-left: $paddingT;
-        }
         &__textarea {
             width: 496px;
             height: 189px;
+            margin-top: 0;
         }
         &__button {
             margin: 0;

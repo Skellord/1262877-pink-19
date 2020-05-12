@@ -77,7 +77,7 @@
           <div class="form__block-achievements">
             <div class="form__wrapper">
               <div class="form__container">
-                <fieldset class="form__achievements form__fieldset">
+                <fieldset class="form__fieldset form__fieldset--frame">
                   <legend class="form__legend">Ваши безбашенные<br> достижения в путешествии</legend>
                   <ul class="form__list">
                     <li class="form__list-item">
@@ -129,22 +129,29 @@
           </div>
           <div class="form__block-phone">
             <div class="form__container">
-              <fieldset class="form__contacts form__fieldset">
+              <fieldset class="form__fieldset form__fieldset--frame">
                 <legend class="form__legend form__legend--phone">Контактная информация</legend>
-                <div class="form__item">
-                  <label class="form__label form__label--text form__label--phone" for="phone">Номер телефона</label>
-                  <input class="form__input form__input--text form__input--phone" id="phone" name="phone" value="" type="number" placeholder="Номер, пожалуйста">
+                <div class="form__item form__item--phone">
+                  <label class="form__label form__label--text" for="phone">Номер телефона</label>
+                  <div class="form__input-wrapper">
+                    <input class="form__input form__input--text form__input--phone" id="phone" name="phone" value="" type="number" placeholder="Номер, пожалуйста">
+                    <span class="form__icon form__icon--phone"></span>
+                  </div>
                 </div>
-                <div class="form__item">
-                  <label class="form__label form__label--text form__label--email" for="email">Адрес почты</label>
-                  <input class="form__input form__input--text form__input--phone" id="email" name="email" value="" type="email" placeholder="Введите почту *" required>
+                <div class="form__item form__item--phone">
+                  <label class="form__label form__label--text" for="email">Адрес почты</label>
+                  <div class="form__input-wrapper">
+                    <input class="form__input form__input--text form__input--phone" id="email" name="email" value="" type="email" placeholder="Введите почту *" required>
+                    <span class="form__icon form__icon--email"></span>
+                  </div>
+                </div>
               </fieldset>
             </div>
           </div>
           <div class="form__block-os">
             <div class="form__wrapper">
               <div class="form__container">
-                <fieldset class="form__os-type form__fieldset">
+                <fieldset class="form__fieldset form__fieldset--frame">
                   <legend class="form__legend">С каким приложением<br>путешествовали?</legend>
                   <ul class="form__list">
                     <li class="form__list-item">
@@ -175,7 +182,7 @@
           </div>
         </div>
         <div class="wrapper">
-          <fieldset class="form__comment form__fieldset">
+          <fieldset class="form__fieldset form__fieldset--frame">
             <legend class="form__legend">Опишите свои эмоции</legend>
             <textarea class="form__textarea" id="user-comment" name="user-comment" rows="12" cols="25" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </fieldset>

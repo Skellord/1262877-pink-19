@@ -15,8 +15,11 @@
         font-weight: 300;
         font-size: $fontL;
     }
-    &__label:not(:last-child) {
+    &__label {
         margin-bottom: $paddingM3;
+    }
+    &__wrapper {
+        margin-bottom: -30px;
     }
     &::after {
         content: "";

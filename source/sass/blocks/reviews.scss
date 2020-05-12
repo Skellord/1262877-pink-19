@@ -13,6 +13,7 @@
         font-size: $fontM;
         color: $black;
         font-weight: bold;
+        line-height: 1;
     }
     &__text {
         margin: 0;
@@ -32,9 +33,13 @@
     }
     &__author-about {
         display: none;
+        line-height: 1;
     }
     &__author {
         margin-bottom: $paddingM2;
+    }
+    &__arrows {
+        display: none;
     }
 }
 @media (min-width: $tablet) {
@@ -59,6 +64,56 @@
         &__author {
             order: 2;
             margin-bottom: 0;
+        }
+    }
+}
+@media (min-width: $desktop) {
+    .reviews {
+        padding-top: 120px;
+        &::before {
+            content: "";
+            position: absolute;
+            display: block;
+            height: 64px;
+            width: 79px;
+            top: 0;
+            left: 50%;
+            margin-left: -40px;
+            background: url(../img/icon-quotes.svg) 0 0 no-repeat;
+        }
+        &__item {
+            align-items: center;
+        }
+        &__text {
+            width: 685px;
+        }
+        &__title {
+            margin-bottom: 5px;
+        }
+        &__author-about {
+            font-size: 16px;
+        }
+        &__toggles {
+            display: none;
+        }
+        &__arrows {
+            display: flex;
+            position: relative;
+            width: 940px;
+        }
+        &__arrow {
+            display: flex;
+            &--left {
+                position: absolute;
+                left: 0;
+                top: -95px;
+            }
+            &--right {
+                position: absolute;
+                right: 0;
+                top: -95px;
+                transform: rotate(180deg);
+            }
         }
     }
 }

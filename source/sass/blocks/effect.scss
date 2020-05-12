@@ -51,6 +51,7 @@
 @media (min-width: $desktop) {
     .effect {
         background-color: $gray;
+        margin-bottom: $paddingT2;
         &__wrapper {
             width: $desktop;
             padding-left: 130px;

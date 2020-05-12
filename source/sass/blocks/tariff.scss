@@ -35,26 +35,28 @@
     &__hit {
         z-index: 1;
     }
-    &__hit::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: block;
-        height: 73px;
-        width: 74px;
-        background: url(../img/bg-hit.svg) 0 0 no-repeat;
-    }
-    &__hit::after {
-        content: "ХИТ";
-        font-size: 14px;
-        font-weight: normal;
-        position: absolute;
-        top: 15px;
-        left: 10px;
-        display: block;
-        background: transparent;
-        transform: rotate(-45deg);
+    &__hit {
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            height: 73px;
+            width: 74px;
+            background: url(../img/bg-hit.svg) 0 0 no-repeat;
+        }
+        &::after {
+            content: "ХИТ";
+            font-size: 14px;
+            font-weight: normal;
+            position: absolute;
+            top: 15px;
+            left: 10px;
+            display: block;
+            background: transparent;
+            transform: rotate(-45deg);
+        }
     }
     &__plus {
         color: $green;
@@ -90,21 +92,55 @@
             border: 2px solid $gray2;
             border-collapse: collapse;
             border-right: 1px solid $gray2;
+            & td {
+                min-width: 153px;
+                font-size: $fontS;
+                justify-content: flex-start;
+                text-transform: none;
+            }
         }
-        &--description td {
-            min-width: 153px;
-            font-size: $fontS;
-            justify-content: flex-start;
-            text-transform: none;
+        &__hit {
+            &::before {
+                width: 55px;
+                height: 55px;
+                background-position-y: 90%;
+            }
+            &::after {
+                top: 7px;
+                left: 6px;
+            }
         }
-        &__hit::before {
-            width: 55px;
-            height: 55px;
-            background-position-y: 90%;
+    }
+}
+@media (min-width: $desktop) {
+    .tariff {
+        & th {
+            min-width: 234px;
+            height: 98px;
+            font-size: $fontM;
         }
-        &__hit::after {
-            top: 7px;
-            left: 6px;
+        &__cost {
+            font-size: $fontL;
+        }
+        & td {
+            height: 59px;
+        }
+        &--description {
+            margin-top: 97.5px;
+            & td {
+                min-width: 234px;
+                font-size: $fontM;
+            }
+        }
+        &__hit {
+            &::before {
+                width: 74px;
+                height: 73px;
+            }
+            &::after {
+                top: 14px;
+                left: 13px;
+            }
         }
     }
 }

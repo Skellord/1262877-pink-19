@@ -29,7 +29,7 @@
         top: 0;
         left: auto;
         background: url(../img/bg-triangle-white.svg) 0 0 no-repeat;
-        background-size: contain;;
+        background-size: contain;
         z-index: -1;
     }
 }
@@ -45,6 +45,13 @@
     .purchase {
         &__toggles {
             display: none;
+        }
+    }
+}
+@media (min-width: $desktop) {
+    .purchase {
+        &::before {
+            background-size: 100% 80px;
         }
     }
 }

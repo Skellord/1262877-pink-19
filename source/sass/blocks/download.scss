@@ -50,7 +50,6 @@
 @media (min-width: $tablet) {
     .download {
         padding-top: 40px;
-        
         &__phone {
             min-height: 545px;
             padding-top: 0;
@@ -59,7 +58,6 @@
                 background: url(../img/iphone-hand-tablet@2x.png) 50% 0 no-repeat;
                 background-size: 700px auto;
             }
-            
         }
         &__wrapper {
             padding: 0;

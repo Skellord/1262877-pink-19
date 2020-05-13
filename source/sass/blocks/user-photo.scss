@@ -80,12 +80,11 @@
         padding-top: $paddingM4;
         padding-bottom: $paddingM4;
         text-align: center;
-    }
-    &__form-button:not(:last-child) {
-        margin-bottom: $paddingM;
+        margin-bottom: -10px;
     }
     &__form-button {
         min-width: 280px;
+        margin-bottom: $paddingM;
     }
     &__wrapper:first-child::after {
         content: "";
@@ -149,12 +148,68 @@
             bottom: 3px;
             right: 13px;
             width: 260px;
+            margin-bottom: -25px;
         }
         &__form-button {
             min-width: 260px;
-        }
-        &__form-button:not(:last-child) {
             margin-bottom: 25px;
+        }
+    }
+}
+@media (min-width: $desktop) {
+    .user-photo {
+        background-color: $white;
+        &__form {
+            width: 940px;
+            height: 514px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: $paddingT3;
+            padding-right: $paddingT4;
+            background-color: $gray;
+        }
+        &__range {
+            width: 288px;
+        }
+        &__svg {
+            &--crop {
+                width: 44px;
+                height: 44px;
+            }
+            &--fill {
+                width: 48px;
+                height: 43px;
+            }
+            &--contrast {
+                width: 32px;
+                height: 32px;
+                margin-left: 5px;
+            }
+        }
+        &__label {
+            padding-top: 0;
+            padding-bottom: 27px;
+            &::after {
+                bottom: 15px;
+                width: 410px;
+            }
+        }
+        &__buttons {
+            flex-direction: row;
+            right: 215px;
+            bottom: 10px;
+            width: 410px;
+            margin-bottom: 0;
+            margin-right: -44px;
+        }
+        &__form-button {
+            min-width: 183px;
+            min-height: 55px;
+            margin-bottom: 0;
+            margin-right: 44px;
+        }
+        &__wrapper:first-child::after {
+            display: none;
         }
     }
 }

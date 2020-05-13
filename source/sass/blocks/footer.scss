@@ -84,3 +84,14 @@
         }
     }
 }
+@media (min-width: $desktop) {
+    .footer {
+        &__map {
+            margin-top: 330px;
+        }
+        &__contacts {
+            padding-left: 130px;
+            padding-right: 130px;
+        }
+    }
+}

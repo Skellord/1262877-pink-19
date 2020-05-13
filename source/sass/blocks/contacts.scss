@@ -48,14 +48,36 @@
         }
         &__label {
             display: inline-block;
-        }
-        &__label:not(:last-child) {
             margin-bottom: $paddingT;
         }
         &::after {
             bottom: -80px;
             height: 80px;
             background-size: 100% 80px;
+        }
+    }
+}
+@media (min-width: $desktop) {
+    .contacts {
+        &__title {
+            font-size: $fontXXL;
+        }
+        &::after {
+            background-size: 100% 120px;
+            bottom: -123px;
+            height: 120px;
+        }
+        &__label {
+            margin-bottom: 0;
+            &--adress {
+                order: 1;
+            }
+            &--phone {
+                order: 0;
+            }
+            &--mail {
+                order: 3;
+            }
         }
     }
 }

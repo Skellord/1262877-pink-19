@@ -30,3 +30,10 @@
         }
     }
 }
+@media (min-width: $desktop) {
+    .main {
+        &__description {
+            width: 580px;
+        }
+    }
+}

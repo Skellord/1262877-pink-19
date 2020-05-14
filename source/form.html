@@ -129,8 +129,9 @@
           </div>
           <div class="form__block-phone">
             <div class="form__container">
-              <fieldset class="form__fieldset form__fieldset--frame">
+              <fieldset class="form__fieldset form__fieldset--frame form__fieldset--phone">
                 <legend class="form__legend form__legend--phone">Контактная информация</legend>
+                <div class="form__phone-wrapper">
                 <div class="form__item form__item--phone">
                   <label class="form__label form__label--text form__label--phone" for="phone">Номер телефона</label>
                   <div class="form__input-wrapper">
@@ -145,13 +146,14 @@
                     <span class="form__icon form__icon--email"></span>
                   </div>
                 </div>
+                </div>
               </fieldset>
             </div>
           </div>
           <div class="form__block-os">
             <div class="form__wrapper">
               <div class="form__container">
-                <fieldset class="form__fieldset form__fieldset--frame">
+                <fieldset class="form__fieldset form__fieldset--frame form__fieldset--os">
                   <legend class="form__legend">С каким приложением<br>путешествовали?</legend>
                   <ul class="form__list">
                     <li class="form__list-item">
@@ -182,13 +184,13 @@
           </div>
         </div>
         <div class="wrapper">
-          <fieldset class="form__fieldset form__fieldset--frame">
+          <fieldset class="form__fieldset form__fieldset--frame form__fieldset--textarea">
             <legend class="form__legend">Опишите свои эмоции</legend>
             <textarea class="form__textarea" id="user-comment" name="user-comment" rows="12" cols="25" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </fieldset>
           <div class="form__button-container">
             <button class="button button--green form__button" type="submit">Отправить форму</button>
-            <span class="form__not"><b>*</b> — обязательные поля</span>
+            <span class="form__not"><b>*</b> — обязательные <span>для заполнения</span> поля</span>
           </div>
         </div>
       </form>

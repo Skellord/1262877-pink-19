@@ -60,5 +60,8 @@
             display: flex;
             background-color: rgba($black, 0.3);
         }
+        &__title {
+            width: 760px;
+        }
     }
 }

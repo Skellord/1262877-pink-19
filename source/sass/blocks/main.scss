@@ -21,9 +21,9 @@
             width: 500px;
             margin-top: $paddingT2;
             margin-bottom: $paddingT2;
-        }
-        &__description:not(.main__description--bottom) br {
-            display: none;
+            :not(.main__description--bottom) br {
+                display: none;
+            }
         }
         &__text-desktop {
             display: inline;
@@ -33,7 +33,10 @@
 @media (min-width: $desktop) {
     .main {
         &__description {
-            width: 580px;
+            width: 800px;
+            &:not(.main__description--bottom) br {
+                display: inline;
+            }
         }
     }
 }

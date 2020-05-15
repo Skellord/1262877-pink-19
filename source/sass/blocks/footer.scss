@@ -91,10 +91,15 @@
     .footer {
         &__map {
             margin-top: 330px;
+            height: 540px;
         }
         &__contacts {
+            padding-top: $paddingT2;
             padding-left: $paddingD;
             padding-right: $paddingD;
+        }
+        &__socials {
+            margin-left: 0;
         }
     }
 }

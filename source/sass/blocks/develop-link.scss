@@ -18,3 +18,10 @@
         }
     }
 }
+@media (min-width: $desktop) {
+    .develop-link {
+        &__text {
+            font-size: $fontM;
+        }
+    }
+}

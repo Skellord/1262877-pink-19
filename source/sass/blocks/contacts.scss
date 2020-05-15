@@ -60,13 +60,19 @@
 }
 @media (min-width: $desktop) {
     .contacts {
+        padding-bottom: $paddingT2;
         &__title {
             font-size: $fontXXL;
         }
         &::after {
-            background-size: 100% 120px;
-            bottom: -123px;
-            height: 120px;
+            background-size: 100% 90px;
+            bottom: -90px;
+            height: 90px;
+        }
+        &__wrapper {
+            padding-left: 120px;
+            padding-right: 100px;
+            padding-top: $paddingM2;
         }
         &__label {
             margin-bottom: 0;

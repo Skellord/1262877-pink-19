@@ -58,6 +58,7 @@
             width: $desktop;
             padding-left: 130px;
             padding-bottom: $paddingT2;
+            padding-top: $paddingM3;
         }
         &__clock {
             width: 298px;
@@ -67,22 +68,29 @@
         }
         &__number {
             font-size: 120px;
-            border: 15px solid $red;
+            border: 20px solid $red;
             height: 235px;
-            padding: 35px;
+            padding: 30px;
         }
         &__text {
             font-size: $fontM;
+            margin-top: $paddingM2;
+            margin-bottom: $paddingM3;
+            line-height: 30px;
             & br {
                 display: none;
             }
         }
         &__description {
             width: 530px;
+            padding-top: $paddingM2;
             margin-top: $paddingT2;
         }
         &__title br {
             display: none;
+        }
+        &__link {
+            font-size: $fontM;
         }
     }
 }

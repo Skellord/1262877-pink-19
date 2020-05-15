@@ -51,6 +51,8 @@
 }
 @media (min-width: $desktop) {
     .purchase {
+        padding-top: 105px;
+        padding-bottom: $paddingM4;
         &::before {
             background-size: 100% 80px;
         }

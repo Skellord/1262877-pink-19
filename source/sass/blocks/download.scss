@@ -90,8 +90,10 @@
 }
 @media (min-width: $desktop) {
     .download {
+        padding-top: $paddingM4;
         &__phone {
             min-height: 643px;
+            padding-top: 0;
             background: url(../img/iphone-hand-desktop@1x.png) 97% 100% no-repeat;
             @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
                 background: url(../img/iphone-hand-desktop@2x.png) 97% 100% no-repeat;
@@ -100,16 +102,17 @@
         }
         &__title {
             font-size: $fontXXL;
+            margin-left: 160px;
         }
         &__list {
-            left: 115px;
-            bottom: 85px;
+            left: 120px;
+            bottom: 180px;
         }
         &__description {
-            margin-top: $paddingT;
+            margin-top: $paddingM5;
         }
-        &__title {
-            margin-left: 160px;
+        &__button {
+            margin-bottom: $paddingT;
         }
     }
 }

@@ -26,20 +26,22 @@
     }
     &__list {
         @include reset-list;
-        padding-bottom: $paddingM;
+        padding-bottom: $paddingM2;
     }
     &__item {
         margin-bottom: $paddingM3;
+        padding-left: $paddingM2;
+        padding-right: $paddingM2;
     }
     &__main::before {
         position: absolute;
         content: "";
         width: 100%;
-        height: 150px;
+        height: 130px;
         top: 0;
         left: auto;
         background: url(../img/bg-triangle-white.svg) 0 0 no-repeat;
-        background-size: contain;
+        background-size: 100% auto;
         z-index: -1;
     }
     &__title {

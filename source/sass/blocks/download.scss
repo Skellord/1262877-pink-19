@@ -49,13 +49,13 @@
 }
 @media (min-width: $tablet) {
     .download {
-        padding-top: 40px;
+        padding-top: $paddingM2;
         &__phone {
-            min-height: 545px;
-            padding-top: 0;
-            background: url(../img/iphone-hand-tablet@1x.png) 50% 0 no-repeat;
+            min-height: 549px;
+            padding-top: $paddingM2;
+            background: url(../img/iphone-hand-tablet@1x.png) 50% 100% no-repeat;
             @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-                background: url(../img/iphone-hand-tablet@2x.png) 50% 0 no-repeat;
+                background: url(../img/iphone-hand-tablet@2x.png) 50% 100% no-repeat;
                 background-size: 700px auto;
             }
         }
@@ -72,15 +72,19 @@
         }
         &__list {
             position: absolute;
-            bottom: 120px;
+            bottom: 130px;
             left: 10px;
+            height: 240px;
             background-color: transparent;
+            padding-top: $paddingM2;
         }
         &__button {
             min-width: 300px;
+            margin-bottom: $paddingM4;
         }
         &__description {
             font-size: $fontM;
+            margin-top: $paddingM3;
         }
     }
 }

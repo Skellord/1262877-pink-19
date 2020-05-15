@@ -44,9 +44,12 @@
 }
 @media (min-width: $tablet) {
     .reviews {
+        padding-top: $paddingD3;
+        padding-bottom: 15px;
         &__item {
             display: flex;
             flex-direction: column;
+            padding: 0;
         }
         &__text {
             font-size: $fontM;
@@ -64,6 +67,9 @@
         &__author {
             order: 2;
             margin-bottom: 0;
+        }
+        &__toggles {
+            bottom: 10px;
         }
     }
 }

@@ -35,12 +35,13 @@
 }
 @media (min-width: $tablet) {
     .contacts {
+        padding-bottom: 0;
         &__wrapper {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
-            padding-left: $paddingM5;
-            padding-right: $paddingM5;
+            padding-left: $paddingM2;
+            padding-right: 0;
         }
         &__title {
             font-size: $fontXL;
@@ -48,7 +49,7 @@
         }
         &__label {
             display: inline-block;
-            margin-bottom: $paddingT;
+            margin-bottom: 55px;
         }
         &::after {
             bottom: -80px;

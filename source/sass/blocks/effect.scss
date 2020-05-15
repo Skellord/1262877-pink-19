@@ -2,7 +2,7 @@
     &__wrapper {
         display: flex;
         padding-top: $paddingT;
-        padding-left: $paddingM3;
+        padding-left: $paddingM2;
         width: $tablet;
         margin-left: auto;
         margin-right: auto;
@@ -19,7 +19,7 @@
         width: 238px;
         height: 276px;
         padding-top: 37px;
-        margin-right: $paddingT3;
+        margin-right: $paddingT2;
         background: url(../img/icon-timer.svg) 0 0 no-repeat;
         background-size: cover;
         }
@@ -30,7 +30,7 @@
         font-size: 96px;
         font-weight: bold;
         color: $red;
-        border: 12px solid $red;
+        border: 14px solid $red;
         border-radius: 50%;
     }
     &__title {
@@ -42,6 +42,8 @@
     }
     &__text {
         font-size: $fontS;
+        margin-top: $paddingM;
+        margin-bottom: $paddingM;
     }
     &__link {
         font-size: $fontS;

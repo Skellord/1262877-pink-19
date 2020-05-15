@@ -90,7 +90,7 @@
         &__phone {
             width: 268px;
             height: 481px;
-            margin-top: -60px;
+            margin-top: -75px;
             background: url(../img/iphone-screen-3-tablet@1x.png) 50% 0% no-repeat;
             @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
                 background: url(../img/iphone-screen-3-tablet@2x.png) 50% 0% no-repeat;
@@ -103,9 +103,15 @@
         &__text {
             text-align: left;
         }
+        &__item {
+            margin-bottom: 35px;
+            padding-left: 0;
+            padding-right: 0;
+        }
         &__list {
-            margin-right: 20px;
+            margin-right: $paddingM2;
             width: 310px;
+            padding-bottom: 0;
         }
         &__wrapper {
             width: $tablet;

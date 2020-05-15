@@ -93,7 +93,8 @@
             border-collapse: collapse;
             border-right: 1px solid $gray2;
             & td {
-                min-width: 153px;
+                width: 153px;
+                padding-left: $paddingM;
                 font-size: $fontS;
                 justify-content: flex-start;
                 text-transform: none;

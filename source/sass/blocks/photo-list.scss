@@ -7,9 +7,12 @@
         position: relative;
         margin-bottom: $paddingM2;
     }
-    &__item--panorama .photo-list__comments-section {
-        margin-right: auto;
-        margin-left: auto;
+    &__item--panorama {
+        & .photo-list__comments-section {
+            margin-right: auto;
+            margin-left: auto;
+            height: 193px;
+        }
     }
     &__panorama-photo {
         width: 320px;
@@ -34,7 +37,7 @@
     }
     &__comments-section {
         width: 280px;
-        padding-top: 25px;
+        padding-top: $paddingM2;
         padding-bottom: 25px;
         padding-left: 17px;
         background-color: $gray;
@@ -42,6 +45,10 @@
     }
     &__link picture {
         display: flex;
+    }
+    &__name {
+        line-height: 1;
+        margin-bottom: 5px;
     }
     &__author {
         font-weight: bold;
@@ -54,7 +61,7 @@
     }
     &__comment {
         margin: 0;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
         font-size: $fontS;
     }
     &__stats {

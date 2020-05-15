@@ -5,7 +5,7 @@
         text-align: center;
     }
     &__photo {
-        margin-bottom: $paddingM4;
+        margin-bottom: 35px;
         width: 280px;
         height: 374px;
     }
@@ -16,8 +16,9 @@
     &__filter-buttons {
         display: flex;
         justify-content: space-around;
-        padding-left: $paddingM5;
+        padding-left: $paddingM4;
         padding-right: $paddingM5;
+        margin-bottom: $paddingM2;
     }
     &__button {
         background-color: transparent;

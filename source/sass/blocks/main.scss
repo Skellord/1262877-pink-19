@@ -9,6 +9,9 @@
         width: 275px;
         text-align: center;
         line-height: $lineheightL;
+        &--bottom {
+            margin-bottom: $paddingT;
+        }
     }
     &__text-desktop {
         display: none;

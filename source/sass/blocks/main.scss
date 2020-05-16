@@ -1,12 +1,10 @@
 .main {
-
     &__description {
         margin-left: auto;
         margin-right: auto;
         margin-top: $paddingM5;
         margin-bottom: $paddingM5;
         font-size: $fontS;
-        width: 275px;
         text-align: center;
         line-height: $lineheightL;
         &--bottom {
@@ -21,7 +19,6 @@
     .main {
         &__description {
             font-size: $fontM;
-            width: 500px;
             margin-top: $paddingT2;
             margin-bottom: $paddingT2;
             :not(.main__description--bottom) br {
@@ -36,7 +33,6 @@
 @media (min-width: $desktop) {
     .main {
         &__description {
-            width: 800px;
             &:not(.main__description--bottom) br {
                 display: inline;
             }

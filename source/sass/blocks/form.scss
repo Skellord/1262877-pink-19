@@ -211,17 +211,17 @@
             padding-top: 0;
         }
         &__item {
-            &--phone {
             display: flex;
+            align-items: center;
+            &--phone {
             flex-direction: column-reverse;
             }
         }
         &__label {
             &--text {
-                display: inline-block;
+                flex: 1 0 auto;
                 margin: 0;
                 margin-right: $paddingM;
-                margin-top: $paddingM2;
                 width: max-content;
             }
             &--phone {
@@ -229,19 +229,14 @@
             }
         }
         &__input {
-            &--text {
-                width: 521px;
-            }
-            &--name {
-                width: 561px;
-            }
+            width: 100%;
+            flex: 1 1 auto;
             &-wrapper {
                 position: relative;
                 width: 496px;
                 display: flex;
             }
             &--phone {
-                width: 100%;
                 padding-right: 56px;
             }
         }
@@ -346,11 +341,11 @@
                 width: $desktop;
                 flex-direction: row;
                 flex-wrap: wrap;
+                justify-content: space-between;
                 padding-left: $paddingD;
                 padding-right: $paddingD;
             }
             &-name {
-                margin-right: 69px;
                 margin-bottom: -70px;
                 & .form__item {
                     margin-bottom: $paddingT2;

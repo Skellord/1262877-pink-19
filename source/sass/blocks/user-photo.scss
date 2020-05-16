@@ -1,6 +1,5 @@
 .user-photo {
     background-color: $gray;
-
     &__form {
         text-align: center;
     }
@@ -106,8 +105,6 @@
         &__form {
             display: flex;
             justify-content: space-between;
-            padding-left: $paddingM2;
-            padding-right: $paddingM2;
             padding-top: $paddingT;
         }
         &__label:not(.user-photo__label--active) {
@@ -161,10 +158,7 @@
     .user-photo {
         background-color: $white;
         &__form {
-            width: 940px;
             height: 514px;
-            margin-left: auto;
-            margin-right: auto;
             padding-left: $paddingT3;
             padding-right: $paddingT4;
             background-color: $gray;

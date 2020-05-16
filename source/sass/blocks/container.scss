@@ -1,0 +1,14 @@
+@media (min-width: $tablet) {
+    .container {
+        width: 620px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media (min-width: $desktop) {
+    .container {
+        width: 940px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

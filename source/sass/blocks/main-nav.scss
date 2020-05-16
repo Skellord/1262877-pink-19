@@ -36,11 +36,11 @@
         font-weight: bold;
         color: $white;
         text-decoration: none;
-        &:hover:not(.active-link),
-        &:focus:not(.active-link) {
+        &[href]:hover,
+        &[href]:focus {
             color: $red;
     }
-        &:active:not(.active-link) {
+        &[href]:active {
             opacity: 0.3;
     }
     }
@@ -96,6 +96,15 @@
             white-space: nowrap;
             box-shadow: none;
             line-height: 1;
+            &--active a::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -11px;
+                width: 100%;
+                height: 2px;
+                background-color: $white;
+            }
         }
         &__item a {
             position: relative;
@@ -105,15 +114,5 @@
         &__button {
             display: none;
         }
-    }
-    .active-link::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: -11px;
-        width: 100%;
-        height: 2px;
-        background-color: $white;
-
     }
 }

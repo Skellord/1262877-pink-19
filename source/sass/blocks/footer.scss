@@ -70,12 +70,8 @@
         &__contacts {
             display: flex;
             justify-content: space-between;
-            padding-top: 35px;
-        }
-        &__contacts {
             flex-direction: row;
-            padding-left: $paddingM2;
-            padding-right: 15px;
+            padding-top: 35px;
         }
         &__logo {
             margin-bottom: 0;
@@ -95,8 +91,6 @@
         }
         &__contacts {
             padding-top: $paddingT2;
-            padding-left: $paddingD;
-            padding-right: $paddingD;
         }
         &__socials {
             margin-left: 0;

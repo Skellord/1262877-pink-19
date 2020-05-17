@@ -98,6 +98,7 @@
 @media (min-width: $tablet) {
     .user-photo {
         position: relative;
+        padding-bottom: $paddingM;
         &__photo {
             width: 300px;
             height: 400px;
@@ -106,6 +107,7 @@
             display: flex;
             justify-content: space-between;
             padding-top: $paddingT;
+            padding-right: 15px;
         }
         &__label:not(.user-photo__label--active) {
             display: flex;
@@ -115,8 +117,8 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            height: 70px;
-            padding-top: 27px;
+            height: 40px;
+            margin-bottom: $paddingM3;
             &::after {
                 content: "";
                 position: absolute;
@@ -144,7 +146,7 @@
             flex-direction: column;
             position: absolute;
             bottom: 3px;
-            right: 13px;
+            right: 15px;
             width: 260px;
             margin-bottom: -25px;
         }
@@ -165,6 +167,7 @@
         }
         &__range {
             width: 288px;
+            margin-left: 50px;
         }
         &__svg {
             &--crop {
@@ -182,6 +185,8 @@
             }
         }
         &__label {
+            height: 55px;
+            margin-bottom: $paddingM2;
             padding-top: 0;
             padding-bottom: 27px;
             &::after {
@@ -191,8 +196,8 @@
         }
         &__buttons {
             flex-direction: row;
-            right: 215px;
-            bottom: 10px;
+            bottom: 15px;
+            right: 100px;
             width: 410px;
             margin-bottom: 0;
             margin-right: -44px;

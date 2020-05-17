@@ -2,6 +2,7 @@
     @include reset-list;
     text-align: center;
     margin-bottom: -20px;
+    position: relative;
     &__item {
         display: inline-block;
         position: relative;
@@ -18,7 +19,7 @@
     &__announcment {
         position: absolute;
         top: 0;
-        left: 160px;
+        right: 20px;
         width: 140px;
         height: 36px;
         background-color: $red;
@@ -97,13 +98,12 @@
             }
         }
         &__announcment {
-            top: 50px;
-            left: 0;
+            top: 55px;
             right: 0;
         }
         &__panorama-photo {
-            width: 100%;
-            height: auto;
+            width: 660px;
+            height: 509px;
         }
         &__photo {
             width: 300px;
@@ -116,10 +116,14 @@
             width: 300px;
             min-height: 155px;
             padding-left: 27px;
+            padding-top: 25px;
             padding-right: $paddingM2;
         }
         &__stats {
             margin-top: auto;
+        }
+        &__button {
+            margin-right: 12px;
         }
         &__likes-number {
             order: -1;
@@ -132,9 +136,12 @@
                 flex-direction: row;
                 flex-wrap: wrap;
                 min-height: 121px;
+                height: 121px;
+                padding-right: $paddingM3;
             }
             & .photo-list__name {
                 order: 1;
+                margin-top: 5px
             }
             & .photo-list__comment {
                 order: 3;
@@ -158,15 +165,13 @@
 }
 @media (min-width: $desktop) {
     .photo-list {
+        margin-bottom: -55px;
         &__panorama-photo {
-            width: 100%;
-            height: auto;
+            width: 1200px;
+            height: 506px;
         }
         &__photo {
             height: 400px;
-        }
-        &__announcment {
-            left: 930px;
         }
         &__wrapper {
             width: 940px;
@@ -179,10 +184,16 @@
                 margin-right: $paddingM2;
             }
         }
+        &__item {
+            margin-bottom: 55px;
+        }
         &__item--panorama {
             & .photo-list__comments-section {
                 width: 100%;
                 min-height: 96px;
+                height: 96px;
+                margin-bottom: 0;
+                padding-right: 15px;
             }
             & .photo-list__stats {
                 margin-right: 20px;

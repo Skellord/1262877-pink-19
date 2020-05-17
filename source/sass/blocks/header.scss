@@ -24,12 +24,11 @@
             background-size: cover;
         }
     }
-
 }
 @media (min-width: $tablet) {
     .header {
         &__wrapper {
-            min-height: 330px;
+            min-height: 325px;
             background: url(../img/bg-back-tablet@1x.jpg) 50% 25% no-repeat;
             background-color: $dark;
             padding-top: 60px;
@@ -54,6 +53,7 @@
         }
 
         &__wrapper {
+            min-height: 285px;
             background: none;
         }
         &__container {

@@ -19,10 +19,14 @@
     .main {
         &__description {
             font-size: $fontM;
-            margin-top: $paddingT2;
-            margin-bottom: $paddingT2;
-            :not(.main__description--bottom) br {
+            margin-top: 90px;
+            margin-bottom: 80px;
+            & .mobile-br {
                 display: none;
+            }
+            &--bottom {
+                margin-top: 68px;
+                margin-bottom: 66px;
             }
         }
         &__text-desktop {
@@ -33,8 +37,16 @@
 @media (min-width: $desktop) {
     .main {
         &__description {
-            &:not(.main__description--bottom) br {
+            margin-bottom: 90px;
+            & .tablet-br {
+                display: none;
+            }
+            & .mobile-br {
                 display: inline;
+            }
+            &--bottom {
+                margin-top: $paddingT;
+                margin-bottom: $paddingT;
             }
         }
     }

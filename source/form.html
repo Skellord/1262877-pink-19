@@ -57,8 +57,8 @@
       <form class="form" method="POST" action="https://echo.htmlacademy.ru">
         <div class="form__block-container">
           <div class="form__block-name">
-            <div class="form__container">
-              <fieldset class="form__full-name form__fieldset">
+            <div class="form__container form__container--name">
+              <fieldset class="form__fieldset form__fieldset--name">
                 <div class="form__item">
                   <label for="surname" class="form__label form__label--text">Фамилия:</label>
                   <input class="form__input form__input--text" id="surname" name="surname" type="text" value="" placeholder="Укажите фамилию *" required>
@@ -77,7 +77,7 @@
           <div class="form__block-achievements">
             <div class="form__wrapper">
               <div class="form__container">
-                <fieldset class="form__fieldset form__fieldset--frame">
+                <fieldset class="form__fieldset form__fieldset--frame form__fieldset--achievements">
                   <legend class="form__legend">Ваши безбашенные<br> достижения в путешествии</legend>
                   <ul class="form__list">
                     <li class="form__list-item">
@@ -155,22 +155,22 @@
               <div class="form__container">
                 <fieldset class="form__fieldset form__fieldset--frame form__fieldset--os">
                   <legend class="form__legend">С каким приложением<br>путешествовали?</legend>
-                  <ul class="form__list">
-                    <li class="form__list-item">
+                  <ul class="form__list form__list--os">
+                    <li class="form__list-item form__list-item--os">
                       <label class="form__label">
                         <input class="form__input form__input--radio" id="iOS" name="os" value="iOS" type="radio" checked>
                         <span class="form__radiobox"></span>
                         <span class="form__label-text">Pink для iOS</span>
                       </label>
                     </li>
-                    <li class="form__list-item">
+                    <li class="form__list-item form__list-item--os">
                       <label class="form__label">
                         <input class="form__input form__input--radio" id="Android" name="os" value="Android" type="radio">
                         <span class="form__radiobox"></span>
                         <span class="form__label-text">Pink на Android</span>
                       </label>
                     </li>
-                    <li class="form__list-item">
+                    <li class="form__list-item form__list-item--os">
                       <label class="form__label">
                         <input class="form__input form__input--radio" id="Windows" name="os" value="Windows" type="radio">
                         <span class="form__radiobox"></span>
@@ -185,7 +185,7 @@
         </div>
         <div class="wrapper">
           <fieldset class="form__fieldset form__fieldset--frame form__fieldset--textarea">
-            <legend class="form__legend">Опишите свои эмоции</legend>
+            <legend class="form__legend form__legend--textarea">Опишите свои эмоции</legend>
             <textarea class="form__textarea" id="user-comment" name="user-comment" rows="12" cols="25" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </fieldset>
           <div class="form__button-container">

@@ -2,8 +2,10 @@
     &__description {
         margin-left: auto;
         margin-right: auto;
-        margin-top: $paddingM5;
-        margin-bottom: $paddingM5;
+        margin-top: 45px;
+        margin-bottom: 45px;
+        padding-left: $paddingM2;
+        padding-right: $paddingM2;
         font-size: $fontS;
         text-align: center;
         line-height: $lineheightL;
@@ -20,7 +22,9 @@
         &__description {
             font-size: $fontM;
             margin-top: 90px;
-            margin-bottom: 80px;
+            margin-bottom: 70px;
+            padding-left: $paddingM5;
+            padding-right: $paddingM5;
             & .mobile-br {
                 display: none;
             }
@@ -37,7 +41,9 @@
 @media (min-width: $desktop) {
     .main {
         &__description {
-            margin-bottom: 90px;
+            margin-bottom: $paddingT2;
+            padding-left: 200px;
+            padding-right: 200px;
             & .tablet-br {
                 display: none;
             }

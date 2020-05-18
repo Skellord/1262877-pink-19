@@ -4,6 +4,10 @@
         padding: 0;
         margin: 0;
         padding-left: $paddingM2;
+        padding-bottom: $paddingM;
+        &--phone {
+            padding-top: $paddingM4;
+        }
     }
     &__container {
         position: relative;
@@ -15,8 +19,8 @@
         background-color: $gray;
     }
     &__input--text {
-        width: 276px;
-        height: 60px;
+        width: 280px;
+        height: 63px;
         padding: 20px;
         border: 2px solid $gray2;
         &:hover {
@@ -59,14 +63,17 @@
         @include reset-list;
         padding-top: $paddingM4;
         padding-bottom: $paddingM4;
-        margin-bottom: -47px;
+        margin-bottom: -42px;
         &-item {
             position: relative;
             min-height: 39px;
             padding-left: 70px;
             padding-top: 7px;
-            margin-bottom: 47px;
-    }
+            margin-bottom: 42px;
+            &--os {
+                margin-bottom: $paddingM3;
+            }
+        }
     }
     &__input--checkbox {
         position: absolute;
@@ -77,8 +84,8 @@
         position: absolute;
         left: 0px;
         top: 0;
-        width: 35px;
-        height: 35px;
+        width: 40px;
+        height: 40px;
         background-color: $white;
         border: 2px solid $gray2;
     }
@@ -140,7 +147,7 @@
         border: 2px solid $gray2;
         padding: $paddingM2;
         margin-top: $paddingM2;
-        margin-bottom: $paddingM4;
+        margin-bottom: $paddingM3;
         color: $dark;
         line-height: 30px;
         &:hover {
@@ -174,6 +181,10 @@
         margin-left: auto;
         margin-right: auto;
         margin-bottom: $paddingM4;
+        text-transform: uppercase;
+        &-container {
+            margin-bottom: 15px;
+        }
     }
 }
 @media (min-width: $tablet) {
@@ -182,6 +193,9 @@
             width: 100%;
             margin: 0;
             margin-bottom: $paddingT;
+            &--name {
+                margin-bottom: 0;
+            }
         }
         &__wrapper {
             background-color: $white;
@@ -209,19 +223,25 @@
         }
         &__list {
             padding-top: 0;
+            &--os {
+                padding-bottom: $paddingT;
+            }
         }
         &__item {
             display: flex;
             align-items: center;
+            margin-bottom: $paddingM5;
             &--phone {
-            flex-direction: column-reverse;
+                margin-bottom: $paddingM4;
+                flex-direction: column-reverse;
+                align-items: flex-start;
             }
         }
         &__label {
             &--text {
                 flex: 1 0 auto;
                 margin: 0;
-                margin-right: $paddingM;
+                margin-right: 18px;
                 width: max-content;
             }
             &--phone {
@@ -238,21 +258,22 @@
             }
             &--phone {
                 padding-right: 56px;
+                margin-bottom: 15px;
             }
         }
         &__icon {
             position: absolute;
             right: 2px;
             top: 2px;
-            width: 56px;
-            height: 56px;
+            width: 60px;
+            height: 60px;
             background-color: $gray2;
             pointer-events: none;
             &--phone::before {
                 content: "";
                 position: absolute;
-                right: 18px;
-                top: 18px;
+                right: 20px;
+                top: 20px;
                 width: 20px;
                 height: 20px;
                 background: url(../img/icon-phone.svg) 0 0 no-repeat;
@@ -260,8 +281,8 @@
             &--email::before {
                 content: "";
                 position: absolute;
-                right: 18px;
-                top: 18px;
+                right: 20px;
+                top: 20px;
                 width: 20px;
                 height: 20px;
                 background: url(../img/icon-mail.svg) 0 0 no-repeat;
@@ -287,6 +308,13 @@
                 padding-left: $paddingT;
                 padding-top: $paddingM5;
             }
+            &--phone {
+                padding-top: 45px;
+                padding-bottom: 0;
+            }
+            &--textarea {
+                padding-top: $paddingM4;
+            }
         }
         &__contacts .form__item{
             display: flex;
@@ -299,6 +327,7 @@
         }
         &__button {
             margin: 0;
+            min-width: 300px;
             &-container {
             display: flex;
             justify-content: space-between;
@@ -327,10 +356,17 @@
             }
             &--phone {
                 display: flex;
+                padding-top: 35px;
+            }
+            &--name {
+                padding-top: 15px;
+            }
+            &--achievements {
+                padding-top: 45px;
             }
             &--textarea {
                 width: 936px;
-                height: 213px;
+                height: 225px;
                 margin-left: auto;
                 margin-right: auto;
                 padding-top: $paddingM3;
@@ -348,7 +384,7 @@
             &-name {
                 margin-bottom: -70px;
                 & .form__item {
-                    margin-bottom: $paddingT2;
+                    margin-bottom: 55px;
                 }
             }
             &-phone {
@@ -379,9 +415,17 @@
                 width: 100%;
             }
         }
+        &__list-item {
+            padding-left: 55px;
+        }
         &__item {
+            &--os {
+                padding-left: 65px;
+                margin-bottom: 35px;
+            }
             &--phone {
                 margin-right: $paddingD2;
+                margin-bottom: $paddingM2;
             }
         }
         &__phone-wrapper {

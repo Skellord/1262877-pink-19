@@ -1,6 +1,7 @@
 .user-photo {
     background-color: $gray;
     &__form {
+        position: relative;
         text-align: center;
     }
     &__photo {
@@ -33,6 +34,12 @@
         opacity: 1;
         color: $red;
     }
+    &__container {
+        position: relative;
+        width: 320px;
+        margin-right: auto;
+        margin-left: auto;
+    }
     &__label:not(.user-photo__label--active) {
         display: none;
     }
@@ -41,14 +48,17 @@
     }
     &__range {
         -webkit-appearance: none;
+        height: 55px;
         width: 240px;
-        height: 2px;
-        background: $black;
+        padding: 0;	
+        background-color: $gray;
     }
     &__range::-webkit-slider-thumb {
         -webkit-appearance: none;
-        width: 13px;
-        height: 13px;
+        box-sizing: content-box;
+        width: 12px;
+        height: 12px;
+        transform: translateY(-50%);
         background-color: $gray;
         border-radius: 50%;
         border: 2px solid $red;
@@ -57,8 +67,8 @@
         }
     }
     &__range::-moz-range-thumb {
-        width: 13px;
-        height: 13px;
+        width: 12px;
+        height: 12px;
         background-color: $gray;
         border-radius: 50%;
         border: 2px solid $red;
@@ -67,14 +77,34 @@
         }
     }
     &__range::-ms-thumb {
-        width: 13px;
-        height: 13px;
+        width: 12px;
+        height: 12px;
         background-color: $gray;
         border-radius: 50%;
         border: 2px solid $red;
         &:active {
             background-color: $red;
         }
+    }
+    &__range::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 2px;
+        background: $black;
+    }
+    &__range::-moz-range-track {
+        width: 100%;
+        height: 2px;
+        background: $black;
+    }
+    &__range::-ms-track {
+        border-color: transparent;
+        color: transparent;
+        width: 100%;
+        height: 2px;
+        background: $black;
+    }
+    &__range::-ms-fill-lower {
+        background: $black;
     }
     &__buttons {
         padding-top: $paddingM4;
@@ -97,17 +127,25 @@
 }
 @media (min-width: $tablet) {
     .user-photo {
-        position: relative;
-        padding-bottom: $paddingM;
         &__photo {
             width: 300px;
             height: 400px;
         }
-        &__form {
+        &__buttons-container {
+            position: relative;
+            width: 620px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &__container {
+            width: 620px;
             display: flex;
             justify-content: space-between;
             padding-top: $paddingT;
             padding-right: 15px;
+        }
+        &__filter-buttons {
+            display: none;
         }
         &__label:not(.user-photo__label--active) {
             display: flex;
@@ -122,9 +160,10 @@
             &::after {
                 content: "";
                 position: absolute;
+                width: 100%;
                 bottom: -15px;
+                left: 0;
                 display: block;
-                width: 275px;
                 height: 1px;
                 background-color: $dark;
                 opacity: 0.1;
@@ -134,9 +173,6 @@
                 color: $red;
             }
         }
-        &__filter-buttons {
-            display: none;
-        }
         &__range {
             margin-left: $paddingM3;
             width: 202px;
@@ -145,7 +181,7 @@
             display: flex;
             flex-direction: column;
             position: absolute;
-            bottom: 3px;
+            bottom: 15px;
             right: 15px;
             width: 260px;
             margin-bottom: -25px;
@@ -154,16 +190,24 @@
             min-width: 260px;
             margin-bottom: 25px;
         }
-    }
+        &__wrapper:first-child::after{
+            display: none;
+        }
+    }   
 }
 @media (min-width: $desktop) {
     .user-photo {
-        background-color: $white;
-        &__form {
-            height: 514px;
+        &__wrapper {
+            background-color: $white;
+        }
+        &__container {
+            width: 940px;
+            background-color: $gray;
             padding-left: $paddingT3;
             padding-right: $paddingT4;
-            background-color: $gray;
+        }
+        &__buttons-container {
+            width: 940px;
         }
         &__range {
             width: 288px;
@@ -191,7 +235,6 @@
             padding-bottom: 27px;
             &::after {
                 bottom: 15px;
-                width: 410px;
             }
         }
         &__buttons {
@@ -207,9 +250,6 @@
             min-height: 55px;
             margin-bottom: 0;
             margin-right: 44px;
-        }
-        &__wrapper:first-child::after {
-            display: none;
         }
     }
 }

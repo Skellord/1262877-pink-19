@@ -1,6 +1,6 @@
 .download {
     position: relative;
-
+    width: 100%;
     &__button {
         min-width: 280px;
     }
@@ -11,7 +11,7 @@
         @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
             background: url(../img/iphone-hand-mobile@2x.png) 0 100% no-repeat;
             background-size: 258px auto;
-    }
+        }
     }
     &__list {
         text-align: center;
@@ -21,7 +21,7 @@
     &__container {
         background-color: #1d2631;
     }
-        &__description {
+    &__description {
         display: inline-block;
         margin-top: 17px;
         font-size: $fontS;
@@ -45,6 +45,9 @@
         padding-top: $paddingM2;
         margin-left: auto;
         margin-right: auto;
+    }
+    &__button {
+        margin-bottom: $paddingM3;
     }
 }
 @media (min-width: $tablet) {

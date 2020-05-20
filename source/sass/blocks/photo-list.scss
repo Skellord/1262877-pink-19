@@ -1,8 +1,10 @@
 .photo-list {
     @include reset-list;
     text-align: center;
-    margin-bottom: -20px;
     position: relative;
+    &:not(.photo-list--panorama) {
+        margin-bottom: -20px;
+    }
     &__item {
         display: inline-block;
         position: relative;
@@ -89,10 +91,12 @@
 }
 @media (min-width: $tablet) {
     .photo-list {
-        &__wrapper {
+        &:not(.photo-list--panorama) {
             display: flex;
             flex-wrap: wrap;
             margin-bottom: -20px;
+        }
+        &__wrapper {
             & .photo-list__item:not(:nth-of-type(2n)) {
                 margin-right: $paddingM2;
             }
@@ -138,6 +142,7 @@
                 min-height: 121px;
                 height: 121px;
                 padding-right: $paddingM3;
+                margin-bottom: $paddingM3;
             }
             & .photo-list__name {
                 order: 1;
@@ -165,7 +170,9 @@
 }
 @media (min-width: $desktop) {
     .photo-list {
-        margin-bottom: -55px;
+        &:not(.photo-list--panorama) {
+            margin-bottom: -55px;
+        }
         &__panorama-photo {
             width: 1200px;
             height: 506px;

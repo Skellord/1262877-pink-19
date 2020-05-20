@@ -1,5 +1,6 @@
 .form {
     &__fieldset {
+        position: relative;
         border: none;
         padding: 0;
         margin: 0;
@@ -18,21 +19,28 @@
     &__wrapper {
         background-color: $gray;
     }
-    &__input--text {
-        width: 280px;
-        height: 63px;
-        padding: 20px;
-        border: 2px solid $gray2;
-        &:hover {
-            border: 2px solid $dark;
-            outline: none;
+    &__input {
+        &--phone {
+            -webkit-appearance: textfield;
+            -moz-appearance: textfield;
+                 appearance: textfield;
         }
-        &:focus {
-            border: 2px solid $red;
-            outline: none;
-        }
-        &::placeholder {
-            color: $dark;
+        &--text {
+            width: 280px;
+            height: 63px;
+            padding: 20px;
+            border: 2px solid $gray2;
+            &:hover {
+                border: 2px solid $dark;
+                outline: none;
+            }
+            &:focus {
+                border: 2px solid $red;
+                outline: none;
+            }
+            &::placeholder {
+                color: $dark;
+            }
         }
     }
     &__label--text {
@@ -74,10 +82,6 @@
                 margin-bottom: $paddingM3;
             }
         }
-    }
-    &__input--checkbox {
-        position: absolute;
-        appearance: none;
     }
     &__checkbox {
         display: block;
@@ -263,10 +267,10 @@
         }
         &__icon {
             position: absolute;
-            right: 2px;
+            right: 1px;
             top: 2px;
-            width: 60px;
-            height: 60px;
+            width: 59px;
+            height: 59px;
             background-color: $gray2;
             pointer-events: none;
             &--phone::before {
@@ -292,8 +296,14 @@
             padding: 0;
             padding-left: 25px;
             padding-right: 25px;
+            
             &--phone {
-                display: inline;
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                background: $white;
+                transform: translate(-50%, -50%);
             }
             & br {
                 display: none;

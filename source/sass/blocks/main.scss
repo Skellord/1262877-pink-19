@@ -12,6 +12,9 @@
         &--bottom {
             margin-bottom: $paddingT;
         }
+        & .tablet-br {
+            display: none;
+        }
     }
     &__text-desktop {
         display: none;
@@ -31,6 +34,9 @@
             &--bottom {
                 margin-top: 68px;
                 margin-bottom: 66px;
+            }
+            & .tablet-br {
+                display: inline;
             }
         }
         &__text-desktop {

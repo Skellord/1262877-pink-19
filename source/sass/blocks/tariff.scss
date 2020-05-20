@@ -59,9 +59,11 @@
         }
     }
     &__plus {
+        margin-left: auto;
         color: $green;
     }
     &__minus {
+        margin-left: auto;
         color: $orange;
     }
 }
@@ -110,6 +112,12 @@
                 top: 7px;
                 left: 6px;
             }
+        }
+        &__plus {
+            margin-left: 0;
+        }
+        &__minus {
+            margin-left: 0;
         }
     }
 }

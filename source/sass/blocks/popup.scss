@@ -9,13 +9,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
     &--error {
-        display: none;
         height: 289px;
     }
     &--recd {
-        display: none;
         height: 380px;
     }
     &__button {
@@ -30,7 +29,7 @@
     }
     &__text {
         margin: 0;
-        margin-bottom: 56px;
+        margin-bottom: $paddingM4;
         font-size: $fontS;
         text-align: center;
     }
@@ -50,13 +49,7 @@
     .popup {
         width: 460px;
         height: 363px;
-        &--error {
-            display: none;
-            flex-direction: column;
-            align-items: center;
-        }
         &--recd {
-            display: none;
             height: 432px;
         }
         &__title {
@@ -68,6 +61,7 @@
         &__text {
             font-size: $fontM;
             width: 315px;
+            margin-bottom: 0;
         }
         &__button {
             width: 300px;
@@ -78,13 +72,19 @@
     .popup {
         width: 780px;
         height: 377px;
-        &--error {
-            display: none;
-        }
         &__wrapper {
             &--desktop {
                 background-color: $gray;
             }
         }
+        &__text {
+            width: 400px;
+        }
+        &__title {
+            width: auto;
+        }
     }
+}
+.popup {
+    display: none;
 }

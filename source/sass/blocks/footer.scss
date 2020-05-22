@@ -9,6 +9,9 @@
     }
     &__logo {
         margin-bottom: $paddingM4;
+        &--desktop {
+            display: none;
+        }
     }
     &__socials {
         @include reset-list;

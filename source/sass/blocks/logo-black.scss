@@ -1,9 +1,7 @@
 .logo-black {
+    display: flex;
     color: $dark;
     &__desktop {
         display: none;
     }
-}
-.logo-black__desktop {
-    display: none;
 }

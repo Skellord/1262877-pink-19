@@ -5,13 +5,13 @@
     <title>Пинк: фотографии пользователей</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="body body--photo">
     <header class="header">
       <div class="main-nav">
         <div class="main-nav__wrapper">
-          <a class="main-nav__logo logo">
+          <a href="index.html" class="main-nav__logo logo">
             <svg class="logo__mobile" width="74" height="23">
               <use xlink:href="img/sprite.svg#logo-mobile"></use>
             </svg>
@@ -23,18 +23,21 @@
             </svg>
           </a>
           <button class="main-nav__button" type="button">
-            <span class="visually-hidden">Закрыть меню</span>
-            <svg class="main-nav__cross" width="24" height="23">
+            <span class="visually-hidden">Открыть меню</span>
+            <svg class="main-nav__button--cross" width="24" height="23">
               <use xlink:href="img/sprite.svg#close-button"></use>
+            </svg>
+            <svg class="main-nav__button--burger" width="50" height="24">
+              <use xlink:href="img/sprite.svg#burger"></use>
             </svg>
           </button>
         </div>
         <nav class="main-nav__menu">
           <ul class="main-nav__list ">
             <li class="main-nav__item">
-              <a href="index.html" class="active-link">Главная</a>
+              <a href="index.html" >Главная</a>
             </li>
-            <li class="main-nav__item">
+            <li class="main-nav__item main-nav__item--active">
               <a>Фотографии</a>
             </li>
             <li class="main-nav__item">
@@ -51,42 +54,49 @@
       </div>
     </header>
     <main class="main main--photo">
-      <div class="wrapper">
-        <p class="main__description">Взгляните на фотографии, которые выкладывают пользователи!<br> Видите, как не хватает ваших?</p>
-        <section class="photo">
-          <ul class="photo-list">
-            <li class="photo-list__item photo-list__item--panorama">
+      <p class="main__description">Взгляните на фотографии, которые выкладывают<br class="tablet-br"> пользователи!<br class="mobile-br"> Видите, как не хватает ваших?</p>
+      <section class="photo">
+        <ul class="photo-list photo-list--panorama">
+          <li class="photo-list__item photo-list__item--panorama">
+            <div class="container">
               <span class="photo-list__announcment">Панорама дня</span>
-              <a class="photo-list__link" href="https://via.placeholder.com/320x137" target="_blank">
-                <picture>
-                  <source media="(min-width: 660px") srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x">
-                  <img class="photo-list__panorama-photo" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" alt="Панорама дня">
-                </picture>
-              </a>
-              <div class="photo-list__comments-section photo-list__comments-section--panorama">
-                <div class="photo-list__name photo-list__name--panorama">
+            </div>
+            <a class="photo-list__link" href="img/panorama-desktop@2x.jpg" target="_blank">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x">
+                <img class="photo-list__panorama-photo" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" alt="Панорама дня">
+              </picture>
+            </a>
+            <div class="container">
+              <div class="photo-list__comments-section photo-list__wrapper">
+                <div class="photo-list__name">
                   <span class="photo-list__author">Анна</span>
-                  <time class="photo-list__time">(5 минут назад)</time>
+                  <span class="photo-list__time">(5 минут назад)</span>
                 </div>
-                <p class="photo-list__comment photo-list__comment--panorama">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
-                <div class="photo-list__stats photo-list__stats--panorama">
-                  <button class="photo-list__button photo-list__button--panorama" type="button"></button>
-                  <span class="photo-list__likes-number photo-list__likes-number--panorama">Нравится: 215</span>
+                <p class="photo-list__comment">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+                <div class="photo-list__stats">
+                  <button class="photo-list__button" type="button"></button>
+                  <span class="photo-list__likes-number">Нравится: 215</span>
                 </div>
               </div>
-            </li>
-            <div class="photo-list__wrapper">
+            </div>
+          </li>
+        </ul>
+        <div class="photo-list__wrapper container">
+          <ul class="photo-list">
             <li class="photo-list__item">
-              <a class="photo-list__link" href="https://via.placeholder.com/280x180" target="_blank">
+              <a class="photo-list__link" href="img/photo-car-desktop@2x.jpg" target="_blank">
                 <picture>
-                  <source media="(min-width: 660px") srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
+                  <source media="(min-width: 1200px)" srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
                   <img class="photo-list__photo" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x" alt="Фотография пользователя">
                 </picture>
               </a>
               <div class="photo-list__comments-section">
                 <div class="photo-list__name">
                   <span class="photo-list__author">Левон</span>
-                  <time class="photo-list__time">(5 часов назад)</time>
+                  <span class="photo-list__time">(5 часов назад)</span>
                 </div>
                 <p class="photo-list__comment">Вчера он на луну летал, сегодня в руки к нам попал.</p>
                 <div class="photo-list__stats">
@@ -96,16 +106,17 @@
               </div>
             </li>
             <li class="photo-list__item">
-              <a class="photo-list__link" href="https://via.placeholder.com/280x180" target="_blank">
+              <a class="photo-list__link" href="img/photo-drumset-desktop@2x.jpg" target="_blank">
                 <picture>
-                  <source media="(min-width: 660px") srcset="img/photo-drumset-tablet@1x.jpg 1x, img/photo-drumset-tablet@2x.jpg 2x">
+                  <source media="(min-width: 1200px)" srcset="img/photo-drumset-desktop@1x.jpg 1x, img/photo-drumset-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.jpg 1x, img/photo-drumset-tablet@2x.jpg 2x">
                   <img class="photo-list__photo" src="img/photo-drumset-mobile@1x.jpg" srcset="img/photo-drumset-mobile@2x.jpg 2x" alt="Фотография пользователя">
                 </picture>
               </a>
               <div class="photo-list__comments-section">
                 <div class="photo-list__name">
                   <span class="photo-list__author">Антон</span>
-                  <time class="photo-list__time">(12 часов назад)</time>
+                  <span class="photo-list__time">(12 часов назад)</span>
                 </div>
                 <p class="photo-list__comment">Соседи будут рады!</p>
                 <div class="photo-list__stats">
@@ -115,16 +126,17 @@
               </div>
             </li>
             <li class="photo-list__item">
-              <a class="photo-list__link" href="https://via.placeholder.com/280x180" target="_blank">
+              <a class="photo-list__link" href="img/photo-window-desktop@2x.jpg" target="_blank">
                 <picture>
-                  <source media="(min-width: 660px") srcset="img/photo-window-tablet@1x.jpg 1x, img/photo-window-tablet@2x.jpg 2x">
+                  <source media="(min-width: 1200px)" srcset="img/photo-window-desktop@1x.jpg 1x, img/photo-window-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.jpg 1x, img/photo-window-tablet@2x.jpg 2x">
                   <img class="photo-list__photo" src="img/photo-window-mobile@1x.jpg" srcset="img/photo-window-mobile@2x.jpg 2x" alt="Фотография пользователя">
                 </picture>
               </a>
               <div class="photo-list__comments-section">
                 <div class="photo-list__name">
                   <span class="photo-list__author">Борис</span>
-                  <time class="photo-list__time">(20 часов назад)</time>
+                  <span class="photo-list__time">(20 часов назад)</span>
                 </div>
                 <p class="photo-list__comment">Здесь могла быть ваша цитата о высоком и вечном.</p>
                 <div class="photo-list__stats">
@@ -134,16 +146,17 @@
               </div>
             </li>
             <li class="photo-list__item">
-              <a class="photo-list__link" href="https://via.placeholder.com/280x180" target="_blank">
+              <a class="photo-list__link" href="img/photo-fair-desktop@2x.jpg" target="_blank">
                 <picture>
-                  <source media="(min-width: 660px") srcset="img/photo-fair-tablet@1x.jpg 1x, img/photo-fair-tablet@2x.jpg 2x">
+                  <source media="(min-width: 1200px)" srcset="img/photo-fair-desktop@1x.jpg 1x, img/photo-fair-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.jpg 1x, img/photo-fair-tablet@2x.jpg 2x">
                   <img class="photo-list__photo" src="img/photo-fair-mobile@1x.jpg" srcset="img/photo-fair-mobile@2x.jpg 2x" alt="Фотография пользователя">
                 </picture>
               </a>
               <div class="photo-list__comments-section">
                 <div class="photo-list__name">
                   <span class="photo-list__author">Сергей</span>
-                  <time class="photo-list__time">(25 часов назад)</time>
+                  <span class="photo-list__time">(25 часов назад)</span>
                 </div>
                 <p class="photo-list__comment">Самая кубанская в мире!</p>
                 <div class="photo-list__stats">
@@ -153,16 +166,17 @@
               </div>
             </li>
             <li class="photo-list__item">
-              <a class="photo-list__link" href="https://via.placeholder.com/280x180" target="_blank">
+              <a class="photo-list__link" href="img/photo-pov-desktop@2x.jpg" target="_blank">
                 <picture>
-                  <source media="(min-width: 660px") srcset="img/photo-pov-tablet@1x.jpg 1x, img/photo-pov-tablet@2x.jpg 2x">
+                  <source media="(min-width: 1200px)" srcset="img/photo-pov-desktop@1x.jpg 1x, img/photo-pov-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.jpg 1x, img/photo-pov-tablet@2x.jpg 2x">
                   <img class="photo-list__photo" src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@2x.jpg 2x" alt="Фотография пользователя">
                 </picture>
               </a>
               <div class="photo-list__comments-section">
                 <div class="photo-list__author">
                   <span class="photo-list__author">Максим</span>
-                  <time class="photo-list__time">(40 часов назад)</time>
+                  <span class="photo-list__time">(40 часов назад)</span>
                 </div>
                 <p class="photo-list__comment">Где снег-то?</p>
                 <div class="photo-list__stats">
@@ -172,16 +186,17 @@
               </div>
             </li>
             <li class="photo-list__item">
-              <a class="photo-list__link" href="https://via.placeholder.com/280x180" target="_blank">
+              <a class="photo-list__link" href="img/photo-wing-desktop@2x.jpg" target="_blank">
                 <picture>
-                  <source media="(min-width: 660px") srcset="img/photo-wing-tablet@1x.jpg 1x, img/photo-wing-tablet@2x.jpg 2x">
+                  <source media="(min-width: 1200px)" srcset="img/photo-wing-desktop@1x.jpg 1x, img/photo-wing-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.jpg 1x, img/photo-wing-tablet@2x.jpg 2x">
                   <img class="photo-list__photo" src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-wing-mobile@2x.jpg 2x" alt="Фотография пользователя">
                 </picture>
               </a>
               <div class="photo-list__comments-section">
                 <div class="photo-list__name">
                   <span class="photo-list__author">Надежда</span>
-                  <time class="photo-list__time">(45 часов назад)</time>
+                  <span class="photo-list__time">(45 часов назад)</span>
                 </div>
                 <p class="photo-list__comment">Всем GM и взаимные лайки!</p>
                 <div class="photo-list__stats">
@@ -190,100 +205,104 @@
                 </div>
               </div>
             </li>
-            </div>
           </ul>
-          <p class="main__description main__description--bottom">Затмите их всех!<br> Выкладывайте все, что накопилось в телефоне!</p>
-        </section>
-      </div>
+        </div>
+        <p class="main__description main__description--bottom">Затмите их всех!<br> Выкладывайте все, что накопилось в телефоне!</p>
+      </section>
       <section class="user-photo">
-        <div class="user-photo__wrapper">
-        <div class="wrapper">
-          <form class="user-photo__form" method="POST">
-            <picture>
-              <source media="(min-width: 660px") srcset="img/photo-road-tablet@1x.jpg 1x, img/photo-road-tablet@2x.jpg 2x">
-              <img class="user-photo__photo" src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x" alt="Ваше фото">
-            </picture>
-            <div class="user-photo__filter">
-              <div class="user-photo__filter-buttons">
-                <button class="user-photo__button-active user-photo__button" id="crop-button" type="button">
-                  <svg class="user-photo__button-svg" width="44" height="44">
-                    <use xlink:href="img/sprite.svg#icon-crop"></use>
-                  </svg>
-                  <span class="visually-hidden">Обрезать</span>
-                </button>
-                <button class="user-photo__button" id="fill-button" type="button">
-                  <svg width="48" height="48">
-                    <use xlink:href="img/sprite.svg#icon-fill"></use>
-                  </svg>
-                  <span class="visually-hidden">Изменить цвет</span>
-                </button>
-                <button class="user-photo__button" id="contrast-button" type="button">
-                  <svg width="32" height="32">
-                    <use xlink:href="img/sprite.svg#icon-contrast"></use>
-                  </svg>
-                  <span class="visually-hidden">Яркость</span>
-                </button>
+        <form class="user-photo__form" method="POST">
+          <div class="user-photo__wrapper">
+            <div class="user-photo__container">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-road-desktop@1x.jpg 1x, img/photo-road-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.jpg 1x, img/photo-road-tablet@2x.jpg 2x">
+                <img class="user-photo__photo" src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x" alt="Ваше фото">
+              </picture>
+              <div class="user-photo__filter">
+                <div class="user-photo__filter-buttons">
+                  <button class="user-photo__button--active user-photo__button" id="crop-button" type="button">
+                    <svg class="user-photo__button-svg" width="44" height="44">
+                      <use xlink:href="img/sprite.svg#icon-crop"></use>
+                    </svg>
+                    <span class="visually-hidden">Обрезать</span>
+                  </button>
+                  <button class="user-photo__button" id="fill-button" type="button">
+                    <svg width="48" height="48">
+                      <use xlink:href="img/sprite.svg#icon-fill"></use>
+                    </svg>
+                    <span class="visually-hidden">Изменить цвет</span>
+                  </button>
+                  <button class="user-photo__button" id="contrast-button" type="button">
+                    <svg width="32" height="32">
+                      <use xlink:href="img/sprite.svg#icon-contrast"></use>
+                    </svg>
+                    <span class="visually-hidden">Яркость</span>
+                  </button>
+                </div>
+                <div class="user-photo__ranges">
+                  <label class="user-photo__label user-photo__label--active">
+                    <svg class="user-photo__svg--crop" width="22" height="22">
+                      <use xlink:href="img/sprite.svg#icon-crop"></use>
+                    </svg>
+                    <input class="user-photo__range" id="crop-range" name="photo-range" type="range" min="0" max="100" step="1">
+                  </label>
+                  <label class="user-photo__label">
+                    <svg class="user-photo__svg--fill" width="24" height="22">
+                      <use xlink:href="img/sprite.svg#icon-fill"></use>
+                    </svg>
+                    <input class="user-photo__range" id="fill-range" name="photo-range" type="range" min="0" max="100" step="1">
+                  </label>
+                  <label class="user-photo__label">
+                    <svg class="user-photo__svg--contrast" width="16" height="16">
+                      <use xlink:href="img/sprite.svg#icon-contrast"></use>
+                    </svg>
+                    <input class="user-photo__range" id="contrast-range" name="photo-range" type="range" min="0" max="100" step="1">
+                  </label>
+                </div>
               </div>
-              <div class="user-photo__ranges">
-              <label for="crop-button" class="user-photo__label user-photo__label-active">
-                <svg class="user-photo__button-svg" width="22" height="22">
-                  <use xlink:href="img/sprite.svg#icon-crop"></use>
-                </svg>
-                <input class="user-photo__range" id="photo-range" name="photo-range" type="range" min="0" max="100" step="1">
-              </label>
-              <label for="fill-button" class="user-photo__label">
-                <svg width="24" height="22">
-                  <use xlink:href="img/sprite.svg#icon-fill"></use>
-                </svg>
-                <input class="user-photo__range" id="photo-range" name="photo-range" type="range" min="0" max="100" step="1">
-              </label>
-              <label for="contrast-button" class="user-photo__label">
-                <svg width="16" height="16">
-                  <use xlink:href="img/sprite.svg#icon-contrast"></use>
-                </svg>
-                <input class="user-photo__range" id="photo-range" name="photo-range" type="range" min="0" max="100" step="1">
-              </label>
             </div>
           </div>
-        </div>
-        <div class="user-photo__wrapper">
-          <div class="wrapper">
+          <div class="user-photo__buttons-container">
             <div class="user-photo__buttons">
               <button class="button button--red user-photo__form-button" type="submit">Запостить</button>
               <button class="button button--gray user-photo__form-button" type="button">Отмена</button>
             </div>
-          </form>
-        </div>
-        </div>
+          </div>
+        </form>
       </section>
     </main>
-    <footer class="footer footer--contacts wrapper">
-      <div class="footer__contacts">
-        <a class="footer__logo logo--black" href="index.html">
-          <svg width="147" height="40">
+    <footer class="footer footer--contacts container">
+      <div class="footer__contacts container">
+        <a class="footer__logo logo-black" href="index.html">
+          <svg class="logo-black__mobile" width="147" height="40">
             <use xlink:href="img/sprite.svg#footer-logo"></use>
           </svg>
+          <svg class="logo-black__desktop" width="147" height="40">
+            <use xlink:href="img/sprite.svg#footer-logo-desktop"></use>
+          </svg>
         </a>
-        <ul class="footer__socials">
-          <li class="footer__link">
-            <a class="footer__twitter" href="" target="_blank" rel="noopener, nofollow" title="Твиттер"></a>
+        <ul class="footer__socials socials">
+          <li class="socials__link">
+            <a class="socials__twitter" href="" target="_blank" rel="noopener, nofollow" title="Твиттер"></a>
           </li>
-          <li class="footer__link">
-            <a class="footer__facebook" href="" target="_blank" rel="noopener, nofollow" title="Фэйсбук"><span class="visually-hidden">Фэйсбук</span></a>
+          <li class="socials__link">
+            <a class="socials__facebook" href="" target="_blank" rel="noopener, nofollow" title="Фэйсбук"><span class="visually-hidden">Фэйсбук</span></a>
           </li>
-          <li class="footer__link">
-            <a class="footer__youtube" href="" target="_blank" rel="noopener, nofollow" title="Ютюб"><span class="visually-hidden">Ютюб</span></a>
+          <li class="socials__link">
+            <a class="socials__youtube" href="" target="_blank" rel="noopener, nofollow" title="Ютюб"><span class="visually-hidden">Ютюб</span></a>
           </li>
         </ul>
         <div class="footer__develop">
           <a class="develop-link" href="https://htmlacademy.ru/intensive/adaptive">
             <p class="develop-link__text">Разработано</p>
-            <svg class="develop-link__academy" width="27" height="34" >
+            <svg class="develop-link__academy" width="30" height="35">
               <use xlink:href="img/sprite.svg#htmlacademy"></use>
             </svg>
           </a>
         </div>
       </div>
     </footer>
+    <script src="js/picturefill.js"></script>
+    <script src=js/svgxuse.js></script>
   </body>
 </html>

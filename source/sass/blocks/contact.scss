@@ -1,5 +1,4 @@
 .contact {
-    
     &__text {
         display: block;
         font-weight: bold;
@@ -33,6 +32,13 @@
         }
         &:active {
             color: rgba($dark, 0.3);
+        }
+    }
+}
+@media (min-width: $desktop) {
+    .contact {
+        &__text {
+            margin-bottom: $paddingM3;
         }
     }
 }

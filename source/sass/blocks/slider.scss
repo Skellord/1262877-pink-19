@@ -38,4 +38,15 @@
         opacity: 1;
         border-radius: 50%;
     }
+    &__arrow {
+        color: $dark;
+        opacity: 0.3;
+        &:hover,
+        &:focus {
+            opacity: 0.6;
+        }
+        &:active {
+            opacity: 0.1;
+        }
+    }
 }

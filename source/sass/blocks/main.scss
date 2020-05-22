@@ -1,14 +1,20 @@
 .main {
-
     &__description {
         margin-left: auto;
         margin-right: auto;
-        margin-top: $paddingM5;
-        margin-bottom: $paddingM5;
+        margin-top: 45px;
+        margin-bottom: 45px;
+        padding-left: $paddingM2;
+        padding-right: $paddingM2;
         font-size: $fontS;
-        width: 275px;
         text-align: center;
         line-height: $lineheightL;
+        &--bottom {
+            margin-bottom: $paddingT;
+        }
+        & .tablet-br {
+            display: none;
+        }
     }
     &__text-desktop {
         display: none;
@@ -18,15 +24,42 @@
     .main {
         &__description {
             font-size: $fontM;
-            width: 500px;
-            margin-top: $paddingT2;
-            margin-bottom: $paddingT2;
-        }
-        &__description:not(.main__description--bottom) br {
-            display: none;
+            margin-top: 90px;
+            margin-bottom: 70px;
+            padding-left: $paddingM5;
+            padding-right: $paddingM5;
+            & .mobile-br {
+                display: none;
+            }
+            &--bottom {
+                margin-top: 68px;
+                margin-bottom: 66px;
+            }
+            & .tablet-br {
+                display: inline;
+            }
         }
         &__text-desktop {
             display: inline;
+        }
+    }
+}
+@media (min-width: $desktop) {
+    .main {
+        &__description {
+            margin-bottom: $paddingT2;
+            padding-left: 200px;
+            padding-right: 200px;
+            & .tablet-br {
+                display: none;
+            }
+            & .mobile-br {
+                display: inline;
+            }
+            &--bottom {
+                margin-top: $paddingT;
+                margin-bottom: $paddingT;
+            }
         }
     }
 }

@@ -15,8 +15,11 @@
         font-weight: 300;
         font-size: $fontL;
     }
-    &__label:not(:last-child) {
+    &__label {
         margin-bottom: $paddingM3;
+    }
+    &__wrapper {
+        margin-bottom: -30px;
     }
     &::after {
         content: "";
@@ -28,28 +31,60 @@
         width: 100%;
         bottom: -64px;
         height: 65px;
-        
     }
 }
 @media (min-width: $tablet) {
     .contacts {
+        padding-bottom: 0;
+        &__wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding-left: $paddingM2;
+            padding-right: 0;
+        }
         &__title {
             font-size: $fontXL;
             line-height: normal;
         }
         &__label {
             display: inline-block;
-        }
-        &__label:first-of-type {
-            margin-right: 100px;
-        }
-        &__label:not(:last-child) {
-            margin-bottom: $paddingT;
+            margin-bottom: 55px;
         }
         &::after {
             bottom: -80px;
             height: 80px;
             background-size: 100% 80px;
+        }
+    }
+}
+@media (min-width: $desktop) {
+    .contacts {
+        padding-bottom: $paddingT2;
+        &__title {
+            font-size: $fontXXL;
+        }
+        &::after {
+            background-size: 100% 90px;
+            bottom: -90px;
+            height: 90px;
+        }
+        &__wrapper {
+            padding-left: 120px;
+            padding-right: 100px;
+            padding-top: $paddingM2;
+        }
+        &__label {
+            margin-bottom: 0;
+            &--adress {
+                order: 1;
+            }
+            &--phone {
+                order: 0;
+            }
+            &--mail {
+                order: 3;
+            }
         }
     }
 }

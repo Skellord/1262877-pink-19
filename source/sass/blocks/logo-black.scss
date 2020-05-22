@@ -1,0 +1,24 @@
+.logo-black {
+    color: $dark;
+    &__desktop {
+        display: none;
+    }
+    &:hover,
+    &:focus {
+        color: $red;
+    }
+    &:active {
+        color: $dark;
+        opacity: 0.3;
+    }
+}
+@media (min-width: $desktop) {
+    .logo-black {
+        &__mobile {
+            display: none;
+        }
+        &__desktop {
+            display: inline;
+        }
+    }
+}

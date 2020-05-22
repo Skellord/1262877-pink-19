@@ -32,3 +32,13 @@
         }
     }
 }
+@media (min-width: $desktop) {
+    .logo {
+        &__tablet {
+            display: none;
+        }
+        &__desktop {
+            display: inline-block;
+        }
+    }
+}

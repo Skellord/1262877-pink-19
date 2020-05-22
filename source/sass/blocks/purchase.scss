@@ -29,7 +29,7 @@
         top: 0;
         left: auto;
         background: url(../img/bg-triangle-white.svg) 0 0 no-repeat;
-        background-size: contain;;
+        background-size: contain;
         z-index: -1;
     }
 }
@@ -43,8 +43,18 @@
         display: block;
     }
     .purchase {
+        padding-bottom: 0;
         &__toggles {
             display: none;
+        }
+    }
+}
+@media (min-width: $desktop) {
+    .purchase {
+        padding-top: 105px;
+        padding-bottom: $paddingM4;
+        &::before {
+            background-size: 100% 80px;
         }
     }
 }

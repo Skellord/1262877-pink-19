@@ -1,11 +1,11 @@
 .user-photo {
     background-color: $gray;
-
     &__form {
+        position: relative;
         text-align: center;
     }
     &__photo {
-        margin-bottom: $paddingM4;
+        margin-bottom: 35px;
         width: 280px;
         height: 374px;
     }
@@ -16,8 +16,9 @@
     &__filter-buttons {
         display: flex;
         justify-content: space-around;
-        padding-left: $paddingM5;
+        padding-left: $paddingM4;
         padding-right: $paddingM5;
+        margin-bottom: $paddingM2;
     }
     &__button {
         background-color: transparent;
@@ -25,15 +26,21 @@
         padding: 0;
         opacity: 0.3;
         color: $dark;
-        &:hover:not(.user-photo__button-active) {
+        &:hover:not(.user-photo__button--active) {
             opacity: 0.5;
         }
     }
-    &__button-active {
+    &__button--active {
         opacity: 1;
         color: $red;
     }
-    &__label:not(.user-photo__label-active) {
+    &__container {
+        position: relative;
+        width: 320px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    &__label:not(.user-photo__label--active) {
         display: none;
     }
     &__label svg {
@@ -41,14 +48,17 @@
     }
     &__range {
         -webkit-appearance: none;
+        height: 55px;
         width: 240px;
-        height: 2px;
-        background: $black;
+        padding: 0;	
+        background-color: $gray;
     }
     &__range::-webkit-slider-thumb {
         -webkit-appearance: none;
-        width: 13px;
-        height: 13px;
+        box-sizing: content-box;
+        width: 12px;
+        height: 12px;
+        transform: translateY(-50%);
         background-color: $gray;
         border-radius: 50%;
         border: 2px solid $red;
@@ -57,8 +67,8 @@
         }
     }
     &__range::-moz-range-thumb {
-        width: 13px;
-        height: 13px;
+        width: 12px;
+        height: 12px;
         background-color: $gray;
         border-radius: 50%;
         border: 2px solid $red;
@@ -67,8 +77,8 @@
         }
     }
     &__range::-ms-thumb {
-        width: 13px;
-        height: 13px;
+        width: 12px;
+        height: 12px;
         background-color: $gray;
         border-radius: 50%;
         border: 2px solid $red;
@@ -76,16 +86,35 @@
             background-color: $red;
         }
     }
+    &__range::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 2px;
+        background: $black;
+    }
+    &__range::-moz-range-track {
+        width: 100%;
+        height: 2px;
+        background: $black;
+    }
+    &__range::-ms-track {
+        border-color: transparent;
+        color: transparent;
+        width: 100%;
+        height: 2px;
+        background: $black;
+    }
+    &__range::-ms-fill-lower {
+        background: $black;
+    }
     &__buttons {
         padding-top: $paddingM4;
         padding-bottom: $paddingM4;
         text-align: center;
-    }
-    &__form-button:not(:last-child) {
-        margin-bottom: $paddingM;
+        margin-bottom: -10px;
     }
     &__form-button {
         min-width: 280px;
+        margin-bottom: $paddingM;
     }
     &__wrapper:first-child::after {
         content: "";
@@ -98,19 +127,27 @@
 }
 @media (min-width: $tablet) {
     .user-photo {
-        position: relative;
         &__photo {
             width: 300px;
             height: 400px;
         }
-        &__form {
+        &__buttons-container {
+            position: relative;
+            width: 620px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &__container {
+            width: 620px;
             display: flex;
             justify-content: space-between;
-            padding-left: $paddingM2;
-            padding-right: $paddingM2;
             padding-top: $paddingT;
+            padding-right: 15px;
         }
-        &__label:not(.user-photo__label-active) {
+        &__filter-buttons {
+            display: none;
+        }
+        &__label:not(.user-photo__label--active) {
             display: flex;
         }
         &__label {
@@ -118,25 +155,23 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            height: 70px;
-            padding-top: 27px;
-        }
-        &__label::after {
-            content: "";
-            position: absolute;
-            bottom: -15px;
-            display: block;
-            width: 275px;
-            height: 1px;
-            background-color: $dark;
-            opacity: 0.1;
-        }
-        &__label svg {
-            display: inline-block;
-            color: $red;
-        }
-        &__filter-buttons {
-            display: none;
+            height: 40px;
+            margin-bottom: $paddingM3;
+            &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                bottom: -15px;
+                left: 0;
+                display: block;
+                height: 1px;
+                background-color: $dark;
+                opacity: 0.1;
+                }
+            & svg {
+                display: inline-block;
+                color: $red;
+            }
         }
         &__range {
             margin-left: $paddingM3;
@@ -146,15 +181,75 @@
             display: flex;
             flex-direction: column;
             position: absolute;
-            bottom: 3px;
-            right: 13px;
+            bottom: 15px;
+            right: 15px;
             width: 260px;
+            margin-bottom: -25px;
         }
         &__form-button {
             min-width: 260px;
-        }
-        &__form-button:not(:last-child) {
             margin-bottom: 25px;
+        }
+        &__wrapper:first-child::after{
+            display: none;
+        }
+    }   
+}
+@media (min-width: $desktop) {
+    .user-photo {
+        &__wrapper {
+            background-color: $white;
+        }
+        &__container {
+            width: 940px;
+            background-color: $gray;
+            padding-left: $paddingT3;
+            padding-right: $paddingT4;
+        }
+        &__buttons-container {
+            width: 940px;
+        }
+        &__range {
+            width: 288px;
+            margin-left: 50px;
+        }
+        &__svg {
+            &--crop {
+                width: 44px;
+                height: 44px;
+            }
+            &--fill {
+                width: 48px;
+                height: 43px;
+            }
+            &--contrast {
+                width: 32px;
+                height: 32px;
+                margin-left: 5px;
+            }
+        }
+        &__label {
+            height: 55px;
+            margin-bottom: $paddingM2;
+            padding-top: 0;
+            padding-bottom: 27px;
+            &::after {
+                bottom: 15px;
+            }
+        }
+        &__buttons {
+            flex-direction: row;
+            bottom: 15px;
+            right: 100px;
+            width: 410px;
+            margin-bottom: 0;
+            margin-right: -44px;
+        }
+        &__form-button {
+            min-width: 183px;
+            min-height: 55px;
+            margin-bottom: 0;
+            margin-right: 44px;
         }
     }
 }

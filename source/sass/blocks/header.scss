@@ -1,7 +1,13 @@
 .header {
     display: flex;
     flex-direction: column;
-
+    background: url(../img/bg-back-mobile@1x.jpg) 50% 25% no-repeat;
+    background-size: cover;
+    background-color: $dark;
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background: url(../img/bg-back-mobile@2x.jpg) 50% 25% no-repeat;
+        background-size: cover;
+    }
     &__title {
     text-align: center;
     font-weight: 300;
@@ -16,26 +22,19 @@
         display: flex;
         justify-content: center;
         padding-top: $paddingM3;
-        background: url(../img/bg-back-mobile@1x.jpg) 50% 25% no-repeat;
-        background-size: cover;
-        background-color: $dark;
-        @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-            background: url(../img/bg-back-mobile@2x.jpg) 50% 25% no-repeat;
-            background-size: cover;
-        }
     }
 }
 @media (min-width: $tablet) {
     .header {
+        background: url(../img/bg-back-tablet@1x.jpg) 50% 25% no-repeat;
+        background-color: $dark;
+        @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+            background: url(../img/bg-back-tablet@2x.jpg) 50% 25% no-repeat;
+            background-size: cover;
+        }
         &__wrapper {
             min-height: 325px;
-            background: url(../img/bg-back-tablet@1x.jpg) 50% 25% no-repeat;
-            background-color: $dark;
             padding-top: 60px;
-            @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-                background: url(../img/bg-back-tablet@2x.jpg) 50% 25% no-repeat;
-                background-size: cover;
-            }
         }
         &__title {
             font-size: $fontXXL;
@@ -51,10 +50,8 @@
             background: url(../img/bg-back-desktop@2x.jpg) 50% 25% no-repeat;
             background-size: cover;
         }
-
         &__wrapper {
             min-height: 285px;
-            background: none;
         }
         &__container {
             display: flex;

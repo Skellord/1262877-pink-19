@@ -1,0 +1,41 @@
+.page-list {
+    @include reset-list;
+    padding-top: $paddingM4;
+    padding-bottom: $paddingM4;
+    margin-bottom: -42px;
+    &__item {
+        position: relative;
+        min-height: 39px;
+        padding-left: 70px;
+        padding-top: 7px;
+        margin-bottom: 42px;
+        &--os {
+            margin-bottom: $paddingM3;
+        }
+    }
+}
+@media (min-width: $tablet) {
+    .page-list {
+        padding-top: 0;
+        &--os {
+            padding-bottom: $paddingT;
+        }
+        &__item--os {
+            padding-left: $paddingT;
+        }
+    }
+}
+@media (min-width: $desktop) {
+    .page-list {
+        &__item {
+            padding-left: 55px;
+        }
+        &--achievements {
+            display: flex;
+            flex-wrap: wrap;
+            & .page-list__item {
+                width: 290px;
+            }
+        }
+    }
+}

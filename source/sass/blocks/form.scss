@@ -67,22 +67,6 @@
             display: none;
         }
     }
-    &__list {
-        @include reset-list;
-        padding-top: $paddingM4;
-        padding-bottom: $paddingM4;
-        margin-bottom: -42px;
-        &-item {
-            position: relative;
-            min-height: 39px;
-            padding-left: 70px;
-            padding-top: 7px;
-            margin-bottom: 42px;
-            &--os {
-                margin-bottom: $paddingM3;
-            }
-        }
-    }
     &__checkbox {
         display: block;
         position: absolute;
@@ -225,12 +209,6 @@
                 order: 4;
             }
         }
-        &__list {
-            padding-top: 0;
-            &--os {
-                padding-bottom: $paddingT;
-            }
-        }
         &__item {
             display: flex;
             align-items: center;
@@ -296,7 +274,6 @@
             padding: 0;
             padding-left: 25px;
             padding-right: 25px;
-            
             &--phone {
                 display: block;
                 position: absolute;
@@ -404,15 +381,6 @@
                 width: 936px;
             }
         }
-        &__block-achievements { 
-            & .form__list {
-                display: flex;
-                flex-wrap: wrap;
-            }
-            & .form__list-item {
-                width: 290px;
-            }
-        }
         &__input {
             width: 336px;
             &--name {
@@ -424,9 +392,6 @@
             &--phone {
                 width: 100%;
             }
-        }
-        &__list-item {
-            padding-left: 55px;
         }
         &__item {
             &--os {

@@ -5,7 +5,7 @@
     <title>Пинк: фотографии пользователей</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="body body--photo">
     <header class="header">
@@ -23,9 +23,12 @@
             </svg>
           </a>
           <button class="main-nav__button" type="button">
-            <span class="visually-hidden">Закрыть меню</span>
-            <svg class="main-nav__cross" width="24" height="23">
+            <span class="visually-hidden">Открыть меню</span>
+            <svg class="main-nav__button--cross" width="24" height="23">
               <use xlink:href="img/sprite.svg#close-button"></use>
+            </svg>
+            <svg class="main-nav__button--burger" width="50" height="24">
+              <use xlink:href="img/sprite.svg#burger"></use>
             </svg>
           </button>
         </div>
@@ -58,7 +61,7 @@
             <div class="container">
               <span class="photo-list__announcment">Панорама дня</span>
             </div>
-            <a class="photo-list__link" href="https://via.placeholder.com/320x137" target="_blank">
+            <a class="photo-list__link" href="img/panorama-desktop@2x.jpg" target="_blank">
               <picture>
                 <source media="(min-width: 1200px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x">
@@ -83,7 +86,7 @@
         <div class="photo-list__wrapper container">
           <ul class="photo-list">
             <li class="photo-list__item">
-              <a class="photo-list__link" href="https://via.placeholder.com/280x180" target="_blank">
+              <a class="photo-list__link" href="img/photo-car-desktop@2x.jpg" target="_blank">
                 <picture>
                   <source media="(min-width: 1200px)" srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
                   <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
@@ -103,7 +106,7 @@
               </div>
             </li>
             <li class="photo-list__item">
-              <a class="photo-list__link" href="https://via.placeholder.com/280x180" target="_blank">
+              <a class="photo-list__link" href="img/photo-drumset-desktop@2x.jpg" target="_blank">
                 <picture>
                   <source media="(min-width: 1200px)" srcset="img/photo-drumset-desktop@1x.jpg 1x, img/photo-drumset-desktop@2x.jpg 2x">
                   <source media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.jpg 1x, img/photo-drumset-tablet@2x.jpg 2x">
@@ -123,7 +126,7 @@
               </div>
             </li>
             <li class="photo-list__item">
-              <a class="photo-list__link" href="https://via.placeholder.com/280x180" target="_blank">
+              <a class="photo-list__link" href="img/photo-window-desktop@2x.jpg" target="_blank">
                 <picture>
                   <source media="(min-width: 1200px)" srcset="img/photo-window-desktop@1x.jpg 1x, img/photo-window-desktop@2x.jpg 2x">
                   <source media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.jpg 1x, img/photo-window-tablet@2x.jpg 2x">
@@ -143,7 +146,7 @@
               </div>
             </li>
             <li class="photo-list__item">
-              <a class="photo-list__link" href="https://via.placeholder.com/280x180" target="_blank">
+              <a class="photo-list__link" href="img/photo-fair-desktop@2x.jpg" target="_blank">
                 <picture>
                   <source media="(min-width: 1200px)" srcset="img/photo-fair-desktop@1x.jpg 1x, img/photo-fair-desktop@2x.jpg 2x">
                   <source media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.jpg 1x, img/photo-fair-tablet@2x.jpg 2x">
@@ -163,7 +166,7 @@
               </div>
             </li>
             <li class="photo-list__item">
-              <a class="photo-list__link" href="https://via.placeholder.com/280x180" target="_blank">
+              <a class="photo-list__link" href="img/photo-pov-desktop@2x.jpg" target="_blank">
                 <picture>
                   <source media="(min-width: 1200px)" srcset="img/photo-pov-desktop@1x.jpg 1x, img/photo-pov-desktop@2x.jpg 2x">
                   <source media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.jpg 1x, img/photo-pov-tablet@2x.jpg 2x">
@@ -183,7 +186,7 @@
               </div>
             </li>
             <li class="photo-list__item">
-              <a class="photo-list__link" href="https://via.placeholder.com/280x180" target="_blank">
+              <a class="photo-list__link" href="img/photo-wing-desktop@2x.jpg" target="_blank">
                 <picture>
                   <source media="(min-width: 1200px)" srcset="img/photo-wing-desktop@1x.jpg 1x, img/photo-wing-desktop@2x.jpg 2x">
                   <source media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.jpg 1x, img/photo-wing-tablet@2x.jpg 2x">
@@ -269,27 +272,30 @@
       </section>
     </main>
     <footer class="footer footer--contacts container">
-      <div class="footer__contacts">
-        <a class="footer__logo logo--black" href="index.html">
-          <svg width="147" height="40">
+      <div class="footer__contacts container">
+        <a class="footer__logo logo-black" href="index.html">
+          <svg class="logo-black__mobile" width="147" height="40">
             <use xlink:href="img/sprite.svg#footer-logo"></use>
           </svg>
+          <svg class="logo-black__desktop" width="147" height="40">
+            <use xlink:href="img/sprite.svg#footer-logo-desktop"></use>
+          </svg>
         </a>
-        <ul class="footer__socials">
-          <li class="footer__link">
-            <a class="footer__twitter" href="" target="_blank" rel="noopener, nofollow" title="Твиттер"></a>
+        <ul class="footer__socials socials">
+          <li class="socials__link">
+            <a class="socials__twitter" href="" target="_blank" rel="noopener, nofollow" title="Твиттер"></a>
           </li>
-          <li class="footer__link">
-            <a class="footer__facebook" href="" target="_blank" rel="noopener, nofollow" title="Фэйсбук"><span class="visually-hidden">Фэйсбук</span></a>
+          <li class="socials__link">
+            <a class="socials__facebook" href="" target="_blank" rel="noopener, nofollow" title="Фэйсбук"><span class="visually-hidden">Фэйсбук</span></a>
           </li>
-          <li class="footer__link">
-            <a class="footer__youtube" href="" target="_blank" rel="noopener, nofollow" title="Ютюб"><span class="visually-hidden">Ютюб</span></a>
+          <li class="socials__link">
+            <a class="socials__youtube" href="" target="_blank" rel="noopener, nofollow" title="Ютюб"><span class="visually-hidden">Ютюб</span></a>
           </li>
         </ul>
         <div class="footer__develop">
           <a class="develop-link" href="https://htmlacademy.ru/intensive/adaptive">
             <p class="develop-link__text">Разработано</p>
-            <svg class="develop-link__academy" width="27" height="34" >
+            <svg class="develop-link__academy" width="30" height="35">
               <use xlink:href="img/sprite.svg#htmlacademy"></use>
             </svg>
           </a>

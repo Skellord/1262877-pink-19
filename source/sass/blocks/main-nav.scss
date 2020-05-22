@@ -45,12 +45,13 @@
     }
     &__button {
         display: none;
-        width: 24px;
-        height: 23px;
         padding: 0;
         background-color: transparent;
         border: none;
         color: $white;
+        &--burger {
+            display: none;
+        }
         &:hover,
         &:focus {
             color: $red;
@@ -58,6 +59,23 @@
         &:active {
             color: $red;
             opacity: 0.3;
+        }
+    }
+}
+.main-nav--disabled {
+    & .main-nav__menu {
+        display: none;
+    }
+    & .main-nav__wrapper {
+        background-color: rgba($black, 0.3);
+        box-shadow: none;
+    }
+    & .main-nav__button {
+        &--cross {
+            display: none;
+        }
+        &--burger {
+            display: block;
         }
     }
 }
@@ -73,11 +91,20 @@
     .main-nav {
         display: flex;
         background-color: rgba($black, 0.3);
+        &--disabled {
+            & .main-nav__menu {
+                display: block;
+            }
+            & .main-nav__wrapper {
+                background: transparent;
+            }
+        }
         &__wrapper {
             background-color: transparent;
             margin-left: 9%;
             align-items: flex-start;
             padding-top: $paddingM3;
+            box-shadow: none;
         }
         &__menu {
             padding-top: 45px;

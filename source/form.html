@@ -5,7 +5,7 @@
     <title>Пинк: конкурс!</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="body body--form">
     <header class="header">
@@ -23,9 +23,12 @@
             </svg>
           </a>
           <button class="main-nav__button" type="button">
-            <span class="visually-hidden">Закрыть меню</span>
-            <svg class="main-nav__cross" width="24" height="23">
+            <span class="visually-hidden">Открыть меню</span>
+            <svg class="main-nav__button--cross" width="24" height="23">
               <use xlink:href="img/sprite.svg#close-button"></use>
+            </svg>
+            <svg class="main-nav__button--burger" width="50" height="24">
+              <use xlink:href="img/sprite.svg#burger"></use>
             </svg>
           </button>
         </div>
@@ -79,43 +82,43 @@
               <div class="form__container">
                 <fieldset class="form__fieldset form__fieldset--frame form__fieldset--achievements">
                   <legend class="form__legend">Ваши безбашенные<br> достижения в путешествии</legend>
-                  <ul class="form__list">
-                    <li class="form__list-item">
+                  <ul class="form__list page-list page-list--achievements">
+                    <li class="page-list__item">
                       <label class="form__label form__label--checkbox">
                         <input class="form__input form__input--checkbox visually-hidden" id="selfie" name="achievments[]" value="selfie" type="checkbox" checked>
                         <span class="form__checkbox"></span>
                         <span class="form__label-text">Сделал селфи с акулой</span>
                       </label>
                     </li>
-                    <li class="form__list-item">
+                    <li class="page-list__item">
                       <label class="form__label form__label--checkbox">
                         <input class="form__input form__input--checkbox visually-hidden" id="burnt" name="achievments[]" value="burnt" type="checkbox" checked>
                         <span class="form__checkbox"></span>
                         <span class="form__label-text">Обгорел на пляже</span>
                       </label>
                     </li>
-                    <li class="form__list-item">
+                    <li class="page-list__item">
                       <label class="form__label form__label--checkbox">
                         <input class="form__input form__input--checkbox visually-hidden" id="chuck" name="achievments[]" value="chuck" type="checkbox">
                         <span class="form__checkbox"></span>
                         <span class="form__label-text">Видел Чака Норриса</span>
                       </label>
                     </li>
-                    <li class="form__list-item">
+                    <li class="page-list__item">
                       <label class="form__label form__label--checkbox">
                         <input class="form__input form__input--checkbox visually-hidden" id="souvenirs" name="achievments[]" value="souvenirs" type="checkbox">
                         <span class="form__checkbox"></span>
                         <span class="form__label-text">Накупил сувениров</span>
                       </label>
                     </li>
-                    <li class="form__list-item">
+                    <li class="page-list__item">
                       <label class="form__label form__label--checkbox">
                         <input class="form__input form__input--checkbox visually-hidden" id="town" name="achievments[]" value="town" type="checkbox" checked>
                         <span class="form__checkbox"></span>
                         <span class="form__label-text">Удержал башню</span>
                       </label>
                     </li>
-                    <li class="form__list-item">
+                    <li class="page-list__item">
                       <label class="form__label form__label--checkbox">
                         <input class="form__input form__input--checkbox visually-hidden" id="hotel" name="achievments[]" value="hotel" type="checkbox">
                         <span class="form__checkbox"></span>
@@ -135,7 +138,7 @@
                 <div class="form__item form__item--phone">
                   <label class="form__label form__label--text form__label--phone" for="phone">Номер телефона</label>
                   <div class="form__input-wrapper">
-                    <input class="form__input form__input--text form__input--phone" id="phone" name="phone" value="" type="number" placeholder="Номер, пожалуйста">
+                    <input class="form__input form__input--text form__input--phone" id="phone" name="phone" value="" type="tel" placeholder="Номер, пожалуйста">
                     <span class="form__icon form__icon--phone"></span>
                   </div>
                 </div>
@@ -155,22 +158,22 @@
               <div class="form__container">
                 <fieldset class="form__fieldset form__fieldset--frame form__fieldset--os">
                   <legend class="form__legend">С каким приложением<br>путешествовали?</legend>
-                  <ul class="form__list form__list--os">
-                    <li class="form__list-item form__list-item--os">
+                  <ul class="form__list page-list page-list--os">
+                    <li class="page-list__item page-list__item--os">
                       <label class="form__label">
                         <input class="form__input form__input--radio visually-hidden" id="iOS" name="os" value="iOS" type="radio" checked>
                         <span class="form__radiobox"></span>
                         <span class="form__label-text">Pink для iOS</span>
                       </label>
                     </li>
-                    <li class="form__list-item form__list-item--os">
+                    <li class="page-list__item page-list__item--os">
                       <label class="form__label">
                         <input class="form__input form__input--radio visually-hidden" id="Android" name="os" value="Android" type="radio">
                         <span class="form__radiobox"></span>
                         <span class="form__label-text">Pink на Android</span>
                       </label>
                     </li>
-                    <li class="form__list-item form__list-item--os">
+                    <li class="page-list__item page-list__item--os">
                       <label class="form__label">
                         <input class="form__input form__input--radio visually-hidden" id="Windows" name="os" value="Windows" type="radio">
                         <span class="form__radiobox"></span>
@@ -197,26 +200,29 @@
     </main>
     <footer class="footer wrapper">
       <div class="footer__contacts container">
-        <a class="footer__logo logo--black" href="index.html">
-          <svg width="147" height="40">
+        <a class="footer__logo logo-black" href="index.html">
+          <svg class="logo-black__mobile" width="147" height="40">
             <use xlink:href="img/sprite.svg#footer-logo"></use>
           </svg>
+          <svg class="logo-black__desktop" width="147" height="40">
+            <use xlink:href="img/sprite.svg#footer-logo-desktop"></use>
+          </svg>
         </a>
-        <ul class="footer__socials">
-          <li class="footer__link">
-            <a class="footer__twitter" href="" target="_blank" rel="noopener, nofollow" title="Твиттер"></a>
+        <ul class="footer__socials socials">
+          <li class="socials__link">
+            <a class="socials__twitter" href="" target="_blank" rel="noopener, nofollow" title="Твиттер"></a>
           </li>
-          <li class="footer__link">
-            <a class="footer__facebook" href="" target="_blank" rel="noopener, nofollow" title="Фэйсбук"><span class="visually-hidden">Фэйсбук</span></a>
+          <li class="socials__link">
+            <a class="socials__facebook" href="" target="_blank" rel="noopener, nofollow" title="Фэйсбук"><span class="visually-hidden">Фэйсбук</span></a>
           </li>
-          <li class="footer__link">
-            <a class="footer__youtube" href="" target="_blank" rel="noopener, nofollow" title="Ютюб"><span class="visually-hidden">Ютюб</span></a>
+          <li class="socials__link">
+            <a class="socials__youtube" href="" target="_blank" rel="noopener, nofollow" title="Ютюб"><span class="visually-hidden">Ютюб</span></a>
           </li>
         </ul>
         <div class="footer__develop">
           <a class="develop-link" href="https://htmlacademy.ru/intensive/adaptive">
             <p class="develop-link__text">Разработано</p>
-            <svg class="develop-link__academy" width="27" height="34" >
+            <svg class="develop-link__academy" width="30" height="35">
               <use xlink:href="img/sprite.svg#htmlacademy"></use>
             </svg>
           </a>

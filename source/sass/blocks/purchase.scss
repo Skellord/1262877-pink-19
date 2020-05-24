@@ -32,20 +32,20 @@
         background-size: contain;
         z-index: -1;
     }
-}
-.purchase .slider__item--1,
-.purchase  .slider__item--3{
-    display: none;
+    &__item--1,
+    &__item--3 {
+        display: none;
+    }
 }
 @media (min-width: $tablet) {
-    .purchase .slider__item--1,
-    .purchase  .slider__item--3 {
-        display: block;
-    }
     .purchase {
         padding-bottom: 0;
         &__toggles {
             display: none;
+        }
+        &__item--1,
+        &__item--3 {
+            display: block;
         }
     }
 }

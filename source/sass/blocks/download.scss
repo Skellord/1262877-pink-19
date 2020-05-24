@@ -6,7 +6,7 @@
     }
     &__phone {
         padding-top: $paddingM2;
-        min-height: 400px;
+        min-height: 392px;
         background: url(../img/iphone-hand-mobile@1x.png) 0% 100% no-repeat;
         @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
             background: url(../img/iphone-hand-mobile@2x.png) 0 100% no-repeat;
@@ -70,7 +70,7 @@
             font-size: $fontXL;
             font-weight: 300;
             text-align: center;
-            line-height: normal;
+            line-height: 50px;
             margin-left: 50px;
         }
         &__list {
@@ -95,21 +95,23 @@
     .download {
         padding-top: $paddingM4;
         &__phone {
-            min-height: 643px;
+            min-height: 644px;
             padding-top: 0;
-            background: url(../img/iphone-hand-desktop@1x.png) 97% 100% no-repeat;
+            background: url(../img/iphone-hand-desktop@1x.png) -27% 100% no-repeat;
             @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-                background: url(../img/iphone-hand-desktop@2x.png) 97% 100% no-repeat;
+                background: url(../img/iphone-hand-desktop@2x.png) -27% 100% no-repeat;
                 background-size: 1050px auto;
             }
         }
         &__title {
             font-size: $fontXXL;
-            margin-left: 160px;
+            margin-left: 40px;
+            padding-top: 10px;
+            line-height: 59px;  
         }
         &__list {
-            left: 120px;
-            bottom: 180px;
+            left: -2px;
+            bottom: 183px;
         }
         &__description {
             margin-top: $paddingM5;

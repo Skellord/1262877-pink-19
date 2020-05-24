@@ -70,13 +70,11 @@
             height: 90px;
         }
         &__wrapper {
-            padding-left: 120px;
-            padding-right: 100px;
             padding-top: $paddingM2;
         }
         &__label {
             margin-bottom: 0;
-            &--adress {
+            &--address {
                 order: 1;
             }
             &--phone {

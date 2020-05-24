@@ -26,10 +26,10 @@
     }
     &__list {
         @include reset-list;
-        padding-bottom: $paddingM2;
+        padding-bottom: 7px;
     }
     &__item {
-        margin-bottom: $paddingM3;
+        margin-bottom: 35px;
         padding-left: $paddingM2;
         padding-right: $paddingM2;
     }
@@ -151,8 +151,8 @@
             display: flex;
             width: 100%;
             justify-content: space-between;
-            padding-left: 155px;
-            padding-right: 165px;
+            padding-left: 30px;
+            padding-right: 45px;
             margin-top: 270px;
         }
         &__item {

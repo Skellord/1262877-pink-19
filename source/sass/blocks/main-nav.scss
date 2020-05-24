@@ -20,7 +20,7 @@
         justify-content: center;
         align-items: center;
         width: 100%;
-        height: 64px;
+        height: 63px;
         line-height: 64px;
         margin-top: 1px;
         box-shadow: 0px 1px 0 0 $black,
@@ -89,8 +89,14 @@
 }
 @media (min-width: $desktop) {
     .main-nav {
-        display: flex;
         background-color: rgba($black, 0.3);
+        &__container {
+            display: flex;
+            width: 960px;
+            padding-top: 10px;
+            margin-left: auto;
+            margin-right: auto;
+        }
         &--disabled {
             & .main-nav__menu {
                 display: block;
@@ -101,15 +107,15 @@
         }
         &__wrapper {
             background-color: transparent;
-            margin-left: 9%;
             align-items: flex-start;
             padding-top: $paddingM3;
+            padding-left: 10px;
             box-shadow: none;
         }
         &__menu {
-            padding-top: 45px;
+            padding-top: 50px;
             background-color: transparent;
-            margin-left: 13%;
+            margin-left: 150px;
         }
         &__list {
             display: flex;
@@ -123,11 +129,15 @@
             white-space: nowrap;
             box-shadow: none;
             line-height: 1;
+            padding-bottom: 10px;
+            &:last-child {
+                margin-right: 0;
+            }
             &--active a::after {
                 content: "";
                 position: absolute;
                 left: 0;
-                bottom: -11px;
+                bottom: 0px;
                 width: 100%;
                 height: 2px;
                 background-color: $white;
@@ -137,6 +147,7 @@
             position: relative;
             text-transform: none;
             font-weight: normal;
+            padding-bottom: 15px;
         }
         &__button {
             display: none;

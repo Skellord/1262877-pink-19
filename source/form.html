@@ -10,44 +10,46 @@
   <body class="body body--form">
     <header class="header">
       <div class="main-nav">
-        <div class="main-nav__wrapper">
-          <a href="index.html" class="main-nav__logo logo">
-            <svg class="logo__mobile" width="74" height="23">
-              <use xlink:href="img/sprite.svg#logo-mobile"></use>
-            </svg>
-            <svg class="logo__tablet" width="147" height="40">
-              <use xlink:href="img/sprite.svg#logo-tablet"></use>
-            </svg>
-            <svg class="logo__desktop" width="147" height="40">
-              <use xlink:href="img/sprite.svg#logo-desktop"></use>
-            </svg>
-          </a>
-          <button class="main-nav__button" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-            <svg class="main-nav__button--cross" width="24" height="23">
-              <use xlink:href="img/sprite.svg#close-button"></use>
-            </svg>
-            <svg class="main-nav__button--burger" width="50" height="24">
-              <use xlink:href="img/sprite.svg#burger"></use>
-            </svg>
-          </button>
+        <div class="main-nav__container">
+          <div class="main-nav__wrapper">
+            <a href="index.html" class="main-nav__logo logo">
+              <svg class="logo__mobile" width="74" height="23">
+                <use xlink:href="img/sprite.svg#logo-mobile"></use>
+              </svg>
+              <svg class="logo__tablet" width="147" height="40">
+                <use xlink:href="img/sprite.svg#logo-tablet"></use>
+              </svg>
+              <svg class="logo__desktop" width="147" height="40">
+                <use xlink:href="img/sprite.svg#logo-desktop"></use>
+              </svg>
+            </a>
+            <button class="main-nav__button" type="button">
+              <span class="visually-hidden">Открыть меню</span>
+              <svg class="main-nav__button main-nav__button--cross" width="24" height="23">
+                <use xlink:href="img/sprite.svg#close-button"></use>
+              </svg>
+              <svg class="main-nav__button main-nav__button--burger" width="50" height="24">
+                <use xlink:href="img/sprite.svg#burger"></use>
+              </svg>
+            </button>
+          </div>
+          <nav class="main-nav__menu">
+            <ul class="main-nav__list ">
+              <li class="main-nav__item">
+                <a href="index.html">Главная</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="photo.html">Фотографии</a>
+              </li>
+              <li class="main-nav__item main-nav__item--active">
+                <a>Конкурс</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+              </li>
+            </ul>
+          </nav>
         </div>
-        <nav class="main-nav__menu">
-          <ul class="main-nav__list ">
-            <li class="main-nav__item">
-              <a href="index.html">Главная</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="photo.html">Фотографии</a>
-            </li>
-            <li class="main-nav__item main-nav__item--active">
-              <a>Конкурс</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-            </li>
-          </ul>
-        </nav>
       </div>
       <div class="header__wrapper">
         <h1 class="header__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
@@ -55,7 +57,7 @@
     </header>
     <main class="main">
       <div class="wrapper">
-        <p class="main__description">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="main__text-desktop">Пожалуйста, заполните форму ниже:</span></p>
+        <p class="main__description main__description--form">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="main__text-desktop">Пожалуйста, заполните форму ниже:</span></p>
       </div>
       <form class="form" method="POST" action="https://echo.htmlacademy.ru">
         <div class="form__block-container">
@@ -83,6 +85,7 @@
                 <fieldset class="form__fieldset form__fieldset--frame form__fieldset--achievements">
                   <legend class="form__legend">Ваши безбашенные<br> достижения в путешествии</legend>
                   <ul class="form__list page-list page-list--achievements">
+                    <div class="form__list-w">
                     <li class="page-list__item">
                       <label class="form__label form__label--checkbox">
                         <input class="form__input form__input--checkbox visually-hidden" id="selfie" name="achievments[]" value="selfie" type="checkbox" checked>
@@ -97,6 +100,8 @@
                         <span class="form__label-text">Обгорел на пляже</span>
                       </label>
                     </li>
+                    </div>
+                    <div class="form__list-w">
                     <li class="page-list__item">
                       <label class="form__label form__label--checkbox">
                         <input class="form__input form__input--checkbox visually-hidden" id="chuck" name="achievments[]" value="chuck" type="checkbox">
@@ -111,6 +116,8 @@
                         <span class="form__label-text">Накупил сувениров</span>
                       </label>
                     </li>
+                    </div>
+                    <div class="form__list-w">
                     <li class="page-list__item">
                       <label class="form__label form__label--checkbox">
                         <input class="form__input form__input--checkbox visually-hidden" id="town" name="achievments[]" value="town" type="checkbox" checked>
@@ -125,6 +132,7 @@
                         <span class="form__label-text">Разгромил отель</span>
                       </label>
                     </li>
+                    </div>
                   </ul>
                 </fieldset>
               </div>

@@ -60,6 +60,9 @@
         }
         &__wrapper {
             min-height: 285px;
+            &--index {
+                padding-top: 90px;
+            }
         }
         &__container {
             display: flex;

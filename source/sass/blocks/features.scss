@@ -79,7 +79,7 @@
             font-size: $fontXL;
             font-weight: 300;
             justify-content: space-around;
-            line-height: normal;
+            line-height: 1.2;
         }
         &__head-text {
             width: 590px;
@@ -138,6 +138,9 @@
         }
         &__main::before {
             background-size: 100% 100px;
+        }
+        &__main {
+            padding-top: 100px;
         }
         &__wrapper {
             width: $desktop;

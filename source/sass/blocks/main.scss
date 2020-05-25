@@ -41,6 +41,7 @@
             & .tablet-br {
                 display: inline;
             }
+
         }
         &__text-desktop {
             display: inline;
@@ -67,6 +68,11 @@
                 padding-left: 100px;
                 padding-right: 100px;
                 margin-bottom: 85px;
+            }
+            &--photo {
+                padding-left: 180px;
+                padding-right: 180px;
+                margin-bottom: 90px;
             }
         }
     }

@@ -40,6 +40,9 @@
 @media (min-width: $tablet) {
     .purchase {
         padding-bottom: 0;
+        &__wrapper {
+            padding-top: 38px;
+        }
         &__toggles {
             display: none;
         }

@@ -31,6 +31,7 @@
     .header {
         background: url(../img/bg-back-tablet@1x.jpg) 50% 25% no-repeat;
         background-color: $dark;
+        background-size: cover;
         @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
             background: url(../img/bg-back-tablet@2x.jpg) 50% 25% no-repeat;
             background-size: cover;
@@ -38,6 +39,9 @@
         &__wrapper {
             min-height: 331px;
             padding-top: 66px;
+            &--index {
+                padding-top: 70px;
+            }
         }
         &__title {
             font-size: $fontXXL;

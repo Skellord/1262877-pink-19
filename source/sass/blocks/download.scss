@@ -52,7 +52,6 @@
 }
 @media (min-width: $tablet) {
     .download {
-        padding-top: $paddingM2;
         &__phone {
             min-height: 549px;
             padding-top: $paddingM2;
@@ -87,15 +86,14 @@
         }
         &__description {
             font-size: $fontM;
-            margin-top: $paddingM3;
+            margin-top: 35px;
         }
     }
 }
 @media (min-width: $desktop) {
     .download {
-        padding-top: $paddingM4;
         &__phone {
-            min-height: 644px;
+            min-height: 659px;
             padding-top: 0;
             background: url(../img/iphone-hand-desktop@1x.png) -27% 100% no-repeat;
             @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -106,7 +104,7 @@
         &__title {
             font-size: $fontXXL;
             margin-left: 40px;
-            padding-top: 10px;
+            padding-top: 22px;
             line-height: 59px;  
         }
         &__list {

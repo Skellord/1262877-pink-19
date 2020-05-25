@@ -9,8 +9,15 @@
         &--phone {
             padding-top: $paddingM4;
         }
+        &--os {
+            padding-top: 75px;
+        }
         &--achievements {
             padding-bottom: 5px;
+            padding-top: 75px;
+        }
+        &--textarea {
+            padding-top: 60px;
         }
     }
     &__container {
@@ -60,7 +67,10 @@
         margin-bottom: $paddingM3;
     }
     &__legend {
-        padding-top: $paddingM4;
+        position: absolute;
+        top: 58px;
+        left: 50%;
+        transform: translate(-50%, -50%);
         color: $red;
         font-size: $fontS;
         text-align: center;
@@ -68,6 +78,9 @@
         line-height: 18px;
         &--phone {
             display: none;
+        }
+        &--textarea {
+            top: 47px;
         }
     }
     &__checkbox {
@@ -137,6 +150,7 @@
         resize: none;
         border: 2px solid $gray2;
         padding: $paddingM2;
+        padding-top: 15px;
         margin-top: 13px;
         margin-bottom: $paddingM3;
         color: $dark;
@@ -249,9 +263,9 @@
         &__icon {
             position: absolute;
             right: 1px;
-            top: 2px;
+            top: 1px;
             width: 59px;
-            height: 59px;
+            height: 61px;
             background-color: $gray2;
             pointer-events: none;
             &--phone::before {
@@ -303,7 +317,7 @@
                 padding-bottom: 0;
             }
             &--textarea {
-                padding-top: 55px;
+                padding-top: 50px;
             }
             &--os {
                 padding-top: 60px;
@@ -319,8 +333,9 @@
         }
         &__textarea {
             width: 496px;
-            height: 189px;
+            height: 195px;
             margin-top: 0;
+            padding: 15px;
         }
         &__button {
             margin: 0;

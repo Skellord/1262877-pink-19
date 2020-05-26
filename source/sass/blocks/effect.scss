@@ -56,7 +56,7 @@
         margin-bottom: $paddingT2;
         &__wrapper {
             width: $desktop;
-            padding-left: 130px;
+            padding-left: 7px;
             padding-bottom: $paddingT2;
             padding-top: $paddingM3;
         }
@@ -68,9 +68,9 @@
         }
         &__number {
             font-size: 120px;
-            border: 20px solid $red;
+            border: 15px solid $red;
             height: 235px;
-            padding: 30px;
+            padding: 35px;
         }
         &__text {
             font-size: $fontM;
@@ -83,7 +83,7 @@
         }
         &__description {
             width: 530px;
-            padding-top: $paddingM2;
+            padding-top: 15px;
             margin-top: $paddingT2;
         }
         &__title br {

@@ -10,7 +10,10 @@
         text-align: center;
         line-height: $lineheightL;
         &--bottom {
-            margin-bottom: $paddingT;
+            margin-bottom: 40px;
+        }
+        &--photo {
+            margin-bottom: 50px;
         }
         & .tablet-br {
             display: none;
@@ -25,19 +28,20 @@
         &__description {
             font-size: $fontM;
             margin-top: 90px;
-            margin-bottom: 70px;
+            margin-bottom: 79px;
             padding-left: $paddingM5;
             padding-right: $paddingM5;
             & .mobile-br {
                 display: none;
             }
             &--bottom {
-                margin-top: 68px;
+                margin-top: 60px;
                 margin-bottom: 66px;
             }
             & .tablet-br {
                 display: inline;
             }
+
         }
         &__text-desktop {
             display: inline;
@@ -47,9 +51,7 @@
 @media (min-width: $desktop) {
     .main {
         &__description {
-            margin-bottom: $paddingT2;
-            padding-left: 200px;
-            padding-right: 200px;
+            margin-bottom: 93px;
             & .tablet-br {
                 display: none;
             }
@@ -58,7 +60,17 @@
             }
             &--bottom {
                 margin-top: $paddingT;
-                margin-bottom: $paddingT;
+                margin-bottom: 40px;
+            }
+            &--form {
+                padding-left: 100px;
+                padding-right: 100px;
+                margin-bottom: 85px;
+            }
+            &--photo {
+                padding-left: 180px;
+                padding-right: 180px;
+                margin-bottom: 90px;
             }
         }
     }

@@ -10,56 +10,58 @@
   <body class="body body--photo">
     <header class="header">
       <div class="main-nav">
-        <div class="main-nav__wrapper">
-          <a href="index.html" class="main-nav__logo logo">
-            <svg class="logo__mobile" width="74" height="23">
-              <use xlink:href="img/sprite.svg#logo-mobile"></use>
-            </svg>
-            <svg class="logo__tablet" width="147" height="40">
-              <use xlink:href="img/sprite.svg#logo-tablet"></use>
-            </svg>
-            <svg class="logo__desktop" width="147" height="40">
-              <use xlink:href="img/sprite.svg#logo-desktop"></use>
-            </svg>
-          </a>
-          <button class="main-nav__button" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-            <svg class="main-nav__button--cross" width="24" height="23">
-              <use xlink:href="img/sprite.svg#close-button"></use>
-            </svg>
-            <svg class="main-nav__button--burger" width="50" height="24">
-              <use xlink:href="img/sprite.svg#burger"></use>
-            </svg>
-          </button>
+        <div class="main-nav__container">
+          <div class="main-nav__wrapper">
+            <a href="index.html" class="main-nav__logo logo">
+              <svg class="logo__mobile" width="74" height="23">
+                <use xlink:href="img/sprite.svg#logo-mobile"></use>
+              </svg>
+              <svg class="logo__tablet" width="147" height="40">
+                <use xlink:href="img/sprite.svg#logo-tablet"></use>
+              </svg>
+              <svg class="logo__desktop" width="147" height="40">
+                <use xlink:href="img/sprite.svg#logo-desktop"></use>
+              </svg>
+            </a>
+            <button class="main-nav__button" type="button">
+              <span class="visually-hidden">Открыть меню</span>
+              <svg class="main-nav__button main-nav__button--cross" width="24" height="23">
+                <use xlink:href="img/sprite.svg#close-button"></use>
+              </svg>
+              <svg class="main-nav__button main-nav__button--burger" width="50" height="24">
+                <use xlink:href="img/sprite.svg#burger"></use>
+              </svg>
+            </button>
+          </div>
+          <nav class="main-nav__menu">
+            <ul class="main-nav__list ">
+              <li class="main-nav__item">
+                <a href="index.html" >Главная</a>
+              </li>
+              <li class="main-nav__item main-nav__item--active">
+                <a>Фотографии</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="form.html">Конкурс</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+              </li>
+            </ul>
+          </nav>
         </div>
-        <nav class="main-nav__menu">
-          <ul class="main-nav__list ">
-            <li class="main-nav__item">
-              <a href="index.html" >Главная</a>
-            </li>
-            <li class="main-nav__item main-nav__item--active">
-              <a>Фотографии</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="form.html">Конкурс</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-            </li>
-          </ul>
-        </nav>
       </div>
       <div class="header__wrapper">
         <h1 class="header__title">Фотографии<br> пользователей</h1>
       </div>
     </header>
     <main class="main main--photo">
-      <p class="main__description">Взгляните на фотографии, которые выкладывают<br class="tablet-br"> пользователи!<br class="mobile-br"> Видите, как не хватает ваших?</p>
+      <p class="main__description main-description--photo">Взгляните на фотографии, которые выкладывают<br class="tablet-br"> пользователи!<br class="mobile-br"> Видите, как не хватает ваших?</p>
       <section class="photo">
         <ul class="photo-list photo-list--panorama">
           <li class="photo-list__item photo-list__item--panorama">
             <div class="container">
-              <span class="photo-list__announcment">Панорама дня</span>
+              <span class="photo-list__announcement">Панорама дня</span>
             </div>
             <a class="photo-list__link" href="img/panorama-desktop@2x.jpg" target="_blank">
               <picture>
@@ -241,19 +243,19 @@
                 </div>
                 <div class="user-photo__ranges">
                   <label class="user-photo__label user-photo__label--active">
-                    <svg class="user-photo__svg--crop" width="22" height="22">
+                    <svg class="user-photo__svg user-photo__svg--crop" width="22" height="22">
                       <use xlink:href="img/sprite.svg#icon-crop"></use>
                     </svg>
                     <input class="user-photo__range" id="crop-range" name="photo-range" type="range" min="0" max="100" step="1">
                   </label>
                   <label class="user-photo__label">
-                    <svg class="user-photo__svg--fill" width="24" height="22">
+                    <svg class="user-photo__svg user-photo__svg--fill" width="24" height="22">
                       <use xlink:href="img/sprite.svg#icon-fill"></use>
                     </svg>
                     <input class="user-photo__range" id="fill-range" name="photo-range" type="range" min="0" max="100" step="1">
                   </label>
                   <label class="user-photo__label">
-                    <svg class="user-photo__svg--contrast" width="16" height="16">
+                    <svg class="user-photo__svg user-photo__svg--contrast" width="16" height="16">
                       <use xlink:href="img/sprite.svg#icon-contrast"></use>
                     </svg>
                     <input class="user-photo__range" id="contrast-range" name="photo-range" type="range" min="0" max="100" step="1">
@@ -265,7 +267,7 @@
           <div class="user-photo__buttons-container">
             <div class="user-photo__buttons">
               <button class="button button--red user-photo__form-button" type="submit">Запостить</button>
-              <button class="button button--gray user-photo__form-button" type="button">Отмена</button>
+              <button class="button button--gray user-photo__form-button" type="reset">Отмена</button>
             </div>
           </div>
         </form>

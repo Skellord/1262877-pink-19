@@ -2,8 +2,8 @@
     @include reset-list;
     display: flex;
     align-items: center;
-    padding-left: 37px;
-    padding-right: 37px;
+    padding-left: 29px;
+    padding-right: 29px;
     justify-content: space-between;
     height: 62px;
     &__item {
@@ -34,7 +34,13 @@
 @media (min-width: $tablet) {
     .os-list {
         padding-top: 0;
-        padding-right: $paddingT;
-        padding-left: 55px;
+        padding-right: $paddingM5;
+        padding-left: $paddingM5;
+    }
+}
+@media (min-width: $desktop) {
+    .os-list {
+        padding-right: 47px;
+        padding-left: 49px; 
     }
 }

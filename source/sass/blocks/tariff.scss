@@ -1,155 +1,180 @@
 .tariff {
-    border-collapse: collapse;
+  border-collapse: collapse;
+  text-transform: uppercase;
+
+  &--description {
+    display: none;
+  }
+
+  & th {
+    position: relative;
+    height: 100px;
+    min-width: 276px;
+    color: $white;
+    font-size: $fontM;
     text-transform: uppercase;
+    background-color: $dark;
+    border: 1px solid $gray2;
+  }
+
+  &__cost {
+    display: block;
+    margin-top: 5px;
+    font-weight: 300;
+    font-size: $fontL;
+  }
+
+  & td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 59px;
+    border: 1px solid $gray2;
+    padding-left: $paddingM2;
+    padding-right: $paddingM2;
+    background-color: $white;
+    font-size: $fontS;
+  }
+
+  &__hit {
+    z-index: 1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      height: 73px;
+      width: 74px;
+      background: url("../img/bg-hit.svg") 0 0 no-repeat;
+    }
+
+    &::after {
+      content: "ХИТ";
+      font-size: 14px;
+      font-weight: normal;
+      position: absolute;
+      top: 15px;
+      left: 10px;
+      display: block;
+      background: transparent;
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__plus {
+    margin-left: auto;
+    color: $green;
+  }
+
+  &__minus {
+    margin-left: auto;
+    color: $orange;
+  }
+}
+
+@media (min-width: $tablet) {
+  .tariff {
+    border-bottom: 2px solid $gray2;
+
+    &__details {
+      display: none;
+    }
+
+    & th {
+      min-width: 152px;
+      font-size: 16px;
+      height: 79px;
+    }
+
+    &__cost {
+      font-size: $fontM;
+    }
+
+    & td {
+      justify-content: center;
+      height: 45px;
+    }
+
+    &--unlim td {
+      border-right: 2px solid $gray2;
+    }
 
     &--description {
-        display: none;
-    }
-    & th {
-        position: relative;
-        height: 100px;
-        min-width: 276px;
-        color: $white;
-        font-size: $fontM;
-        text-transform: uppercase;
-        background-color: $dark;
-        border: 1px solid $gray2;
-    }
-    &__cost {
-        display: block;
-        margin-top: 5px;
-        font-weight: 300;
-        font-size: $fontL;
-    }
-    & td {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 59px;
-        border: 1px solid $gray2;
-        padding-left: $paddingM2;
-        padding-right: $paddingM2;
-        background-color: $white;
+      display: table;
+      margin-top: 78.5px;
+      border: 2px solid $gray2;
+      border-collapse: collapse;
+      border-right: 1px solid $gray2;
+
+      & td {
+        width: 153px;
+        padding-left: $paddingM;
         font-size: $fontS;
+        justify-content: flex-start;
+        text-transform: none;
+      }
     }
+
     &__hit {
-        z-index: 1;
+      &::before {
+        width: 55px;
+        height: 55px;
+        background-position-y: 90%;
+      }
+
+      &::after {
+        top: 7px;
+        left: 6px;
+      }
     }
-    &__hit {
-        &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            display: block;
-            height: 73px;
-            width: 74px;
-            background: url(../img/bg-hit.svg) 0 0 no-repeat;
-        }
-        &::after {
-            content: "ХИТ";
-            font-size: 14px;
-            font-weight: normal;
-            position: absolute;
-            top: 15px;
-            left: 10px;
-            display: block;
-            background: transparent;
-            transform: rotate(-45deg);
-        }
-    }
+
     &__plus {
-        margin-left: auto;
-        color: $green;
+      margin-left: 0;
     }
+
     &__minus {
-        margin-left: auto;
-        color: $orange;
+      margin-left: 0;
     }
+  }
 }
-@media (min-width: $tablet) {
-    .tariff {
-        border-bottom: 2px solid $gray2;
-        &__details {
-            display: none;
-        }
-        & th {
-            min-width: 152px;
-            font-size: 16px;
-            height: 79px;
-        }
-        &__cost {
-            font-size: $fontM;
-        }
-        & td {
-            justify-content: center;
-            height: 45px;
-        }
-        &--unlim td {
-            border-right: 2px solid $gray2;;
-        }
-        &--description {
-            display: table;
-            margin-top: 78.5px;
-            border: 2px solid $gray2;
-            border-collapse: collapse;
-            border-right: 1px solid $gray2;
-            & td {
-                width: 153px;
-                padding-left: $paddingM;
-                font-size: $fontS;
-                justify-content: flex-start;
-                text-transform: none;
-            }
-        }
-        &__hit {
-            &::before {
-                width: 55px;
-                height: 55px;
-                background-position-y: 90%;
-            }
-            &::after {
-                top: 7px;
-                left: 6px;
-            }
-        }
-        &__plus {
-            margin-left: 0;
-        }
-        &__minus {
-            margin-left: 0;
-        }
-    }
-}
+
 @media (min-width: $desktop) {
-    .tariff {
-        & th {
-            min-width: 234px;
-            height: 98px;
-            font-size: $fontM;
-        }
-        &__cost {
-            font-size: $fontL;
-        }
-        & td {
-            height: 59px;
-        }
-        &--description {
-            margin-top: 97.5px;
-            & td {
-                min-width: 234px;
-                font-size: $fontM;
-            }
-        }
-        &__hit {
-            &::before {
-                width: 74px;
-                height: 73px;
-            }
-            &::after {
-                top: 14px;
-                left: 13px;
-            }
-        }
+  .tariff {
+    & th {
+      min-width: 234px;
+      height: 98px;
+      font-size: $fontM;
     }
+
+    &__cost {
+      font-size: $fontL;
+    }
+
+    & td {
+      height: 59px;
+    }
+
+    &--description {
+      margin-top: 97.5px;
+
+      & td {
+        min-width: 234px;
+        font-size: $fontM;
+      }
+    }
+
+    &__hit {
+      &::before {
+        width: 74px;
+        height: 73px;
+      }
+
+      &::after {
+        top: 14px;
+        left: 13px;
+      }
+    }
+  }
 }

@@ -1,44 +1,49 @@
 .contact {
-    &__text {
-        display: block;
-        font-weight: bold;
-        margin-bottom: $paddingM;
-    }
-    &__text:not(:last-child) {
-        line-height: 1;
+  &__text {
+    display: block;
+    font-weight: bold;
+    margin-bottom: $paddingM;
+  }
 
+  &__text:not(:last-child) {
+    line-height: 1;
+  }
+
+  &__value {
+    display: block;
+    margin: 0;
+    font-size: $fontL;
+    font-weight: 300;
+    color: $red;
+    text-decoration: none;
+    line-height: 1;
+  }
+
+  &__mail {
+    display: block;
+    margin: 0;
+    font-size: $fontL;
+    font-weight: 300;
+    color: $red;
+    text-decoration: none;
+    line-height: 1;
+
+    &:hover,
+    &:focus {
+      color: $dark;
+      text-decoration: underline;
     }
-    &__value {
-        display: block;
-        margin: 0;
-        font-size: $fontL;
-        font-weight: 300;
-        color: $red;
-        text-decoration: none;
-        line-height: 1;
+
+    &:active {
+      color: rgba($dark, 0.3);
     }
-    &__mail {
-        display: block;
-        margin: 0;
-        font-size: $fontL;
-        font-weight: 300;
-        color: $red;
-        text-decoration: none;
-        line-height: 1;
-        &:hover,
-        &:focus {
-            color: $dark;
-            text-decoration: underline;
-        }
-        &:active {
-            color: rgba($dark, 0.3);
-        }
-    }
+  }
 }
+
 @media (min-width: $desktop) {
-    .contact {
-        &__text {
-            margin-bottom: $paddingM3;
-        }
+  .contact {
+    &__text {
+      margin-bottom: $paddingM3;
     }
+  }
 }

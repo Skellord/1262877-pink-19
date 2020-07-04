@@ -1,44 +1,54 @@
 .logo {
+  color: $white;
+
+  &:hover,
+  &:focus {
+    color: $red;
+  }
+
+  &:active {
     color: $white;
-    &:hover,
-    &:focus {
-        color: $red;
+    opacity: 0.3;
+  }
+
+  &--black {
+    color: $dark;
+
+    &:hover {
+      color: $red;
     }
+
     &:active {
-        color: $white;
-        opacity: 0.3;
+      opacity: 0.3;
     }
-    &--black {
-        color: $dark;
-        &:hover  {
-            color: $red;
-        }
-        &:active {
-            opacity: 0.3;
-        }
-    }
-    &__tablet,
-    &__desktop {
-        display: none;
-    }
+  }
+
+  &__tablet,
+  &__desktop {
+    display: none;
+  }
 }
+
 @media (min-width: $tablet) {
-    .logo {
-        &__mobile {
-            display: none;
-        }
-        &__tablet {
-            display: inline-block;
-        }
+  .logo {
+    &__mobile {
+      display: none;
     }
+
+    &__tablet {
+      display: inline-block;
+    }
+  }
 }
+
 @media (min-width: $desktop) {
-    .logo {
-        &__tablet {
-            display: none;
-        }
-        &__desktop {
-            display: inline-block;
-        }
+  .logo {
+    &__tablet {
+      display: none;
     }
+
+    &__desktop {
+      display: inline-block;
+    }
+  }
 }

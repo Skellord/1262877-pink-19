@@ -1,77 +1,91 @@
 .main {
-    &__description {
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 45px;
-        margin-bottom: 45px;
-        padding-left: $paddingM2;
-        padding-right: $paddingM2;
-        font-size: $fontS;
-        text-align: center;
-        line-height: $lineheightL;
-        &--bottom {
-            margin-bottom: 40px;
-        }
-        &--photo {
-            margin-bottom: 50px;
-        }
-        & .tablet-br {
-            display: none;
-        }
-    }
-    &__text-desktop {
-        display: none;
-    }
-}
-@media (min-width: $tablet) {
-    .main {
-        &__description {
-            font-size: $fontM;
-            margin-top: 90px;
-            margin-bottom: 79px;
-            padding-left: $paddingM5;
-            padding-right: $paddingM5;
-            & .mobile-br {
-                display: none;
-            }
-            &--bottom {
-                margin-top: 60px;
-                margin-bottom: 66px;
-            }
-            & .tablet-br {
-                display: inline;
-            }
+  &__description {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 45px;
+    margin-bottom: 45px;
+    padding-left: $paddingM2;
+    padding-right: $paddingM2;
+    font-size: $fontS;
+    text-align: center;
+    line-height: $lineheightL;
 
-        }
-        &__text-desktop {
-            display: inline;
-        }
+    &--bottom {
+      margin-bottom: 40px;
     }
+
+    &--photo {
+      margin-bottom: 50px;
+    }
+
+    & .tablet-br {
+      display: none;
+    }
+  }
+
+  &__text-desktop {
+    display: none;
+  }
 }
-@media (min-width: $desktop) {
-    .main {
-        &__description {
-            margin-bottom: 93px;
-            & .tablet-br {
-                display: none;
-            }
-            & .mobile-br {
-                display: inline;
-            }
-            &--bottom {
-                margin-top: $paddingT;
-                margin-bottom: 40px;
-            }
-            &--form {
-                padding-left: 100px;
-                padding-right: 100px;
-                margin-bottom: 85px;
-            }
-            &--photo {
-                padding-left: 180px;
-                padding-right: 180px;
-                margin-bottom: 90px;
-            }
-        }
+
+@media (min-width: $tablet) {
+  .main {
+    &__description {
+      font-size: $fontM;
+      margin-top: 90px;
+      margin-bottom: 79px;
+      padding-left: $paddingM5;
+      padding-right: $paddingM5;
+
+      & .mobile-br {
+        display: none;
+      }
+
+      &--bottom {
+        margin-top: 60px;
+        margin-bottom: 66px;
+      }
+
+      & .tablet-br {
+        display: inline;
+      }
     }
+
+    &__text-desktop {
+      display: inline;
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .main {
+    &__description {
+      margin-bottom: 93px;
+
+      & .tablet-br {
+        display: none;
+      }
+
+      & .mobile-br {
+        display: inline;
+      }
+
+      &--bottom {
+        margin-top: $paddingT;
+        margin-bottom: 40px;
+      }
+
+      &--form {
+        padding-left: 100px;
+        padding-right: 100px;
+        margin-bottom: 85px;
+      }
+
+      &--photo {
+        padding-left: 180px;
+        padding-right: 180px;
+        margin-bottom: 90px;
+      }
+    }
+  }
 }

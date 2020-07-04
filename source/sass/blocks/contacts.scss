@@ -1,90 +1,106 @@
 .contacts {
-    position: absolute;
-    width: 100%;
-    top: auto;
-    left: auto;
-    padding-top: 50px;
-    padding-bottom: 35px;
+  position: absolute;
+  width: 100%;
+  top: auto;
+  left: auto;
+  padding-top: 50px;
+  padding-bottom: 35px;
+  text-align: center;
+  background-color: $white;
+
+  &__title {
+    margin: 0;
+    margin-bottom: $paddingM4;
     text-align: center;
-    background-color: $white;
+    font-weight: 300;
+    font-size: $fontL;
+  }
+
+  &__label {
+    margin-bottom: $paddingM3;
+  }
+
+  &__wrapper {
+    margin-bottom: -30px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background: url("../img/bg-triangle-white-footer.svg") 0 0 no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    width: 100%;
+    bottom: -64px;
+    height: 65px;
+  }
+}
+
+@media (min-width: $tablet) {
+  .contacts {
+    padding-bottom: 0;
+
+    &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding-left: $paddingM;
+      padding-right: 0;
+    }
 
     &__title {
-        margin: 0;
-        margin-bottom: $paddingM4;
-        text-align: center;
-        font-weight: 300;
-        font-size: $fontL;
+      font-size: $fontXL;
+      line-height: 1.2;
+      margin-bottom: 45px;
     }
+
     &__label {
-        margin-bottom: $paddingM3;
+      display: inline-block;
+      margin-bottom: 55px;
     }
-    &__wrapper {
-        margin-bottom: -30px;
-    }
+
     &::after {
-        content: "";
-        display: block;
-        position: absolute;
-        background: url(../img/bg-triangle-white-footer.svg) 0 0 no-repeat;
-        background-size: contain;
-        background-color: transparent;
-        width: 100%;
-        bottom: -64px;
-        height: 65px;
+      bottom: -80px;
+      height: 80px;
+      background-size: 100% 80px;
     }
+  }
 }
-@media (min-width: $tablet) {
-    .contacts {
-        padding-bottom: 0;
-        &__wrapper {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            padding-left: $paddingM;
-            padding-right: 0;
-        }
-        &__title {
-            font-size: $fontXL;
-            line-height: 1.2;
-            margin-bottom: 45px;
-        }
-        &__label {
-            display: inline-block;
-            margin-bottom: 55px;
-        }
-        &::after {
-            bottom: -80px;
-            height: 80px;
-            background-size: 100% 80px;
-        }
-    }
-}
+
 @media (min-width: $desktop) {
-    .contacts {
-        padding-top: 59px;
-        padding-bottom: $paddingT2;
-        &__title {
-            font-size: $fontXXL;
-        }
-        &::after {
-            background-size: 100% 90px;
-            bottom: -90px;
-            height: 90px;
-        }
-        &__wrapper {
-            padding-top: $paddingM2;
-        }
-        &__label {
-            margin-bottom: 0;
-            &--address {
-                order: 1;
-            }
-            &--phone {
-                order: 0;
-            }
-            &--mail {
-                order: 3;
-            }
-        }
+  .contacts {
+    padding-top: 59px;
+    padding-bottom: $paddingT2;
+
+    &__title {
+      font-size: $fontXXL;
     }
+
+    &::after {
+      background-size: 100% 90px;
+      bottom: -90px;
+      height: 90px;
+    }
+
+    &__wrapper {
+      padding-top: $paddingM2;
+    }
+
+    &__label {
+      margin-bottom: 0;
+
+      &--address {
+        order: 1;
+      }
+
+      &--phone {
+        order: 0;
+      }
+
+      &--mail {
+        order: 3;
+      }
+    }
+  }
 }

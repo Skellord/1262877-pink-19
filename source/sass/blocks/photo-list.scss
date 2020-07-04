@@ -1,212 +1,251 @@
 .photo-list {
-    @include reset-list;
-    text-align: center;
+  @include reset-list;
+  text-align: center;
+  position: relative;
+
+  &:not(.photo-list--panorama) {
+    margin-bottom: -20px;
+  }
+
+  &__item {
+    display: inline-block;
     position: relative;
-    &:not(.photo-list--panorama) {
-        margin-bottom: -20px;
+    margin-bottom: 21px;
+  }
+
+  &__panorama-photo {
+    width: 320px;
+    height: 137px;
+  }
+
+  &__photo {
+    width: 280px;
+    height: 180px;
+  }
+
+  &__announcement {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 140px;
+    height: 36px;
+    background-color: $red;
+    color: $white;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-top: 5px;
+  }
+
+  &__comments-section {
+    width: 280px;
+    padding-top: $paddingM2;
+    padding-bottom: 25px;
+    padding-left: 17px;
+    background-color: $gray;
+    text-align: left;
+  }
+
+  &__link picture {
+    display: flex;
+  }
+
+  &__name {
+    line-height: 1;
+    margin-bottom: 5px;
+  }
+
+  &__author {
+    font-weight: bold;
+    font-size: $fontS;
+  }
+
+  &__time {
+    font-weight: 300;
+    font-size: $fontXS;
+    text-transform: uppercase;
+  }
+
+  &__comment {
+    margin: 0;
+    margin-bottom: 15px;
+    font-size: $fontS;
+  }
+
+  &__stats {
+    display: flex;
+    align-items: center;
+  }
+
+  &__button {
+    display: block;
+    background: transparent url("../img/icon-heart.svg") no-repeat 0 0;
+    padding: 0;
+    border: none;
+    width: 13px;
+    height: 12px;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+
+  &__likes-number {
+    text-transform: uppercase;
+    font-size: $fontXS;
+    color: $red;
+    line-height: 1;
+  }
+
+  &__item--panorama {
+    & .photo-list__comments-section {
+      margin-right: auto;
+      margin-left: auto;
+      height: 193px;
     }
-    &__item {
-        display: inline-block;
-        position: relative;
-        margin-bottom: 21px;
-    }
-    &__panorama-photo {
-        width: 320px;
-        height: 137px;
-    }
-    &__photo {
-        width: 280px;
-        height: 180px;
-    }
-    &__announcement {
-        position: absolute;
-        top: 0;
-        right: 0px;
-        width: 140px;
-        height: 36px;
-        background-color: $red;
-        color: $white;
-        font-size: 12px;
-        font-weight: bold;
-        text-transform: uppercase;
-        padding-top: 5px;
-    }
-    &__comments-section {
-        width: 280px;
-        padding-top: $paddingM2;
-        padding-bottom: 25px;
-        padding-left: 17px;
-        background-color: $gray;
-        text-align: left;
-    }
-    &__link picture {
-        display: flex;
-    }
-    &__name {
-        line-height: 1;
-        margin-bottom: 5px;
-    }
-    &__author {
-        font-weight: bold;
-        font-size: $fontS;
-    }
-    &__time {
-        font-weight: 300;
-        font-size: $fontXS;
-        text-transform: uppercase;
-    }
-    &__comment {
-        margin: 0;
-        margin-bottom: 15px;
-        font-size: $fontS;
-    }
-    &__stats {
-        display: flex;
-        align-items: center;
-    }
-    &__button {
-        display: block;
-        background-color: transparent;
-        background: url(../img/icon-heart.svg) 0 0 no-repeat;
-        padding: 0;
-        border: none;
-        width: 13px;
-        height: 12px;
-        margin-right: 20px;
-        cursor: pointer;
-    }
-    &__likes-number {
-        text-transform: uppercase;
-        font-size: $fontXS;
-        color: $red;
-        line-height: 1;
-    }
-    &__item--panorama {
-        & .photo-list__comments-section {
-            margin-right: auto;
-            margin-left: auto;
-            height: 193px;
-        }
-    }
+  }
 }
+
 @media (min-width: $tablet) {
-    .photo-list {
-        &:not(.photo-list--panorama) {
-            display: flex;
-            flex-wrap: wrap;
-            margin-bottom: -20px;
-        }
-        &__wrapper {
-            & .photo-list__item:not(:nth-of-type(2n)) {
-                margin-right: $paddingM2;
-            }
-        }
-        &__announcement {
-            top: 55px;
-            right: 0;
-        }
-        &__panorama-photo {
-            width: 660px;
-            height: 509px;
-        }
-        &__photo {
-            width: 300px;
-            height: 300px;
-        }
-        &__comments-section {
-            display: flex;
-            flex-direction: column;
-            width: 300px;
-            min-height: 155px;
-            padding-left: 27px;
-            padding-top: 25px;
-            padding-bottom: 30px;
-            padding-right: $paddingM2;
-        }
-        &__stats {
-            margin-top: auto;
-        }
-        &__button {
-            margin-right: 12px;
-        }
-        &__likes-number {
-            order: -1;
-            margin-right: auto;
-        }
-        &__item--panorama {
-            & .photo-list__comments-section {
-                width: 100%;
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                min-height: 121px;
-                height: 121px;
-                padding-right: $paddingM3;
-                padding-top: 20px;
-                margin-bottom: $paddingM3;
-            }
-            & .photo-list__name {
-                order: 1;
-                margin-top: 5px
-            }
-            & .photo-list__comment {
-                order: 3;
-                margin-bottom: 0;
-            }
-            & .photo-list__stats {
-                order: 2;
-                margin-top: 8px;
-                margin-left: auto;
-                align-items: flex-start;
-            }
-            & .photo-list__button {
-                margin-right: 0;
-            }
-            & .photo-list__likes-number{
-                order: -1;
-                margin-right: 20px;
-            }
-        }
+  .photo-list {
+    &:not(.photo-list--panorama) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: -20px;
     }
+
+    &__wrapper {
+      & .photo-list__item:not(:nth-of-type(2n)) {
+        margin-right: $paddingM2;
+      }
+    }
+
+    &__announcement {
+      top: 55px;
+      right: 0;
+    }
+
+    &__panorama-photo {
+      width: 660px;
+      height: 509px;
+    }
+
+    &__photo {
+      width: 300px;
+      height: 300px;
+    }
+
+    &__comments-section {
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+      min-height: 155px;
+      padding-left: 27px;
+      padding-top: 25px;
+      padding-bottom: 30px;
+      padding-right: $paddingM2;
+    }
+
+    &__stats {
+      margin-top: auto;
+    }
+
+    &__button {
+      margin-right: 12px;
+    }
+
+    &__likes-number {
+      order: -1;
+      margin-right: auto;
+    }
+
+    &__item--panorama {
+      & .photo-list__comments-section {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        min-height: 121px;
+        height: 121px;
+        padding-right: $paddingM3;
+        padding-top: 20px;
+        margin-bottom: $paddingM3;
+      }
+
+      & .photo-list__name {
+        order: 1;
+        margin-top: 5px;
+      }
+
+      & .photo-list__comment {
+        order: 3;
+        margin-bottom: 0;
+      }
+
+      & .photo-list__stats {
+        order: 2;
+        margin-top: 8px;
+        margin-left: auto;
+        align-items: flex-start;
+      }
+
+      & .photo-list__button {
+        margin-right: 0;
+      }
+
+      & .photo-list__likes-number {
+        order: -1;
+        margin-right: 20px;
+      }
+    }
+  }
 }
+
 @media (min-width: $desktop) {
-    .photo-list {
-        &:not(.photo-list--panorama) {
-            margin-bottom: -55px;
-        }
-        &__panorama-photo {
-            width: 1200px;
-            height: 506px;
-        }
-        &__photo {
-            height: 400px;
-        }
-        &__wrapper {
-            width: 940px;
-            margin-left: auto;
-            margin-right: auto;
-            & .photo-list__item:not(:nth-of-type(2n)) {
-                margin-right: 0;
-            }
-            & .photo-list__item:not(:nth-of-type(3n)) {
-                margin-right: $paddingM2;
-            }
-        }
-        &__item {
-            margin-bottom: 55px;
-        }
-        &__item--panorama {
-            margin-bottom: 50px;
-            & .photo-list__comments-section {
-                width: 100%;
-                min-height: 96px;
-                height: 96px;
-                margin-bottom: 0;
-                padding-right: 15px;
-            }
-            & .photo-list__stats {
-                margin-right: 20px;
-            }
-        }
+  .photo-list {
+    &:not(.photo-list--panorama) {
+      margin-bottom: -55px;
     }
+
+    &__panorama-photo {
+      width: 1200px;
+      height: 506px;
+    }
+
+    &__photo {
+      height: 400px;
+    }
+
+    &__wrapper {
+      width: 940px;
+      margin-left: auto;
+      margin-right: auto;
+
+      & .photo-list__item:not(:nth-of-type(2n)) {
+        margin-right: 0;
+      }
+
+      & .photo-list__item:not(:nth-of-type(3n)) {
+        margin-right: $paddingM2;
+      }
+    }
+
+    &__item {
+      margin-bottom: 55px;
+    }
+
+    &__item--panorama {
+      margin-bottom: 50px;
+
+      & .photo-list__comments-section {
+        width: 100%;
+        min-height: 96px;
+        height: 96px;
+        margin-bottom: 0;
+        padding-right: 15px;
+      }
+
+      & .photo-list__stats {
+        margin-right: 20px;
+      }
+    }
+  }
 }

@@ -1,16 +1,18 @@
 .wrapper {
-    position: relative;
-    width: $mobile;
-    margin-left: auto;
-    margin-right: auto;
+  position: relative;
+  width: $mobile;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 @media (min-width: $tablet) {
-    .wrapper {
-        width: $tablet;
-    }
+  .wrapper {
+    width: $tablet;
+  }
 }
+
 @media (min-width: $desktop) {
-    .wrapper {
-        width: $desktop;
-    }
+  .wrapper {
+    width: $desktop;
+  }
 }

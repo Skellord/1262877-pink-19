@@ -1,121 +1,140 @@
 .download {
-    position: relative;
-    width: 100%;
-    &__button {
-        min-width: 280px;
+  position: relative;
+  width: 100%;
+
+  &__button {
+    min-width: 280px;
+    margin-bottom: $paddingM3;
+  }
+
+  &__phone {
+    padding-top: $paddingM2;
+    min-height: 392px;
+    background: url("../img/iphone-hand-mobile@1x.png") 0% 100% no-repeat;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background: url("../img/iphone-hand-mobile@2x.png") 0 100% no-repeat;
+      background-size: 258px auto;
     }
-    &__phone {
-        padding-top: $paddingM2;
-        min-height: 392px;
-        background: url(../img/iphone-hand-mobile@1x.png) 0% 100% no-repeat;
-        @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-            background: url(../img/iphone-hand-mobile@2x.png) 0 100% no-repeat;
-            background-size: 258px auto;
-        }
-    }
-    &__list {
-        text-align: center;
-        padding-bottom: $paddingM;
-        padding-top: $paddingM;
-    }
-    &__container {
-        background-color: #1d2631;
-    }
-    &__description {
-        display: inline-block;
-        margin-top: 17px;
-        font-size: $fontS;
-        font-weight: 300;
-        color: $white;
-    }
-    &__title {
-        text-align: center;
-        max-width: 235px;
-        font-weight: 300;
-        font-size: $fontL;
-        line-height: $lineheightL;
-        color: $white;
-        margin: 0;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    &__wrapper {
-        width: $mobile;
-        padding: $paddingM2;
-        padding-top: $paddingM2;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    &__button {
-        margin-bottom: $paddingM3;
-    }
+  }
+
+  &__list {
+    text-align: center;
+    padding-bottom: $paddingM;
+    padding-top: $paddingM;
+  }
+
+  &__container {
+    background-color: #1d2631;
+  }
+
+  &__description {
+    display: inline-block;
+    margin-top: 17px;
+    font-size: $fontS;
+    font-weight: 300;
+    color: $white;
+  }
+
+  &__title {
+    text-align: center;
+    max-width: 235px;
+    font-weight: 300;
+    font-size: $fontL;
+    line-height: $lineheightL;
+    color: $white;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__wrapper {
+    width: $mobile;
+    padding: $paddingM2;
+    padding-top: $paddingM2;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
+
 @media (min-width: $tablet) {
-    .download {
-        &__phone {
-            min-height: 549px;
-            padding-top: $paddingM2;
-            background: url(../img/iphone-hand-tablet@1x.png) 50% 100% no-repeat;
-            @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-                background: url(../img/iphone-hand-tablet@2x.png) 50% 100% no-repeat;
-                background-size: 700px auto;
-            }
-        }
-        &__wrapper {
-            padding: 0;
-        }
-        &__title {
-            color: $white;
-            font-size: $fontXL;
-            font-weight: 300;
-            text-align: center;
-            line-height: 50px;
-            margin-left: 50px;
-        }
-        &__list {
-            position: absolute;
-            bottom: 130px;
-            left: 10px;
-            height: 240px;
-            background-color: transparent;
-            padding-top: $paddingM2;
-        }
-        &__button {
-            min-width: 300px;
-            margin-bottom: $paddingM4;
-        }
-        &__description {
-            font-size: $fontM;
-            margin-top: 35px;
-        }
+  .download {
+    &__phone {
+      min-height: 549px;
+      padding-top: $paddingM2;
+      background: url("../img/iphone-hand-tablet@1x.png") 50% 100% no-repeat;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background: url("../img/iphone-hand-tablet@2x.png") 50% 100% no-repeat;
+        background-size: 700px auto;
+      }
     }
+
+    &__wrapper {
+      padding: 0;
+    }
+
+    &__title {
+      color: $white;
+      font-size: $fontXL;
+      font-weight: 300;
+      text-align: center;
+      line-height: 50px;
+      margin-left: 50px;
+    }
+
+    &__list {
+      position: absolute;
+      bottom: 130px;
+      left: 10px;
+      height: 240px;
+      background-color: transparent;
+      padding-top: $paddingM2;
+    }
+
+    &__button {
+      min-width: 300px;
+      margin-bottom: $paddingM4;
+    }
+
+    &__description {
+      font-size: $fontM;
+      margin-top: 35px;
+    }
+  }
 }
+
 @media (min-width: $desktop) {
-    .download {
-        &__phone {
-            min-height: 659px;
-            padding-top: 0;
-            background: url(../img/iphone-hand-desktop@1x.png) -27% 100% no-repeat;
-            @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-                background: url(../img/iphone-hand-desktop@2x.png) -27% 100% no-repeat;
-                background-size: 1050px auto;
-            }
-        }
-        &__title {
-            font-size: $fontXXL;
-            margin-left: 40px;
-            padding-top: 22px;
-            line-height: 59px;  
-        }
-        &__list {
-            left: -2px;
-            bottom: 183px;
-        }
-        &__description {
-            margin-top: $paddingM5;
-        }
-        &__button {
-            margin-bottom: $paddingT;
-        }
+  .download {
+    &__phone {
+      min-height: 659px;
+      padding-top: 0;
+      background: url("../img/iphone-hand-desktop@1x.png") -27% 100% no-repeat;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background: url("../img/iphone-hand-desktop@2x.png") -27% 100% no-repeat;
+        background-size: 1050px auto;
+      }
     }
+
+    &__title {
+      font-size: $fontXXL;
+      margin-left: 40px;
+      padding-top: 22px;
+      line-height: 59px;
+    }
+
+    &__list {
+      left: -2px;
+      bottom: 183px;
+    }
+
+    &__description {
+      margin-top: $paddingM5;
+    }
+
+    &__button {
+      margin-bottom: $paddingT;
+    }
+  }
 }

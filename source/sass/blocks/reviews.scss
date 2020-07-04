@@ -1,130 +1,158 @@
 .reviews {
-    position: relative;
-    padding-top: $paddingM5;
-    padding-bottom: $paddingM3;
-    &__slider {
-        padding-bottom: 55px;
-    }
-    &__list {
-        @include reset-list;
-    }
-    &__title {
-        margin: 0;
-        font-size: $fontM;
-        color: $black;
-        font-weight: bold;
-        line-height: 1;
-    }
-    &__text {
-        margin: 0;
-        font-size: $fontS;
-        text-align: center;
-        line-height: $lineheightL;
-    }
-    &__item {
-        text-align: center;
-        padding: 0 22px;
-    }
-    &__toggles {
-        margin-left: -29px;
-        position: absolute;
-        left: 50%;
-        bottom: 15px;
-    }
-    &__author-about {
-        display: none;
-        line-height: 1;
-    }
-    &__author {
-        margin-bottom: $paddingM2;
-    }
-    &__arrows {
-        display: none;
-    }
+  position: relative;
+  padding-top: $paddingM5;
+  padding-bottom: $paddingM3;
+
+  &__slider {
+    padding-bottom: 55px;
+  }
+
+  &__list {
+    @include reset-list;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: $fontM;
+    color: $black;
+    font-weight: bold;
+    line-height: 1;
+  }
+
+  &__text {
+    margin: 0;
+    font-size: $fontS;
+    text-align: center;
+    line-height: $lineheightL;
+  }
+
+  &__item {
+    text-align: center;
+    padding: 0 22px;
+  }
+
+  &__toggles {
+    margin-left: -29px;
+    position: absolute;
+    left: 50%;
+    bottom: 15px;
+  }
+
+  &__author-about {
+    display: none;
+    line-height: 1;
+  }
+
+  &__author {
+    margin-bottom: $paddingM2;
+  }
+
+  &__arrows {
+    display: none;
+  }
 }
+
 @media (min-width: $tablet) {
-    .reviews {
-        padding-top: $paddingD3;
-        padding-bottom: 15px;
-        &__item {
-            display: flex;
-            flex-direction: column;
-            padding: 0;
-        }
-        &__text {
-            font-size: $fontM;
-            margin-bottom: $paddingM4;
-        }
-        &__author-about {
-            display: inline-block;
-            font-size: $fontS;
-            margin: 0;
-        }
-        &__title {
-            font-size: $fontM2;
-            margin-bottom: $paddingM;
-        }
-        &__author {
-            order: 2;
-            margin-bottom: 0;
-        }
-        &__toggles {
-            bottom: 10px;
-        }
+  .reviews {
+    padding-top: $paddingD3;
+    padding-bottom: 15px;
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
     }
+
+    &__text {
+      font-size: $fontM;
+      margin-bottom: $paddingM4;
+    }
+
+    &__author-about {
+      display: inline-block;
+      font-size: $fontS;
+      margin: 0;
+    }
+
+    &__title {
+      font-size: $fontM2;
+      margin-bottom: $paddingM;
+    }
+
+    &__author {
+      order: 2;
+      margin-bottom: 0;
+    }
+
+    &__toggles {
+      bottom: 10px;
+    }
+  }
 }
+
 @media (min-width: $desktop) {
-    .reviews {
-        padding-top: 110px;
-        padding-bottom: 0;
-        &::before {
-            content: "";
-            position: absolute;
-            display: block;
-            height: 64px;
-            width: 79px;
-            top: 0;
-            left: 50%;
-            margin-left: -40px;
-            background: url(../img/icon-quotes.svg) 0 0 no-repeat;
-        }
-        &__item {
-            align-items: center;
-        }
-        &__text {
-            width: 700px;
-        }
-        &__title {
-            margin-bottom: 5px;
-            font-size: $fontL;
-        }
-        &__author-about {
-            font-size: $fontM;
-        }
-        &__slider {
-            padding-bottom: $paddingM5;
-        }
-        &__toggles {
-            display: none;
-        }
-        &__arrows {
-            display: flex;
-            position: relative;
-            width: 940px;
-        }
-        &__arrow {
-            display: flex;
-            &--left {
-                position: absolute;
-                left: 0;
-                top: -100px;
-            }
-            &--right {
-                position: absolute;
-                right: 0;
-                top: -100px;
-                transform: rotate(180deg);
-            }
-        }
+  .reviews {
+    padding-top: 110px;
+    padding-bottom: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      height: 64px;
+      width: 79px;
+      top: 0;
+      left: 50%;
+      margin-left: -40px;
+      background: url("../img/icon-quotes.svg") 0 0 no-repeat;
     }
+
+    &__item {
+      align-items: center;
+    }
+
+    &__text {
+      width: 700px;
+    }
+
+    &__title {
+      margin-bottom: 5px;
+      font-size: $fontL;
+    }
+
+    &__author-about {
+      font-size: $fontM;
+    }
+
+    &__slider {
+      padding-bottom: $paddingM5;
+    }
+
+    &__toggles {
+      display: none;
+    }
+
+    &__arrows {
+      display: flex;
+      position: relative;
+      width: 940px;
+    }
+
+    &__arrow {
+      display: flex;
+
+      &--left {
+        position: absolute;
+        left: 0;
+        top: -100px;
+      }
+
+      &--right {
+        position: absolute;
+        right: 0;
+        top: -100px;
+        transform: rotate(180deg);
+      }
+    }
+  }
 }
